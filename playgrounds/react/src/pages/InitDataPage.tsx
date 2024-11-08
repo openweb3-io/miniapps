@@ -1,6 +1,6 @@
 import { type FC, useMemo } from 'react';
 import { initData, type User, useSignal } from '@openweb3-apps/sdk-react';
-import { List, Placeholder } from '@openweb3-apps/openweb3-ui';
+import { List, Placeholder } from '@telegram-apps/telegram-ui';
 
 import { DisplayData, type DisplayDataRow } from '@/components/DisplayData/DisplayData.tsx';
 import { Page } from '@/components/Page.tsx';

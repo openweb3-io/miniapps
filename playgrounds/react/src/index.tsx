@@ -5,7 +5,7 @@ import { retrieveLaunchParams } from '@openweb3-apps/sdk-react';
 import { Root } from '@/components/Root';
 import { init } from '@/init.ts';
 
-import '@openweb3-apps/openweb3-ui/dist/styles.css';
+import '@telegram-apps/telegram-ui/dist/styles.css';
 import './index.css';
 
 // Mock the environment in case, we are outside Openweb3.

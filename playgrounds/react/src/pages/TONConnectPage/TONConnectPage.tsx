@@ -9,7 +9,7 @@ import {
   Section,
   Text,
   Title,
-} from '@openweb3-apps/openweb3-ui';
+} from '@telegram-apps/telegram-ui';
 import type { FC } from 'react';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData.tsx';

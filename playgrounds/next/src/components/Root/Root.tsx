@@ -3,7 +3,7 @@
 import { type PropsWithChildren, useEffect, useMemo } from 'react';
 import { useLaunchParams, miniApp, useSignal } from '@openweb3-apps/sdk-react';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
-import { AppRoot } from '@openweb3-apps/openweb3-ui';
+import { AppRoot } from '@telegram-apps/telegram-ui';
 
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorPage } from '@/components/ErrorPage';
