@@ -1,0 +1,21 @@
+{
+  "extends": "tsconfig/esnext-dom.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "../../packages/*/src/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
