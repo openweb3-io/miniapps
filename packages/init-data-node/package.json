@@ -1,5 +1,5 @@
 {
-  "name": "@openweb3-apps/init-data-node",
+  "name": "@openweb3-miniapps/init-data-node",
   "version": "1.1.1",
   "description": "TypeScript Node library to operate with Telegram init data.",
   "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",

@@ -56,6 +56,8 @@ export interface User {
    * Username of the user or bot.
    */
   username?: string;
+
+  extra?: { [key: string]: any };
 }
 
 /**

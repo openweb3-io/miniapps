@@ -1,5 +1,5 @@
 {
-  "name": "@telegram-apps/types",
+  "name": "@openweb3-miniapps/types",
   "version": "1.0.1",
   "description": "Telegram Mini Apps related TypeScript types.",
   "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",
