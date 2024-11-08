@@ -1,5 +1,5 @@
 <script lang="ts">
-import { type RGB } from '@telegram-apps/sdk-vue';
+import { type RGB } from '@openweb3-apps/sdk-vue';
 import { type Component } from 'vue';
 
 export interface DisplayDataRow {
@@ -13,7 +13,7 @@ export interface DisplayDataProps {
 </script>
 
 <script setup lang="ts">
-import { isRGB } from '@telegram-apps/sdk-vue';
+import { isRGB } from '@openweb3-apps/sdk-vue';
 import UiRGB from './UiRGB.vue';
 
 defineProps<DisplayDataProps>();

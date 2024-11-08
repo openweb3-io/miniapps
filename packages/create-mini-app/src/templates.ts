@@ -3,16 +3,16 @@ import type { Template, Framework, Language, SDK, TemplateRepository } from './t
 function createRepository(name: string): TemplateRepository {
   return {
     clone: {
-      https: `https://github.com/Telegram-Mini-Apps/${name}.git`,
-      ssh: `git@github.com:Telegram-Mini-Apps/${name}.git`,
+      https: `https://github.com/openweb3-io/${name}.git`,
+      ssh: `git@github.com:openweb3-io/${name}.git`,
     },
-    link: `github.com/Telegram-Mini-Apps/${name}`,
+    link: `github.com/openweb3-io/${name}`,
   };
 }
 
 const settings = {
   js: {
-    telegramApps: {
+    openweb3Apps: {
       react: 'reactjs-js-template',
       solid: 'solidjs-js-template',
       next: 'nextjs-js-template',
@@ -28,7 +28,7 @@ const settings = {
     },
   },
   ts: {
-    telegramApps: {
+    openweb3Apps: {
       react: 'reactjs-template',
       solid: 'solidjs-template',
       next: 'nextjs-template',

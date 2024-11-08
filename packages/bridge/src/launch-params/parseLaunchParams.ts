@@ -1,4 +1,4 @@
-import { launchParams, type LaunchParams } from '@telegram-apps/transformers';
+import { launchParams, type LaunchParams } from '@openweb3-apps/transformers';
 
 /**
  * Parses value as launch parameters.

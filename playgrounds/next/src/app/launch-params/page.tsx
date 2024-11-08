@@ -1,7 +1,7 @@
 'use client';
 
-import { useLaunchParams } from '@telegram-apps/sdk-react';
-import { List } from '@telegram-apps/telegram-ui';
+import { useLaunchParams } from '@openweb3-apps/sdk-react';
+import { List } from '@openweb3-apps/openweb3-ui';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData';
 import { Page } from '@/components/Page';

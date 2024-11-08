@@ -1,8 +1,8 @@
-import type { ExecuteWithPostEvent } from '@telegram-apps/bridge';
+import type { ExecuteWithPostEvent } from '@openweb3-apps/bridge';
 
 /**
  * This object describes the native popup.
- * @see https://core.telegram.org/bots/webapps#popupparams
+ * @see https://core.openweb3.io/bots/webapps#popupparams
  */
 export interface OpenOptions extends ExecuteWithPostEvent {
   /**
@@ -23,7 +23,7 @@ export interface OpenOptions extends ExecuteWithPostEvent {
 
 /**
  * This object describes the native popup button.
- * @see https://core.telegram.org/bots/webapps#popupbutton
+ * @see https://core.openweb3.io/bots/webapps#popupbutton
  */
 export type OpenOptionsButton = {
   /**

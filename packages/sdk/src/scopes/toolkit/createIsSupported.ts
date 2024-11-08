@@ -1,6 +1,6 @@
-import { type Computed, computed } from '@telegram-apps/signals';
+import { type Computed, computed } from '@openweb3-apps/signals';
 
-import { type MethodName, supports } from '@telegram-apps/bridge';
+import { type MethodName, supports } from '@openweb3-apps/bridge';
 import { $version } from '@/scopes/globals.js';
 
 /**

@@ -18,8 +18,8 @@ export type ThemeParamsKey =
   | 'textColor';
 
 /**
- * Application [theme parameters](https://docs.telegram-mini-apps.com/platform/theming).
- * Defines palette used by the Telegram application.
+ * Application [theme parameters](https://docs.openweb3-mini-apps.com/platform/theming).
+ * Defines palette used by the Openweb3 application.
  */
 export interface ThemeParams {
   [key: ThemeParamsKey | string]: RGB | undefined;

@@ -1,5 +1,5 @@
 import { vi } from 'vitest';
-import type { PostEventFn } from '@telegram-apps/bridge';
+import type { PostEventFn } from '@openweb3-apps/bridge';
 
 import { $postEvent } from '@/scopes/globals.js';
 

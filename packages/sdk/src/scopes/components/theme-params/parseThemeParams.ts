@@ -1,5 +1,5 @@
-import { themeParams } from '@telegram-apps/transformers';
-import type { ThemeParams } from '@telegram-apps/bridge';
+import { themeParams } from '@openweb3-apps/transformers';
+import type { ThemeParams } from '@openweb3-apps/bridge';
 
 /**
  * Parses incoming value as theme parameters.

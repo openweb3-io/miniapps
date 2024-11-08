@@ -14,9 +14,9 @@ This is a moderately sized yet simple component that offers limited functionalit
 the ability to control the button text, its active state, button and inner loader visibility. It is
 also possible to update text and background colors.
 
-To update any of the Main Button properties, Telegram Mini Apps provides the
+To update any of the Main Button properties, Openweb3 Mini Apps provides the
 [web_app_setup_main_button](methods.md#web-app-setup-main-button) method.
-When user clicks the Main Button, Telegram application emits
+When user clicks the Main Button, Openweb3 application emits
 the [main_button_pressed](events.md#main-button-pressed) event.
 
 ::: tip

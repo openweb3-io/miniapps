@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { retrieveLaunchParams, type LaunchParams } from '@telegram-apps/sdk';
+import { retrieveLaunchParams, type LaunchParams } from '@openweb3-apps/sdk';
 
 /**
  * Retrieves Mini Apps launch parameters.

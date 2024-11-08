@@ -1,4 +1,4 @@
-import { computed, type Computed, signal } from '@telegram-apps/signals';
+import { computed, type Computed, signal } from '@openweb3-apps/signals';
 
 import { buttonColor } from '@/scopes/components/theme-params/signals.js';
 import { bottomBarColorRGB } from '@/scopes/components/mini-app/signals.js';

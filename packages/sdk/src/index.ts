@@ -65,7 +65,7 @@ export {
   subscribe,
   supports,
   unsubscribe,
-  mockTelegramEnv,
+  mockOpenweb3Env,
   deleteCssVar,
   setCssVar,
   isAbortError,
@@ -74,7 +74,7 @@ export {
   addEventListener,
   retrieveLaunchParams,
   TypedError,
-} from '@telegram-apps/bridge';
+} from '@openweb3-apps/bridge';
 export type {
   AsyncOptions,
   AnyHapticFeedbackParams,
@@ -133,7 +133,7 @@ export type {
   RequestResult,
   SubscribeListener,
   TypedErrorOptions,
-} from '@telegram-apps/bridge';
+} from '@openweb3-apps/bridge';
 
 export {
   isRGB,
@@ -147,4 +147,4 @@ export {
   ERR_UNEXPECTED_TYPE,
   serializeLaunchParams,
   serializeThemeParams,
-} from '@telegram-apps/transformers';
+} from '@openweb3-apps/transformers';

@@ -1,4 +1,4 @@
-import type { ThemeParams } from '@telegram-apps/bridge';
+import type { ThemeParams } from '@openweb3-apps/bridge';
 
 export interface GetCssVarNameFn {
   /**
@@ -8,4 +8,4 @@ export interface GetCssVarNameFn {
   (property: Extract<keyof ThemeParams, string>): string;
 }
 
-export type { ThemeParams, ThemeParamsKey } from '@telegram-apps/bridge';
+export type { ThemeParams, ThemeParamsKey } from '@openweb3-apps/bridge';

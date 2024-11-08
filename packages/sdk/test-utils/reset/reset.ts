@@ -1,5 +1,5 @@
-import { resetPackageState as resetBridgeState } from '@telegram-apps/bridge';
-import type { Computed, Signal } from '@telegram-apps/signals';
+import { resetPackageState as resetBridgeState } from '@openweb3-apps/bridge';
+import type { Computed, Signal } from '@openweb3-apps/signals';
 
 import { $createRequestId, $postEvent, $version } from '@/scopes/globals.js';
 import { resetBackButton } from '@test-utils/reset/resetBackButton.js';

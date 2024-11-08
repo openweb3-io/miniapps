@@ -1,5 +1,5 @@
-import { CancelablePromise, type ExecuteWithOptions } from '@telegram-apps/bridge';
-import { array, object, string } from '@telegram-apps/transformers';
+import { CancelablePromise, type ExecuteWithOptions } from '@openweb3-apps/bridge';
+import { array, object, string } from '@openweb3-apps/transformers';
 
 import { invokeCustomMethod } from '@/scopes/globals.js';
 import { createWithIsSupported } from '@/scopes/toolkit/createWithIsSupported.js';

@@ -1,4 +1,4 @@
-import { computed, type Computed, signal } from '@telegram-apps/signals';
+import { computed, type Computed, signal } from '@openweb3-apps/signals';
 
 import { buttonColor, buttonTextColor } from '@/scopes/components/theme-params/signals.js';
 

@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import { RouterLink } from 'vue-router';
-import { openLink } from '@telegram-apps/sdk-vue';
+import { openLink } from '@openweb3-apps/sdk-vue';
 
 const props = defineProps({
   // add @ts-ignore if using TypeScript

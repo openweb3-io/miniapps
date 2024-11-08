@@ -1,4 +1,4 @@
-import { openLink, classNames } from '@telegram-apps/sdk-react';
+import { openLink, classNames } from '@openweb3-apps/sdk-react';
 import { type FC, type MouseEventHandler, type JSX, useCallback } from 'react';
 import { type LinkProps as NextLinkProps, default as NextLink } from 'next/link';
 

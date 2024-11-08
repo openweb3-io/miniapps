@@ -1,4 +1,4 @@
-# @telegram-apps/sdk
+# @openweb3-apps/sdk
 
 ## 2.5.2
 
@@ -19,7 +19,7 @@
 - 34b2595: We realized that many developers might be using the SDK without knowing that some functionality they're using may not work. This is due to the non-strict `postEvent` function in the `init` function:
 
   ```ts
-  import { init } from "@telegram-apps/sdk";
+  import { init } from "@openweb3-apps/sdk";
 
   init({
     postEvent: "non-strict",
@@ -44,7 +44,7 @@
   Since we no longer allow non-strict actions, most component and utility methods now include the `isSupported` property. For example:
 
   ```ts
-  import { backButton } from "@telegram-apps/sdk";
+  import { backButton } from "@openweb3-apps/sdk";
 
   if (backButton.mount.isSupported()) {
     backButton.mount();
@@ -59,7 +59,7 @@
   For example, the following code will throw an error:
 
   ```ts
-  import { backButton } from "@telegram-apps/sdk";
+  import { backButton } from "@openweb3-apps/sdk";
 
   backButton.show();
   // TypedError('ERR_NOT_MOUNTED') will be thrown
@@ -68,8 +68,8 @@
 ### Patch Changes
 
 - Updated dependencies [5346f76]
-  - @telegram-apps/bridge@1.3.0
-  - @telegram-apps/navigation@1.0.4
+  - @openweb3-apps/bridge@1.3.0
+  - @openweb3-apps/navigation@1.0.4
 
 ## 2.4.1
 
@@ -81,7 +81,7 @@
 
 ### Minor Changes
 
-- 96dec34: Make mountable components now send their state to the Telegram application on mount.
+- 96dec34: Make mountable components now send their state to the Openweb3 application on mount.
 
 ## 2.3.1
 
@@ -89,9 +89,9 @@
 
 - 06f6720: Fix some links in README.
 - Updated dependencies [06f6720]
-  - @telegram-apps/navigation@1.0.3
-  - @telegram-apps/signals@1.0.1
-  - @telegram-apps/bridge@1.2.1
+  - @openweb3-apps/navigation@1.0.3
+  - @openweb3-apps/signals@1.0.1
+  - @openweb3-apps/bridge@1.2.1
 
 ## 2.3.0
 
@@ -109,24 +109,24 @@
 ### Patch Changes
 
 - Updated dependencies [7a7829a]
-  - @telegram-apps/bridge@1.2.0
-  - @telegram-apps/navigation@1.0.2
+  - @openweb3-apps/bridge@1.2.0
+  - @openweb3-apps/navigation@1.0.2
 
 ## 2.1.0
 
 ### Minor Changes
 
 - baa1994: - Add the Main Button `hasShineEffect` signal.
-  - Fix the Main Button default values closer to the Telegram SDK's.
+  - Fix the Main Button default values closer to the Openweb3 SDK's.
   - Add Theme Params `bottomBarBgColor` signal.
   - Implement `shareStory` function.
 
 ### Patch Changes
 
 - Updated dependencies [74dfc59]
-  - @telegram-apps/bridge@1.1.0
-  - @telegram-apps/navigation@1.0.1
-  - @telegram-apps/transformers@1.0.1
+  - @openweb3-apps/bridge@1.1.0
+  - @openweb3-apps/navigation@1.0.1
+  - @openweb3-apps/transformers@1.0.1
 
 ## 2.0.0
 

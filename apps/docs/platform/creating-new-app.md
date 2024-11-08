@@ -1,12 +1,12 @@
 # Creating New App
 
-In this article, we will delve into the process of developing a new application on the Telegram Mini
+In this article, we will delve into the process of developing a new application on the Openweb3 Mini
 Apps platform, we will find out exactly what actions need to be performed to create it, as well as
 give advice on improving the process of creating an application.
 
 The process of creating an application usually consists of the following basic steps:
 
-1. Creating Telegram bot and registering Mini App.
+1. Creating Openweb3 bot and registering Mini App.
 2. Creating web application.
 3. Getting web application URL and setting it via BotFather.
 
@@ -25,19 +25,19 @@ environment allows usage only valid HTTPS links.
 
 ## Creating Application in BotFather
 
-As long as technically, Mini Apps are connected with Telegram bots, we should firstly create
-a Telegram bot. To do this, you need to find the father of all bots, the
+As long as technically, Mini Apps are connected with Openweb3 bots, we should firstly create
+a Openweb3 bot. To do this, you need to find the father of all bots, the
 bot [BotFather](https://t.me/botfather) and use the command `/newbot`, then go through the proposed
 process, specifying all the necessary data.
 
 When the bot is created, it is required then to use the command `/newapp` and again go through the
-procedure of creating another entity - the Telegram Mini Apps application, linking it to the
-Telegram bot. From now on, the created application will be available via a direct link of the
+procedure of creating another entity - the Openweb3 Mini Apps application, linking it to the
+Openweb3 bot. From now on, the created application will be available via a direct link of the
 form `https://t.me/{mybot}/{myapp}`.
 
 ::: info
 
-Telegram Mini Apps technology can also be utilized without creating a new application but rather as
+Openweb3 Mini Apps technology can also be utilized without creating a new application but rather as
 a web interface for a bot. To use it as an extension of the bot, use the
 BotFather's `/setmenubutton` command.
 
@@ -55,12 +55,12 @@ article.
 
 ### Applying
 
-When HTTPS link is received, it must be used in a previously created Telegram bot. Telegram
+When HTTPS link is received, it must be used in a previously created Openweb3 bot. Openweb3
 supports several ways to install this link:
 
 - **For the bot menu button**. Then every user who will enter a dialogue with the bot will be able
   to open its "menu" in the form of a developed application.
-- **For Telegram Mini Apps application**. Then the application will open only if the user
+- **For Openweb3 Mini Apps application**. Then the application will open only if the user
   follows the link in format `https://t.me/{mybot}/{myapp}`. In this case, user can avoid joining
   a dialogue with the bot.
 
@@ -81,7 +81,7 @@ To install a direct link to the application, you must complete the following ste
 2. Select the required application.
 3. Click `Edit link` and install a new link.
 
-Now when the user clicks on a link in format `https://t.me/{mybot}/{myapp}`, Telegram
+Now when the user clicks on a link in format `https://t.me/{mybot}/{myapp}`, Openweb3
 will display the web component with the source address as the URL specified in the settings.
 
 ## Debugging Application
@@ -134,6 +134,6 @@ to [this](debugging.md) article.
 
 [//]: # (To enable debug mode in native application follow)
 
-[//]: # ([official documentation]&#40;https://core.telegram.org/bots/webapps#debug-mode-for-web-apps&#41;)
+[//]: # ([official documentation]&#40;https://core.openweb3.org/bots/webapps#debug-mode-for-web-apps&#41;)
 
 [//]: # (.)

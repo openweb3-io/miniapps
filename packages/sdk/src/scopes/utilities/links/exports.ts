@@ -1,1 +1,1 @@
-export { openLink, openTelegramLink, shareURL, type OpenLinkOptions } from './links.js';
+export { openLink, openOpenweb3Link, shareURL, type OpenLinkOptions } from './links.js';

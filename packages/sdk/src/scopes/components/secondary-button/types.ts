@@ -1,4 +1,4 @@
-import type { RGB, SecondaryButtonPosition } from '@telegram-apps/bridge';
+import type { RGB, SecondaryButtonPosition } from '@openweb3-apps/bridge';
 
 export interface State {
   /**

@@ -15,7 +15,7 @@ afterEach(() => {
   resetPackageState();
 });
 
-it('should call listener in case, Telegram event was created', () => {
+it('should call listener in case, Openweb3 event was created', () => {
   const listener = vi.fn();
   subscribe(listener);
 

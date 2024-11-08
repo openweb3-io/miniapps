@@ -1,5 +1,5 @@
-import { camelToSnake, snakeToCamel } from '@telegram-apps/toolkit';
-import type { ThemeParams } from '@telegram-apps/types';
+import { camelToSnake, snakeToCamel } from '@openweb3-apps/toolkit';
+import type { ThemeParams } from '@openweb3-apps/types';
 
 import { toRecord } from '@/toRecord.js';
 import { rgb } from '@/transformers/rgb.js';
@@ -21,7 +21,7 @@ export const themeParams: TransformerGen<ThemeParams> = createTransformerGen(
 );
 
 /**
- * Serializes theme parameters to representation sent from the Telegram application.
+ * Serializes theme parameters to representation sent from the Openweb3 application.
  */
 // #__NO_SIDE_EFFECTS__
 export function serializeThemeParams(themeParams: ThemeParams): string {

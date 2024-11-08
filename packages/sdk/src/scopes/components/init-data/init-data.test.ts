@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import type { InitData } from '@telegram-apps/bridge';
+import type { InitData } from '@openweb3-apps/bridge';
 
 import { resetPackageState } from '@test-utils/reset/reset.js';
 
 import { raw, state, restore } from './init-data.js';
 
-vi.mock('@telegram-apps/bridge', async () => {
-  const m = await vi.importActual('@telegram-apps/bridge');
+vi.mock('@openweb3-apps/bridge', async () => {
+  const m = await vi.importActual('@openweb3-apps/bridge');
 
   return {
     ...m,

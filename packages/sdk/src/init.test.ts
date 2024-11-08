@@ -42,16 +42,16 @@ it('should call configure with options passed to init', () => {
   expect($version()).toEqual('999');
 });
 
-it('should define Telegram event handlers', () => {
+it('should define Openweb3 event handlers', () => {
   init({
     postEvent() {
     },
     version: '999',
   });
   const wnd = window as any;
-  expect(wnd.TelegramGameProxy_receiveEvent).toBeDefined();
-  expect(wnd.TelegramGameProxy.receiveEvent).toBeDefined();
-  expect(wnd.Telegram.WebView.receiveEvent).toBeDefined();
+  expect(wnd.Openweb3GameProxy_receiveEvent).toBeDefined();
+  expect(wnd.Openweb3GameProxy.receiveEvent).toBeDefined();
+  expect(wnd.Openweb3.WebView.receiveEvent).toBeDefined();
 });
 
 it('should listen to "reload_iframe" event, call "iframe_will_reload" method and window.location.reload on receive', () => {
@@ -74,7 +74,7 @@ it('should listen to "reload_iframe" event, call "iframe_will_reload" method and
   expect(reloadSpy).toHaveBeenCalledOnce();
 });
 
-it('should append to document.head <style/> element with id "telegram-custom-styles", containing styles from received "set_custom_style" event', () => {
+it('should append to document.head <style/> element with id "openweb3-custom-styles", containing styles from received "set_custom_style" event', () => {
   let style: any;
   const createElement = vi.fn(() => ({}));
   const appendChild = vi.fn((c) => style = c);
@@ -91,7 +91,7 @@ it('should append to document.head <style/> element with id "telegram-custom-sty
   expect(createElement).toHaveBeenCalledOnce();
   expect(createElement).toHaveBeenCalledWith('style');
   expect(appendChild).toHaveBeenCalledOnce();
-  expect(appendChild).toHaveBeenCalledWith({ id: 'telegram-custom-styles' });
+  expect(appendChild).toHaveBeenCalledWith({ id: 'openweb3-custom-styles' });
 
   dispatchMiniAppsEvent('set_custom_style', '.root{}');
   expect(style.innerHTML).toBe('.root{}');
@@ -120,7 +120,7 @@ it('should remove "reload_iframe" and "set_custom_style" event listeners, remove
   expect(createElement).toHaveBeenCalledOnce();
   expect(createElement).toHaveBeenCalledWith('style');
   expect(appendChild).toHaveBeenCalledOnce();
-  expect(appendChild).toHaveBeenCalledWith({ id: 'telegram-custom-styles' });
+  expect(appendChild).toHaveBeenCalledWith({ id: 'openweb3-custom-styles' });
 
   // Check if postEvent function was called only with "iframe_ready".
   expect(postEvent).toHaveBeenCalledOnce();
@@ -137,5 +137,5 @@ it('should remove "reload_iframe" and "set_custom_style" event listeners, remove
 
   expect(postEvent).toHaveBeenCalledOnce();
   expect(reloadSpy).not.toHaveBeenCalled();
-  expect(style).toStrictEqual({ id: 'telegram-custom-styles' });
+  expect(style).toStrictEqual({ id: 'openweb3-custom-styles' });
 });

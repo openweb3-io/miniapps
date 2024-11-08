@@ -5,13 +5,13 @@ import {
   type PhoneRequestedStatus,
   type WriteAccessRequestedStatus,
   type ExecuteWithOptions,
-} from '@telegram-apps/bridge';
-import { searchParams, object, number, string, date } from '@telegram-apps/transformers';
+} from '@openweb3-apps/bridge';
+import { searchParams, object, number, string, date } from '@openweb3-apps/transformers';
 
 import { invokeCustomMethod, request } from '@/scopes/globals.js';
 import { withIsSupported } from '@/scopes/toolkit/withIsSupported.js';
 import { ERR_ACCESS_DENIED, ERR_ALREADY_CALLED } from '@/errors.js';
-import { signal } from '@telegram-apps/signals';
+import { signal } from '@openweb3-apps/signals';
 
 /**
  * Requested contact information.

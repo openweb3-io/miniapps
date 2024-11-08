@@ -1,5 +1,5 @@
-import type { If, IsNever } from '@telegram-apps/toolkit';
-import type { RGB } from '@telegram-apps/types';
+import type { If, IsNever } from '@openweb3-apps/toolkit';
+import type { RGB } from '@openweb3-apps/types';
 
 import type { CreateParams } from './utils.js';
 import type { AnyHapticFeedbackParams } from './haptic-feedback.js';
@@ -49,13 +49,13 @@ interface ButtonParams {
 
 /**
  * Describes a list of events and their parameters that could be posted.
- * @see https://docs.telegram-mini-apps.com/platform/methods
+ * @see https://docs.openweb3-mini-apps.com/platform/methods
  */
 export interface Methods {
   /**
    * Notifies parent iframe about the current frame is ready. This method is only used in the Web
-   * version of Telegram. As a result, Mini App will receive `set_custom_style` event.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#iframe-ready
+   * version of Openweb3. As a result, Mini App will receive `set_custom_style` event.
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#iframe-ready
    */
   iframe_ready: CreateParams<{
     /**
@@ -65,7 +65,7 @@ export interface Methods {
   } | undefined>;
   /**
    * Notifies parent iframe about the current iframe is going to reload.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#iframe-will-reload
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#iframe-will-reload
    */
   iframe_will_reload: CreateParams;
   /**
@@ -75,7 +75,7 @@ export interface Methods {
    * This request should just initialize the client-side state, i.e. by checking if biometric
    * authentication is even available or not, it should not ask the user anything.
    * @since v7.2
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-biometry-get-info
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-biometry-get-info
    */
   web_app_biometry_get_info: CreateParams;
   /**
@@ -85,7 +85,7 @@ export interface Methods {
    * _Note that this method can be called only in response to user interaction with the Mini
    * App interface (e.g. a click inside the Mini App or on the main button)_.
    * @since v7.2
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-biometry-open-settings
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-biometry-open-settings
    */
   web_app_biometry_open_settings: CreateParams;
   /**
@@ -97,7 +97,7 @@ export interface Methods {
    * allowed or denied the usage of biometric authentication for the bot associated with the
    * mini app.
    * @since v7.2
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-biometry-request-access
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-biometry-request-access
    */
   web_app_biometry_request_access: CreateParams<{
     /**
@@ -117,7 +117,7 @@ export interface Methods {
    * If a user has previously disallowed the bot from using biometric authentication, this
    * request will immediately fail, emitting an appropriate `biometry_auth_requested` event.
    * @since v7.2
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-biometry-request-auth
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-biometry-request-auth
    */
   web_app_biometry_request_auth: CreateParams<{
     /**
@@ -130,13 +130,13 @@ export interface Methods {
    * Attempts to authenticate using biometrics and store the biometric token
    * securely on a device, emitting a `biometry_token_updated` event on completion.
    *
-   * This token will be safely stored by the Telegram client and will be associated with the bot
+   * This token will be safely stored by the Openweb3 client and will be associated with the bot
    * that owns the mini app.
    *
    * If the user has previously disallowed the bot from using biometric authentication, this
    * request will immediately fail, emitting an appropriate biometry_token_updated event.
    * @since v7.2
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-biometry-update-token
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-biometry-update-token
    */
   web_app_biometry_update_token: CreateParams<{
     /**
@@ -150,7 +150,7 @@ export interface Methods {
   }>;
   /**
    * Closes Mini App.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-close
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-close
    */
   web_app_close: CreateParams<{
     /**
@@ -160,9 +160,9 @@ export interface Methods {
     return_back?: boolean;
   } | undefined, 'return_back'>;
   /**
-   * Closes a QR scanner. The Telegram application creates `scan_qr_popup_closed` event.
+   * Closes a QR scanner. The Openweb3 application creates `scan_qr_popup_closed` event.
    * @since v6.4
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-close-scan-qr-popup
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-close-scan-qr-popup
    */
   web_app_close_scan_qr_popup: CreateParams;
   /**
@@ -170,9 +170,9 @@ export interface Methods {
    * containing the data of the length up to 4096 bytes. Then, Mini App will be closed.
    *
    * To get more information, take a look at `web_app_data` field in the
-   * class [Message](https://core.telegram.org/bots/api#message).
+   * class [Message](https://core.openweb3.io/bots/api#message).
    *
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-data-send
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-data-send
    */
   web_app_data_send: CreateParams<{
     /**
@@ -182,20 +182,20 @@ export interface Methods {
   }>;
   /**
    * Expands the Mini App.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-expand
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-expand
    */
   web_app_expand: CreateParams;
   /**
    * Invokes custom method.
    * @since v6.9
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-invoke-custom-method
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-invoke-custom-method
    */
   web_app_invoke_custom_method: CreateParams<AnyInvokeCustomMethodParams>;
   /**
    * Opens an invoice by its specified slug. More information about invoices in
-   * this [documentation](https://core.telegram.org/bots/payments).
+   * this [documentation](https://core.openweb3.io/bots/payments).
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-open-invoice
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-open-invoice
    */
   web_app_open_invoice: CreateParams<{
     /**
@@ -205,17 +205,17 @@ export interface Methods {
   }>;
   /**
    * Opens a link in a default browser. The Mini App will not be closed.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-open-link
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-open-link
    */
   web_app_open_link: CreateParams<{
     /**
-     * URL to be opened by Telegram application. Should be a full path with `https` protocol.
+     * URL to be opened by Openweb3 application. Should be a full path with `https` protocol.
      */
     url: string;
     /**
      * Link will be opened in Instant View mode if possible.
      * @since v6.4
-     * @see https://instantview.telegram.org/
+     * @see https://instantview.openweb3.io/
      */
     try_instant_view?: boolean;
     /**
@@ -225,17 +225,17 @@ export interface Methods {
     try_browser?: OpenLinkBrowser;
   }, 'try_instant_view' | 'try_browser'>;
   /**
-   * Opens a new popup. When a user closes the popup, Telegram creates the `popup_closed` event.
+   * Opens a new popup. When a user closes the popup, Openweb3 creates the `popup_closed` event.
    * @since v6.2
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-open-popup
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-open-popup
    */
   web_app_open_popup: CreateParams<PopupParams>;
   /**
-   * Opens a QR scanner. When the scanner was closed, the Telegram application creates
-   * the `scan_qr_popup_closed` event. When the scanner reads QR, Telegram creates the
+   * Opens a QR scanner. When the scanner was closed, the Openweb3 application creates
+   * the `scan_qr_popup_closed` event. When the scanner reads QR, Openweb3 creates the
    * `qr_text_received` event.
    * @since v6.4
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-open-scan-qr-popup
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-open-scan-qr-popup
    */
   web_app_open_scan_qr_popup: CreateParams<{
     /**
@@ -244,10 +244,10 @@ export interface Methods {
     text?: string;
   }>;
   /**
-   * Opens the Telegram link by its pathname and query parameters. The link will be opened in the
-   * Telegram app, Mini App will be closed.
+   * Opens the Openweb3 link by its pathname and query parameters. The link will be opened in the
+   * Openweb3 app, Mini App will be closed.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-open-tg-link
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-open-tg-link
    */
   web_app_open_tg_link: CreateParams<{
     /**
@@ -260,7 +260,7 @@ export interface Methods {
    * Reads text from the clipboard. The method accepts a request identifier which is used to
    * appropriately retrieve the method execution result from the `clipboard_text_received` event.
    * @since v6.4
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-read-text-from-clipboard
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-read-text-from-clipboard
    */
   web_app_read_text_from_clipboard: CreateParams<{
     /**
@@ -270,38 +270,38 @@ export interface Methods {
     req_id: string;
   }>;
   /**
-   * Notifies Telegram about current application is ready to be shown. This method will make
-   * Telegram to remove application loader and display Mini App.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-ready
+   * Notifies Openweb3 about current application is ready to be shown. This method will make
+   * Openweb3 to remove application loader and display Mini App.
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-ready
    */
   web_app_ready: CreateParams;
   /**
    * Requests access to current user's phone.
    * @since v6.9
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-request-phone
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-request-phone
    */
   web_app_request_phone: CreateParams;
   /**
-   * Requests current theme from Telegram. As a result, Telegram will create `theme_changed` event.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-request-theme
+   * Requests current theme from Openweb3. As a result, Openweb3 will create `theme_changed` event.
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-request-theme
    */
   web_app_request_theme: CreateParams;
   /**
-   * Requests current viewport information from Telegram. As a result, Telegram will create
+   * Requests current viewport information from Openweb3. As a result, Openweb3 will create
    * `viewport_changed` event.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-request-viewport
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-request-viewport
    */
   web_app_request_viewport: CreateParams;
   /**
    * Requests write message access to the current user.
    * @since v6.9
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-rqeuest-write-access
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-rqeuest-write-access
    */
   web_app_request_write_access: CreateParams;
   /**
    * Updates the Mini App background color.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-set-background-color
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-set-background-color
    */
   web_app_set_background_color: CreateParams<{
     /**
@@ -312,7 +312,7 @@ export interface Methods {
   /**
    * Updates the mini app bottom bar background color.
    * @since v7.10
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-set-bottom-bar-color
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-set-bottom-bar-color
    */
   web_app_set_bottom_bar_color: CreateParams<{
     /**
@@ -323,7 +323,7 @@ export interface Methods {
   /**
    * Updates the Mini App header color.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-set-header-color
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-set-header-color
    */
   web_app_set_header_color: CreateParams<
     | {
@@ -342,7 +342,7 @@ export interface Methods {
   /**
    * Updates the Back Button settings.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-setup-back-button
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-setup-back-button
    */
   web_app_setup_back_button: CreateParams<{
     /**
@@ -352,7 +352,7 @@ export interface Methods {
   }>;
   /**
    * Updates current closing behavior.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-setup-closing-behavior
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-setup-closing-behavior
    */
   web_app_setup_closing_behavior: CreateParams<{
     /**
@@ -362,12 +362,12 @@ export interface Methods {
   }>;
   /**
    * Updates the Main Button settings.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-setup-main-button
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-setup-main-button
    */
   web_app_setup_main_button: CreateParams<ButtonParams, 'has_shine_effect'>;
   /**
    * Updates the secondary button settings.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-setup-secondary-button
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-setup-secondary-button
    */
   web_app_setup_secondary_button: CreateParams<ButtonParams & {
     /**
@@ -385,7 +385,7 @@ export interface Methods {
   /**
    * Updates the current state of the Settings Button.
    * @since v6.10
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-setup-settings-button
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-setup-settings-button
    */
   web_app_setup_settings_button: CreateParams<{
     /**
@@ -395,7 +395,7 @@ export interface Methods {
   }>;
   /**
    * Changes swipe behavior.
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-setup-swipe-behavior
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-setup-swipe-behavior
    * @since v7.7
    */
   web_app_setup_swipe_behavior: CreateParams<{
@@ -413,13 +413,13 @@ export interface Methods {
     /**
      * The caption to be added to the media.
      * 0-200 characters for regular users and 0-2048 characters for premium subscribers.
-     * @see https://telegram.org/faq_premium#telegram-premium
+     * @see https://openweb3.io/faq_premium#openweb3-premium
      */
     text?: string;
     /**
      * An object that describes a widget link to be included in the story.
      * Note that only premium subscribers can post stories with links.
-     * @see https://telegram.org/faq_premium#telegram-premium
+     * @see https://openweb3.io/faq_premium#openweb3-premium
      */
     widget_link?: {
       /**
@@ -438,7 +438,7 @@ export interface Methods {
    * the user to choose a specific chat, then opens that chat and inserts the bot's username and
    * the specified inline query in the input field.
    * @since v6.7
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-switch-inline-query
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-switch-inline-query
    */
   web_app_switch_inline_query: CreateParams<{
     /**
@@ -454,7 +454,7 @@ export interface Methods {
   /**
    * Generates haptic feedback event.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/methods#web-app-trigger-haptic-feedback
+   * @see https://docs.openweb3-mini-apps.com/platform/methods#web-app-trigger-haptic-feedback
    */
   web_app_trigger_haptic_feedback: CreateParams<AnyHapticFeedbackParams>;
 }
@@ -501,7 +501,7 @@ export type MethodNameWithVersionedParams = {
 }[MethodName];
 
 /**
- * Method parameters which appear only in the specific Telegram Mini Apps version.
+ * Method parameters which appear only in the specific Openweb3 Mini Apps version.
  */
 export type MethodVersionedParams<M extends MethodNameWithVersionedParams> =
   Methods[M]['versionedParams'];

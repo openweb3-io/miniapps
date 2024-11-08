@@ -1,4 +1,4 @@
-# @telegram-apps/types
+# @openweb3-apps/types
 
 ## 1.0.1
 

@@ -1,5 +1,5 @@
 /**
- * Telegram application platform name.
+ * Openweb3 application platform name.
  */
 export type Platform =
   | 'android'
@@ -14,7 +14,7 @@ export type Platform =
   | string;
 
 /**
- * Telegram Mini Apps version in format like "\d+.\d+".
+ * Openweb3 Mini Apps version in format like "\d+.\d+".
  * @example "7.0"
  */
 export type Version = string;

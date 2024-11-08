@@ -1,4 +1,4 @@
-import { signal } from '@telegram-apps/signals';
+import { signal } from '@openweb3-apps/signals';
 
 import type { State } from './types.js';
 

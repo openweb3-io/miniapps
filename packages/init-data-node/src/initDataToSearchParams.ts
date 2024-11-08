@@ -1,4 +1,4 @@
-import type { InitData, User } from '@telegram-apps/types';
+import type { InitData, User } from '@openweb3-apps/types';
 
 /**
  * Removes undefined properties from the object.

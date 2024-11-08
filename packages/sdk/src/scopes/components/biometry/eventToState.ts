@@ -1,4 +1,4 @@
-import type { EventPayload } from '@telegram-apps/bridge';
+import type { EventPayload } from '@openweb3-apps/bridge';
 
 import type { State } from './types.js';
 

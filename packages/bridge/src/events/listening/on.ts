@@ -1,4 +1,4 @@
-import type { RemoveListenerFn } from '@telegram-apps/signals';
+import type { RemoveListenerFn } from '@openweb3-apps/signals';
 
 import { signalFor } from '@/events/listening/signalFor.js';
 import type { EventName } from '@/events/types/events.js';

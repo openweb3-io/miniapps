@@ -9,7 +9,7 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: true,
-    rollupOptions: { external: ['@solidjs/router', '@telegram-apps/sdk-solid'] },
+    rollupOptions: { external: ['@solidjs/router', '@openweb3-apps/sdk-solid'] },
     lib: {
       entry: 'src/index.ts',
       formats: ['es', 'cjs'],

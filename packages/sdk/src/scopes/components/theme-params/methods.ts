@@ -11,8 +11,8 @@ import {
   type EventListener,
   type RGB,
   type ThemeParams,
-} from '@telegram-apps/bridge';
-import { isPageReload } from '@telegram-apps/navigation';
+} from '@openweb3-apps/bridge';
+import { isPageReload } from '@openweb3-apps/navigation';
 
 import { ERR_ALREADY_CALLED } from '@/errors.js';
 import { withIsMounted } from '@/scopes/toolkit/withIsMounted.js';

@@ -1,19 +1,19 @@
 {
-  "name": "@telegram-apps/mate",
+  "name": "@openweb3-apps/mate",
   "version": "0.0.23",
-  "description": "Your personal mate in Telegram Mini Apps development.",
-  "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",
-  "homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
+  "description": "Your personal mate in Openweb3 Mini Apps development.",
+  "author": "Vladislav Kibenko <dev@openweb3.io>",
+  "homepage": "https://github.com/openweb3-io/miniapps#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Telegram-Mini-Apps/telegram-apps.git",
+    "url": "git@github.com:openweb3-io/miniapps.git",
     "directory": "packages/mate"
   },
   "bugs": {
-    "url": "https://github.com/Telegram-Mini-Apps/telegram-apps/issues"
+    "url": "https://github.com/openweb3-io/miniapps/issues"
   },
   "keywords": [
-    "telegram-mini-apps",
+    "openweb3-mini-apps",
     "cli"
   ],
   "license": "MIT",

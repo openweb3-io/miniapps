@@ -1,11 +1,11 @@
-import { CancelablePromise, type AsyncOptions } from '@telegram-apps/toolkit';
+import { CancelablePromise, type AsyncOptions } from '@openweb3-apps/toolkit';
 
 import { request } from '@/utils/request.js';
 import { hasWebviewProxy } from '@/env/hasWebviewProxy.js';
 import { retrieveLaunchParams } from '@/launch-params/retrieveLaunchParams.js';
 
 /**
- * Returns true if the current environment is Telegram Mini Apps.
+ * Returns true if the current environment is Openweb3 Mini Apps.
  *
  * It uses the `retrieveLaunchParams` function to determine if the environment contains
  * launch parameters. In case it does, true will be returned.
@@ -15,7 +15,7 @@ import { retrieveLaunchParams } from '@/launch-params/retrieveLaunchParams.js';
 export function isTMA(type: 'simple'): boolean;
 
 /**
- * Returns promise with true if the current environment is Telegram Mini Apps.
+ * Returns promise with true if the current environment is Openweb3 Mini Apps.
  *
  * First of all, it checks if the current environment contains traits specific to the
  * Mini Apps environment.

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h } from 'vue';
-import { useLaunchParams } from '@telegram-apps/sdk-vue';
+import { useLaunchParams } from '@openweb3-apps/sdk-vue';
 import UiLink from '@/components/UiLink.vue';
 import UiPage from '@/components/UiPage.vue';
 import UiDisplayData, { type DisplayDataRow } from '@/components/UiDisplayData.vue';
@@ -21,7 +21,7 @@ const rows: DisplayDataRow[] = [
 <template>
   <UiPage title="Launch Params">
     <template #disclaimer>
-      This page displays application <UiLink to="https://docs.telegram-mini-apps.com/platform/launch-parameters">
+      This page displays application <UiLink to="https://docs.openweb3-mini-apps.com/platform/launch-parameters">
         launch params</UiLink>.
     </template>
     <UiDisplayData :rows />

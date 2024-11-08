@@ -1,6 +1,6 @@
-import { isRecord } from '@telegram-apps/transformers';
-import { TypedError } from '@telegram-apps/toolkit';
-import type { Version } from '@telegram-apps/types';
+import { isRecord } from '@openweb3-apps/transformers';
+import { TypedError } from '@openweb3-apps/toolkit';
+import type { Version } from '@openweb3-apps/types';
 
 import { ERR_METHOD_PARAMETER_UNSUPPORTED, ERR_METHOD_UNSUPPORTED } from '@/errors.js';
 import { supports } from '@/methods/supports.js';
@@ -36,7 +36,7 @@ export type CreatePostEventMode = 'strict' | 'non-strict';
  * with `ERR_METHOD_UNSUPPORTED` or `ERR_METHOD_PARAMETER_UNSUPPORTED` type.
  * - Passing `non-strict` will just warn you about something being unsupported.
  *
- * @param version - Telegram Mini Apps version.
+ * @param version - Openweb3 Mini Apps version.
  * @param onUnsupportedOrMode - function or strict mode. Default: `strict`
  */
 export function createPostEvent(

@@ -4,7 +4,7 @@ outline: [ 2, 3 ]
 
 # Events
 
-Events are signals, sent from Telegram native application in case, when some external action was
+Events are signals, sent from Openweb3 native application in case, when some external action was
 done. Like methods, each event has its unique name and parameters.
 
 ## Web
@@ -28,7 +28,7 @@ interface MessageJSON {
 }
 ```
 
-Then, lets imagine how we could process an event from Telegram application:
+Then, lets imagine how we could process an event from Openweb3 application:
 
 ```typescript
 window.addEventListener('message', ({ data }) => {
@@ -47,24 +47,24 @@ type `string`. Don't forget to check each type and appropriately process incomin
 
 ## Desktop, Mobile and Windows Phone
 
-Desktop, mobile, and Windows Phone versions of Telegram don’t use the method, described in the
+Desktop, mobile, and Windows Phone versions of Openweb3 don’t use the method, described in the
 previous section. They do it in a bit unusual way. The first thing developer should know, is in
-case, when Telegram needs to emit an event, it will insert JavaScript code, which calls a globally
+case, when Openweb3 needs to emit an event, it will insert JavaScript code, which calls a globally
 defined function.
 
 Here is an example:
 
 ```typescript
-window.Telegram.WebView.receiveEvent('popup_closed', {
+window.Openweb3.WebView.receiveEvent('popup_closed', {
   button_id: 'cancel'
 });
 ```
 
 Path to this function depends on platform:
 
-- `window.TelegramGameProxy.receiveEvent` - Telegram Desktop;
-- `window.Telegram.WebView.receiveEvent` - Telegram for iOS and Android;
-- `window.TelegramGameProxy_receiveEvent` - Windows Phone
+- `window.Openweb3GameProxy.receiveEvent` - Openweb3 Desktop;
+- `window.Openweb3.WebView.receiveEvent` - Openweb3 for iOS and Android;
+- `window.Openweb3GameProxy_receiveEvent` - Windows Phone
 
 All of these functions have the same signature:
 
@@ -78,13 +78,13 @@ type and assign it to all 3 paths.
 ## Listening to Events
 
 Handling all possible environments for a developer's application can be challenging. To simplify
-this process, the community developed the [@telegram-apps/sdk](../packages/telegram-apps-sdk/2-x)
+this process, the community developed the [@openweb3-apps/sdk](../packages/openweb3-apps-sdk/2-x)
 package, which greatly eases integration.
 
 Here's how to use it:
 
 ```ts
-import { on } from '@telegram-apps/sdk';
+import { on } from '@openweb3-apps/sdk';
 
 // Start listening to "viewport_changed" event. Returned value
 // is a function, which removes this event listener.
@@ -97,11 +97,11 @@ removeListener();
 ```
 
 You can learn more about calling methods in the
-package's [documentation](../packages/telegram-apps-bridge/events.md#listening-to-events).
+package's [documentation](../packages/openweb3-apps-bridge/events.md#listening-to-events).
 
 ## Available Events
 
-This section contains the list of events, sent from Telegram: their names, description, and
+This section contains the list of events, sent from Openweb3: their names, description, and
 parameters. Section title means minimal version, from which events inside the section could be sent.
 
 ### `back_button_pressed`
@@ -153,7 +153,7 @@ Biometry token was updated.
 
 Available since: **v6.4**
 
-Telegram application attempted to extract text from clipboard.
+Openweb3 application attempted to extract text from clipboard.
 
 | Field  | Type               | Description                                                                                                                                              |
 |--------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -279,7 +279,7 @@ A user clicked the Secondary Button.
 
 ### `set_custom_style`
 
-The event which is usually sent by the Telegram web application. Its payload represents `<style/>`
+The event which is usually sent by the Openweb3 web application. Its payload represents `<style/>`
 tag html content, a developer could use. The stylesheet described in the payload will help the
 developer to stylize the app scrollbar (but he is still able to do it himself).
 
@@ -291,7 +291,7 @@ Occurs when the [Settings Button](settings-button.md) was pressed.
 
 ### `theme_changed`
 
-Occurs whenever [the theme](theming.md) was changed in the user's Telegram app (
+Occurs whenever [the theme](theming.md) was changed in the user's Openweb3 app (
 including switching to night mode).
 
 | Field        | Type                     | Description                                                                                            |

@@ -1,4 +1,4 @@
-import { isRecord } from '@telegram-apps/transformers';
+import { isRecord } from '@openweb3-apps/transformers';
 
 import { classNames } from './classNames.js';
 

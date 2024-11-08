@@ -14,8 +14,8 @@ export const sections: Section[] = [
     title: 'SDK',
     name: 'sdk',
     choices: [
-      { title: '@telegram-apps', value: 'telegramApps', defaultChecked: true },
-      { title: 'Telegram SDK', value: 'tsdk' },
+      { title: '@openweb3-apps', value: 'openweb3Apps', defaultChecked: true },
+      { title: 'Openweb3 SDK', value: 'tsdk' },
     ],
   },
   {

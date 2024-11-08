@@ -1,6 +1,6 @@
-export type { Chat, ChatType, InitData, User } from '@telegram-apps/types';
-export { TypedError, isErrorOfType } from '@telegram-apps/toolkit';
-export { ERR_PARSE, ERR_UNEXPECTED_VALUE } from '@telegram-apps/transformers';
+export type { Chat, ChatType, InitData, User } from '@openweb3-apps/types';
+export { TypedError, isErrorOfType } from '@openweb3-apps/toolkit';
+export { ERR_PARSE, ERR_UNEXPECTED_VALUE } from '@openweb3-apps/transformers';
 
 export { initDataToSearchParams } from '../initDataToSearchParams.js';
 export { parse } from '../parse.js';

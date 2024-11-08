@@ -1,7 +1,7 @@
 # Authorizing User
 
 This article provides code examples in different programming languages on how a developer could authorize a user using
-Telegram [init data](init-data.md).
+Openweb3 [init data](init-data.md).
 
 ## Client
 
@@ -9,7 +9,7 @@ First of all, it is required to begin with the transmitting init data from the c
 using this code:
 
 ```typescript
-import { retrieveLaunchParams } from '@telegram-apps/sdk';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk';
 
 const { initDataRaw } = retrieveLaunchParams();
 
@@ -25,7 +25,7 @@ We are sending a request to an imaginary server using the `https://example.com/a
 method (you can use whatever you want) and appends the `Authorization` header, which is the most important here. It
 represents a string containing 2 parts divided by a space. The first one describes the authorization method (in this
 case, our server is going to support several others), and the second one contains authorization data. In the case of
-Telegram Mini Apps, the second part is raw init data.
+Openweb3 Mini Apps, the second part is raw init data.
 
 ## Server
 
@@ -37,7 +37,7 @@ authorizes the user.
 The Node.js example uses [express](https://www.npmjs.com/package/express) to process HTTP requests.
 
 ```typescript
-import { validate, parse, type InitDataParsed } from '@telegram-apps/init-data-node';
+import { validate, parse, type InitDataParsed } from '@openweb3-apps/init-data-node';
 import express, {
   type ErrorRequestHandler,
   type RequestHandler,
@@ -72,7 +72,7 @@ function getInitData(res: Response): InitDataParsed | undefined {
 const authMiddleware: RequestHandler = (req, res, next) => {
   // We expect passing init data in the Authorization header in the following format:
   // <auth-type> <auth-data>
-  // <auth-type> must be "tma", and <auth-data> is Telegram Mini Apps init data.
+  // <auth-type> must be "tma", and <auth-data> is Openweb3 Mini Apps init data.
   const [authType, authData = ''] = (req.header('authorization') || '').split(' ');
 
   switch (authType) {
@@ -151,7 +151,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	initdata "github.com/telegram-mini-apps/init-data-golang"
+	initdata "github.com/openweb3-io/init-data-golang"
 )
 
 type contextKey string
@@ -176,7 +176,7 @@ func authMiddleware(token string) gin.HandlerFunc {
 	return func(context *gin.Context) {
 		// We expect passing init data in the Authorization header in the following format:
 		// <auth-type> <auth-data>
-		// <auth-type> must be "tma", and <auth-data> is Telegram Mini Apps init data.
+		// <auth-type> must be "tma", and <auth-data> is Openweb3 Mini Apps init data.
 		authParts := strings.Split(context.GetHeader("authorization"), " ")
 		if len(authParts) != 2 {
 			context.AbortWithStatusJSON(401, map[string]any{

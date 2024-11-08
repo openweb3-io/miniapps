@@ -6,7 +6,7 @@ import {
   type ExecuteWithOptions,
   type SwitchInlineQueryChatType,
   type ExecuteWithPostEvent, supports,
-} from '@telegram-apps/bridge';
+} from '@openweb3-apps/bridge';
 
 import { postEvent, createRequestId, request, $version } from '@/scopes/globals.js';
 import { withIsSupported } from '@/scopes/toolkit/withIsSupported.js';
@@ -20,13 +20,13 @@ export interface ShareStoryOptions extends ExecuteWithPostEvent {
   /**
    * The caption to be added to the media.
    * 0-200 characters for regular users and 0-2048 characters for premium subscribers.
-   * @see https://telegram.org/faq_premium#telegram-premium
+   * @see https://openweb3.io/faq_premium#openweb3-premium
    */
   text?: string;
   /**
    * An object that describes a widget link to be included in the story.
    * Note that only premium subscribers can post stories with links.
-   * @see https://telegram.org/faq_premium#telegram-premium
+   * @see https://openweb3.io/faq_premium#openweb3-premium
    */
   widgetLink?: {
     /**
@@ -65,7 +65,7 @@ export const readTextFromClipboard = withIsSupported(
  * When this method called, a service message sent to the bot containing the data of the length
  * up to 4096 bytes, and the Mini App closed.
  *
- * See the field `web_app_data` in the class [Message](https://core.telegram.org/bots/api#message).
+ * See the field `web_app_data` in the class [Message](https://core.openweb3.io/bots/api#message).
  *
  * This method is only available for Mini Apps launched via a Keyboard button.
  * @param data - data to send to bot.

@@ -1,4 +1,4 @@
-import type { ExecuteWithOptions, CancelablePromise } from '@telegram-apps/bridge';
+import type { ExecuteWithOptions, CancelablePromise } from '@openweb3-apps/bridge';
 
 import { request as _request } from '@/scopes/globals.js';
 
@@ -10,7 +10,7 @@ export interface RequestResult {
 }
 
 /**
- * Requests viewport actual information from the Telegram application.
+ * Requests viewport actual information from the Openweb3 application.
  * @param options - request options.
  */
 export function request(options?: ExecuteWithOptions): CancelablePromise<RequestResult> {

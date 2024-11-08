@@ -1,5 +1,5 @@
-import { computed, type Computed, signal } from '@telegram-apps/signals';
-import { type InitData, retrieveLaunchParams } from '@telegram-apps/bridge';
+import { computed, type Computed, signal } from '@openweb3-apps/signals';
+import { type InitData, retrieveLaunchParams } from '@openweb3-apps/bridge';
 
 /* USUAL */
 
@@ -29,7 +29,7 @@ export const canSendAfter = fromState('canSendAfter');
 
 /**
  * Date after which it is allowed to call
- * the [answerWebAppQuery](https://core.telegram.org/bots/api#answerwebappquery) method.
+ * the [answerWebAppQuery](https://core.openweb3.io/bots/api#answerwebappquery) method.
  */
 export const canSendAfterDate = computed(() => {
   const authDateValue = authDate();

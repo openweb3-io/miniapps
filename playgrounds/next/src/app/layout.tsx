@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 import { Root } from '@/components/Root/Root';
 
-import '@telegram-apps/telegram-ui/dist/styles.css';
+import '@openweb3-apps/openweb3-ui/dist/styles.css';
 import 'normalize.css/normalize.css';
 import './_assets/globals.css';
 

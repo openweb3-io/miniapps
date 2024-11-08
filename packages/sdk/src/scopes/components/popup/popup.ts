@@ -1,5 +1,5 @@
-import { TypedError } from '@telegram-apps/bridge';
-import { signal } from '@telegram-apps/signals';
+import { TypedError } from '@openweb3-apps/bridge';
+import { signal } from '@openweb3-apps/signals';
 
 import { request } from '@/scopes/globals.js';
 import { ERR_ALREADY_CALLED } from '@/errors.js';

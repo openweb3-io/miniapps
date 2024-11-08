@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, MockInstance, vi } from 'vitest';
 import { createWindow } from 'test-utils';
-import { emitMiniAppsEvent, TypedError } from '@telegram-apps/bridge';
+import { emitMiniAppsEvent, TypedError } from '@openweb3-apps/bridge';
 import { resetPackageState } from '@test-utils/reset/reset.js';
 import { mockPostEvent } from '@test-utils/mockPostEvent.js';
 
@@ -10,8 +10,8 @@ import { isMounted, state } from './signals.js';
 type SetPropertyFn = typeof document.documentElement.style.setProperty;
 let setSpy: MockInstance<SetPropertyFn>;
 
-vi.mock('@telegram-apps/bridge', async () => {
-  const m = await vi.importActual('@telegram-apps/bridge');
+vi.mock('@openweb3-apps/bridge', async () => {
+  const m = await vi.importActual('@openweb3-apps/bridge');
   return {
     ...m,
     retrieveLaunchParams: vi.fn(() => ({

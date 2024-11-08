@@ -42,7 +42,7 @@ function canonicalizePath(path: string) {
 
 export const upload = new Command()
   .name('upload')
-  .description('Deploys specified directory to the Telegram Mini Apps CDN')
+  .description('Deploys specified directory to the Openweb3 Mini Apps CDN')
   .option('--verbose', 'enables debug mode')
   .option('-e, --endpoint <endpoint>', 'API endpoint')
   .option('-c, --config <config path>', 'mate configuration location')

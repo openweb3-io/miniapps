@@ -1,4 +1,4 @@
-import type { Version } from '@telegram-apps/types';
+import type { Version } from '@openweb3-apps/types';
 
 import { compareVersions } from '@/utils/compareVersions.js';
 import type {

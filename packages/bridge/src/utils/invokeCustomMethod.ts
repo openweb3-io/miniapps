@@ -1,4 +1,4 @@
-import { CancelablePromise, TypedError } from '@telegram-apps/toolkit';
+import { CancelablePromise, TypedError } from '@openweb3-apps/toolkit';
 
 import { ERR_CUSTOM_METHOD_ERR_RESPONSE } from '@/errors.js';
 import { captureSameReq } from '@/methods/captureSameReq.js';

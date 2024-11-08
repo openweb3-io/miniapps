@@ -1,6 +1,6 @@
-import { themeParams, useSignal } from '@telegram-apps/sdk-react';
+import { themeParams, useSignal } from '@openweb3-apps/sdk-react';
 import type { FC } from 'react';
-import { List } from '@telegram-apps/telegram-ui';
+import { List } from '@openweb3-apps/openweb3-ui';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData.tsx';
 import { Page } from '@/components/Page.tsx';

@@ -3,11 +3,11 @@ import { mockWindow } from 'test-utils';
 
 import { removeEventHandlers } from './removeEventHandlers.js';
 
-it('should delete window properties: TelegramGameProxy_receiveEvent, TelegramGameProxy, Telegram', () => {
+it('should delete window properties: Openweb3GameProxy_receiveEvent, Openweb3GameProxy, Openweb3', () => {
   const wnd = {
-    TelegramGameProxy_receiveEvent: {},
-    TelegramGameProxy: { receiveEvent: {} },
-    Telegram: { WebView: { receiveEvent: {} } },
+    Openweb3GameProxy_receiveEvent: {},
+    Openweb3GameProxy: { receiveEvent: {} },
+    Openweb3: { WebView: { receiveEvent: {} } },
   };
   mockWindow(wnd as any);
   removeEventHandlers();

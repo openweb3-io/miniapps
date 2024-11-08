@@ -1,6 +1,6 @@
 /**
  * Uses window.dispatchEvent function with specified message event to dispatch event to imitate
- * its creation by Telegram.
+ * its creation by Openweb3.
  * @param eventType - event name.
  * @param eventData - event payload.
  */

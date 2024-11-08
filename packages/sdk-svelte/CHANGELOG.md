@@ -1,1 +1,1 @@
-# @telegram-apps/sdk-svelte
+# @openweb3-apps/sdk-svelte

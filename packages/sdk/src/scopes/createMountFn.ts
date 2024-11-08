@@ -1,5 +1,5 @@
-import { batch, type Signal } from '@telegram-apps/signals';
-import { type AsyncOptions, CancelablePromise, TypedError } from '@telegram-apps/bridge';
+import { batch, type Signal } from '@openweb3-apps/signals';
+import { type AsyncOptions, CancelablePromise, TypedError } from '@openweb3-apps/bridge';
 import { ERR_ALREADY_CALLED } from '@/errors.js';
 import { withIsSupported } from '@/scopes/toolkit/withIsSupported.js';
 

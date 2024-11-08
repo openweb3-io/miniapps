@@ -3,7 +3,7 @@ import {
   createCbCollector,
   type If,
   type IsNever,
-} from '@telegram-apps/toolkit';
+} from '@openweb3-apps/toolkit';
 
 import { on } from '@/events/listening/on.js';
 import { postEvent } from '@/methods/postEvent.js';

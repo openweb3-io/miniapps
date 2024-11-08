@@ -1,5 +1,5 @@
-import { supports, TypedError, type OpenLinkBrowser } from '@telegram-apps/bridge';
-import { createSafeURL } from '@telegram-apps/navigation';
+import { supports, TypedError, type OpenLinkBrowser } from '@openweb3-apps/bridge';
+import { createSafeURL } from '@openweb3-apps/navigation';
 
 import { $version, postEvent } from '@/scopes/globals.js';
 import { ERR_INVALID_HOSTNAME } from '@/errors.js';
@@ -37,12 +37,12 @@ export function openLink(url: string, options?: OpenLinkOptions): void {
 }
 
 /**
- * Opens a Telegram link inside Telegram app. The Mini App will be closed. It expects passing
+ * Opens a Openweb3 link inside Openweb3 app. The Mini App will be closed. It expects passing
  * links in full format, with hostname "t.me".
  * @param url - URL to be opened.
  * @throws {TypedError} ERR_INVALID_HOSTNAME
  */
-export function openTelegramLink(url: string): void {
+export function openOpenweb3Link(url: string): void {
   const { hostname, pathname, search } = new URL(url, 'https://t.me');
   if (hostname !== 't.me') {
     throw new TypedError(ERR_INVALID_HOSTNAME);
@@ -60,19 +60,19 @@ export function openTelegramLink(url: string): void {
  * Shares specified URL with the passed to the chats, selected by user. After being called,
  * it closes the mini application.
  *
- * This method uses Telegram's Share Links.
+ * This method uses Openweb3's Share Links.
  * @param url - URL to share.
  * @param text - text to append after the URL.
- * @see https://core.telegram.org/api/links#share-links
- * @see https://core.telegram.org/widgets/share#custom-buttons
+ * @see https://core.openweb3.io/api/links#share-links
+ * @see https://core.openweb3.io/widgets/share#custom-buttons
  */
 export function shareURL(url: string, text?: string): void {
-  openTelegramLink(
+  openOpenweb3Link(
     `https://t.me/share/url?` + new URLSearchParams({ url, text: text || '' })
       .toString()
       // By default, URL search params encode spaces with "+".
       // We are replacing them with "%20", because plus symbols are working incorrectly
-      // in Telegram.
+      // in Openweb3.
       .replace(/\+/g, '%20'),
   );
 }

@@ -1,13 +1,13 @@
 # init-data-golang
 
-该软件包提供用于处理 Telegram 迷你应用程序初始化数据的实用程序。 要了解
+该软件包提供用于处理 Openweb3 迷你应用程序初始化数据的实用程序。 要了解
 有关初始化数据及其用法的更多信息，请参阅
 [文档](../platform/launch-parameters.md).
 
 ## 安装
 
 ```bash
-go get github.com/telegram-mini-apps/init-data-golang
+go get github.com/openweb3-io/init-data-golang
 ```
 
 ## 验证
@@ -20,7 +20,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Telegram-Mini-Apps/init-data-golang"
+	"github.com/openweb3-io/init-data-golang"
 	"time"
 )
 
@@ -28,7 +28,7 @@ func main() {
 	// Init data in raw format.
 	initData := "query_id=AAHdF6IQAAAAAN0XohDhrOrc&..."
 
-	// Telegram Bot secret key.
+	// Openweb3 Bot secret key.
 	token := "627618978:amnnncjocxKJf"
 
 	// Define how long since init data generation date init data is valid.
@@ -50,7 +50,7 @@ package main
 
 import (
     "fmt"
-    "github.com/Telegram-Mini-Apps/init-data-golang"
+    "github.com/openweb3-io/init-data-golang"
 )
 
 func main() {
@@ -75,7 +75,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Telegram-Mini-Apps/init-data-golang"
+	"github.com/openweb3-io/init-data-golang"
 	"time"
 )
 
@@ -83,7 +83,7 @@ func main() {
 	// Init data in raw format.
 	initData := "query_id=AAHdF6IQAAAAAN0XohDhrOrc&..."
 
-	// Telegram Bot secret key.
+	// Openweb3 Bot secret key.
 	token := "627618978:amnnncjocxKJf"
 
 	// Signing timestamp.
@@ -103,4 +103,4 @@ func main() {
 
 ## GoDoc
 
-要查看 GoDoc 文档，请访问 [此链接](https://pkg.go.dev/github.com/telegram-mini-apps/init-data-golang)。
+要查看 GoDoc 文档，请访问 [此链接](https://pkg.go.dev/github.com/openweb3-io/init-data-golang)。

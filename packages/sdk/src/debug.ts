@@ -1,4 +1,4 @@
-import { $debug, createLogger } from '@telegram-apps/bridge';
+import { $debug, createLogger } from '@openweb3-apps/bridge';
 
 export const [logInfo, logError] = createLogger('SDK', {
   bgColor: 'forestgreen',

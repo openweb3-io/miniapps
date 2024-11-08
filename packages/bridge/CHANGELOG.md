@@ -1,4 +1,4 @@
-# @telegram-apps/bridge
+# @openweb3-apps/bridge
 
 ## 1.3.0
 
@@ -12,7 +12,7 @@
 
 - 06f6720: Fix some links in README.
 - Updated dependencies [06f6720]
-  - @telegram-apps/signals@1.0.1
+  - @openweb3-apps/signals@1.0.1
 
 ## 1.2.0
 
@@ -31,5 +31,5 @@
 ### Patch Changes
 
 - Updated dependencies [b27e6fa]
-  - @telegram-apps/types@1.0.1
-  - @telegram-apps/transformers@1.0.1
+  - @openweb3-apps/types@1.0.1
+  - @openweb3-apps/transformers@1.0.1

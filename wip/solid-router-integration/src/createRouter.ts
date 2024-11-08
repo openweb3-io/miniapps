@@ -1,5 +1,5 @@
 import { type BaseRouterProps, createRouter as createSolidRouter } from '@solidjs/router';
-import { Navigator, urlToPath } from '@telegram-apps/navigation';
+import { Navigator, urlToPath } from '@openweb3-apps/navigation';
 import type { Component } from 'solid-js';
 
 // /**

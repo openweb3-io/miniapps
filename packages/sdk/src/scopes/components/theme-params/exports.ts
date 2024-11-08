@@ -30,4 +30,4 @@ export type {
 } from './types.js';
 export * from './parseThemeParams.js';
 
-export { serializeThemeParams } from '@telegram-apps/transformers';
+export { serializeThemeParams } from '@openweb3-apps/transformers';

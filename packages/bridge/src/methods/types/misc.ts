@@ -1,4 +1,4 @@
-import type { RGB } from '@telegram-apps/types';
+import type { RGB } from '@openweb3-apps/types';
 
 type KnownColorKey = 'bg_color' | 'secondary_bg_color';
 

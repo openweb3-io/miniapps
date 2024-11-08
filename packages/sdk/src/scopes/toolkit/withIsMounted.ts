@@ -1,4 +1,4 @@
-import { TypedError } from '@telegram-apps/bridge';
+import { TypedError } from '@openweb3-apps/bridge';
 
 import { ERR_NOT_MOUNTED } from '@/errors.js';
 

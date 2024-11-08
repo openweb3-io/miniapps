@@ -5,7 +5,7 @@ import type {
   To,
   NavigateOptions,
 } from 'react-router-dom';
-import { type Navigator, createSafeURL, urlToPath } from '@telegram-apps/navigation';
+import { type Navigator, createSafeURL, urlToPath } from '@openweb3-apps/navigation';
 
 /**
  * Uses the passed Mini Apps navigator and returns a tuple containing reactive values

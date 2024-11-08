@@ -9,4 +9,4 @@
 
 无论如何，用户仍然可以通过轻扫迷你应用的标题来最小化和关闭迷你应用。
 
-要禁用垂直页面轻扫，Telegram 小应用程序提供了一个名为 [web_app_setup_swipe_behavior](methods.md#web-app-setup-swipe-behavior) 的方法。
+要禁用垂直页面轻扫，Openweb3 小应用程序提供了一个名为 [web_app_setup_swipe_behavior](methods.md#web-app-setup-swipe-behavior) 的方法。

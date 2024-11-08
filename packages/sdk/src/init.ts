@@ -3,20 +3,20 @@ import {
   defineEventHandlers,
   on,
   removeEventHandlers,
-} from '@telegram-apps/bridge';
+} from '@openweb3-apps/bridge';
 
 import { postEvent, configure, type ConfigureOptions } from '@/scopes/globals.js';
 
 export interface InitOptions extends ConfigureOptions {
   /**
-   * True if SDK should accept styles sent from the Telegram application.
+   * True if SDK should accept styles sent from the Openweb3 application.
    * @default true
    */
   acceptCustomStyles?: boolean;
 }
 
 /**
- * Initializes the SDK allowing it to properly handle events, sent from the native Telegram
+ * Initializes the SDK allowing it to properly handle events, sent from the native Openweb3
  * application.
  * @param options - function options.
  * @returns A function, to perform a cleanup.
@@ -25,7 +25,7 @@ export function init(options?: InitOptions): VoidFunction {
   // Configure the package global dependencies.
   configure(options);
 
-  // Define event handlers, so we could receive the events from the Telegram application.
+  // Define event handlers, so we could receive the events from the Openweb3 application.
   defineEventHandlers();
 
   const [addCleanup, cleanup] = createCbCollector(
@@ -39,7 +39,7 @@ export function init(options?: InitOptions): VoidFunction {
   const { acceptCustomStyles = true } = options || {};
   if (acceptCustomStyles) {
     const style = document.createElement('style');
-    style.id = 'telegram-custom-styles';
+    style.id = 'openweb3-custom-styles';
     document.head.appendChild(style);
 
     addCleanup(
@@ -55,13 +55,13 @@ export function init(options?: InitOptions): VoidFunction {
     );
   }
 
-  // Notify Telegram that the application is ready.
+  // Notify Openweb3 that the application is ready.
   //
-  // This will result in sending style tag html content from the Telegram web application.
-  // We should call this method also to start receiving "reload_iframe" events from the Telegram
+  // This will result in sending style tag html content from the Openweb3 web application.
+  // We should call this method also to start receiving "reload_iframe" events from the Openweb3
   // application.
   //
-  // It really has no effect outside non-Telegram web environment.
+  // It really has no effect outside non-Openweb3 web environment.
   postEvent('iframe_ready', { reload_supported: true });
 
   return cleanup;

@@ -5,7 +5,7 @@ import { ERR_PARSE, ERR_UNEXPECTED_TYPE } from '../errors/errors.js';
 import { date } from './date.js';
 import { searchParams } from './searchParams.js';
 import { string } from './string.js';
-import { TypedError } from '@telegram-apps/toolkit';
+import { TypedError } from '@openweb3-apps/toolkit';
 
 it('should throw if passed value is not of type string or URLSearchParams', () => {
   const parser = searchParams({})(true);

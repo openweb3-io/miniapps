@@ -1,4 +1,4 @@
-import type { HeaderColorKey, BottomBarColor, RGB, BackgroundColor } from '@telegram-apps/bridge';
+import type { HeaderColorKey, BottomBarColor, RGB, BackgroundColor } from '@openweb3-apps/bridge';
 
 /**
  * Mini App header color.

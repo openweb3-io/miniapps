@@ -1,4 +1,4 @@
-import type { InitData } from '@telegram-apps/types';
+import type { InitData } from '@openweb3-apps/types';
 
 import type { SignDataOptions } from './signData.js';
 

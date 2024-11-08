@@ -1,8 +1,8 @@
 'use client';
 
 import { useMemo } from 'react';
-import { type User, useSignal, initData } from '@telegram-apps/sdk-react';
-import { List, Placeholder } from '@telegram-apps/telegram-ui';
+import { type User, useSignal, initData } from '@openweb3-apps/sdk-react';
+import { List, Placeholder } from '@openweb3-apps/openweb3-ui';
 
 import { DisplayData, type DisplayDataRow } from '@/components/DisplayData/DisplayData';
 import { Page } from '@/components/Page';
@@ -94,8 +94,8 @@ export default function InitDataPage() {
           description="Application was launched with missing init data"
         >
           <img
-            alt="Telegram sticker"
-            src="https://xelene.me/telegram.gif"
+            alt="Openweb3 sticker"
+            src="https://xelene.me/openweb3.gif"
             style={{ display: 'block', width: '144px', height: '144px' }}
           />
         </Placeholder>

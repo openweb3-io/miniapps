@@ -24,7 +24,7 @@ describe('env: iframe', () => {
 
     postEvent('web_app_close');
     expect(postMessage).toHaveBeenCalledOnce();
-    expect(postMessage).toHaveBeenCalledWith('{"eventType":"web_app_close"}', 'https://web.telegram.org');
+    expect(postMessage).toHaveBeenCalledWith('{"eventType":"web_app_close"}', 'https://web.openweb3.io');
 
     postMessage.mockClear();
 
@@ -32,7 +32,7 @@ describe('env: iframe', () => {
     expect(postMessage).toHaveBeenCalledOnce();
     expect(postMessage).toHaveBeenCalledWith(
       '{"eventType":"web_app_set_header_color","eventData":{"color_key":"bg_color"}}',
-      'https://web.telegram.org',
+      'https://web.openweb3.io',
     );
 
     postMessage.mockClear();
@@ -42,16 +42,16 @@ describe('env: iframe', () => {
     expect(postMessage).toHaveBeenCalledOnce();
     expect(postMessage).toHaveBeenCalledWith(
       '{"eventType":"web_app_set_header_color","eventData":{"color_key":"bg_color"}}',
-      'https://web.telegram.org',
+      'https://web.openweb3.io',
     );
   });
 });
 
 describe('env: common mobile', () => {
-  it('should call "window.TelegramWebviewProxy.postEvent" with the event name (string) as the first argument and event data (object converted to string) as the second one', () => {
+  it('should call "window.Openweb3WebviewProxy.postEvent" with the event name (string) as the first argument and event data (object converted to string) as the second one', () => {
     const spy = vi.fn();
     createWindow({
-      TelegramWebviewProxy: {
+      Openweb3WebviewProxy: {
         postEvent: spy,
       },
     } as any);

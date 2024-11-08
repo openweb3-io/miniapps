@@ -1,4 +1,4 @@
-import { toRGB } from '@telegram-apps/transformers';
+import { toRGB } from '@openweb3-apps/transformers';
 
 /**
  * @param color - color in any format acceptable by the `toRGB` function.

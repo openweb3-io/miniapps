@@ -1,5 +1,5 @@
-import { useLaunchParams, miniApp } from '@telegram-apps/sdk-react';
-import { AppRoot } from '@telegram-apps/telegram-ui';
+import { useLaunchParams, miniApp } from '@openweb3-apps/sdk-react';
+import { AppRoot } from '@openweb3-apps/openweb3-ui';
 import { Navigate, Route, Routes, HashRouter } from 'react-router-dom';
 
 import { routes } from '@/navigation/routes.tsx';

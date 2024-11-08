@@ -5,11 +5,11 @@ outline: [ 2, 4 ]
 # Getting App Link
 
 In a nutshell, all Mini Apps are typical web applications, each requiring its own URL, which is used
-to retrieve and display the application's content. Telegram does not provide any storage for the
+to retrieve and display the application's content. Openweb3 does not provide any storage for the
 developer's application, so it is the developer's responsibility to create storage for their
 application and obtain its URL.
 
-Telegram accepts only links that have a valid SSL certificate and use the HTTPS protocol. Unlike the
+Openweb3 accepts only links that have a valid SSL certificate and use the HTTPS protocol. Unlike the
 production environment, the [test environment](test-environment.md) allows using an IP directly.
 
 ::: info
@@ -31,7 +31,7 @@ time, we need application links for one of the following purposes:
    application, typically accessed by common users.
 
 This guide covers both cases. You can find real link generation and usage in
-the [template for React.js](https://github.com/telegram-mini-apps/reactjs-template).
+the [template for React.js](https://github.com/openweb3-mini-apps/reactjs-template).
 
 The next sections of this documentation will use [Vite](https://vitejs.dev) as the basic bundler for
 the applications.
@@ -115,7 +115,7 @@ VITE ready in 275 ms
 ```
 
 The `Local` link (`https://localhost:5173`) refers to a local development server. Opening this link
-in your browser, Telegram for macOS, Telegram Desktop, or Telegram Web A/K will lead to a warning
+in your browser, Openweb3 for macOS, Openweb3 Desktop, or Openweb3 Web A/K will lead to a warning
 message related to an untrusted certificate.
 
 <img

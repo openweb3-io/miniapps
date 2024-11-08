@@ -3,8 +3,8 @@ import {
   type ExecuteWithOptions,
   type InvoiceStatus,
   type ExecuteWithPostEvent,
-} from '@telegram-apps/bridge';
-import { signal } from '@telegram-apps/signals';
+} from '@openweb3-apps/bridge';
+import { signal } from '@openweb3-apps/signals';
 
 import { request } from '@/scopes/globals.js';
 import { ERR_INVALID_HOSTNAME, ERR_INVALID_SLUG, ERR_ALREADY_CALLED } from '@/errors.js';

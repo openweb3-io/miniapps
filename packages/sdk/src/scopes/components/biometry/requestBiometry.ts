@@ -1,4 +1,4 @@
-import type { ExecuteWithOptions, CancelablePromise } from '@telegram-apps/bridge';
+import type { ExecuteWithOptions, CancelablePromise } from '@openweb3-apps/bridge';
 
 import { request } from '@/scopes/globals.js';
 import { withIsSupported } from '@/scopes/toolkit/withIsSupported.js';

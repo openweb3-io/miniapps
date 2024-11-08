@@ -29,24 +29,24 @@ export const packagesLinksGenerator = (prefix: string = "") => {
 
   const packagesNavItem: NavItemWithLink = {
     text: "软件包",
-    link: `${BASE}/telegram-apps-create-mini-app`,
+    link: `${BASE}/openweb3-apps-create-mini-app`,
   };
 
   const packagesSidebar: Sidebar = {
     [BASE]: [
       section("CLI", {
-        "@telegram-apps/create-mini-app": "telegram-apps-create-mini-app",
-        "@telegram-apps/mate": [
-          "telegram-apps-mate",
+        "@openweb3-apps/create-mini-app": "openweb3-apps-create-mini-app",
+        "@openweb3-apps/mate": [
+          "openweb3-apps-mate",
           {
             "托管": "hosting",
           },
         ],
       }),
       section("TypeScript", {
-        "@telegram-apps/signals": "telegram-apps-signals",
-        "@telegram-apps/bridge": [
-          "telegram-apps-bridge",
+        "@openweb3-apps/signals": "openweb3-apps-signals",
+        "@openweb3-apps/bridge": [
+          "openweb3-apps-bridge",
           {
             "方法": "methods",
             "事件": "events",
@@ -55,8 +55,8 @@ export const packagesLinksGenerator = (prefix: string = "") => {
             "全局变量": "globals",
           },
         ],
-        "@telegram-apps/sdk": [
-          { url: "telegram-apps-sdk", page: false },
+        "@openweb3-apps/sdk": [
+          { url: "openweb3-apps-sdk", page: false },
           {
             "@1.x": [
               "1-x",
@@ -141,9 +141,9 @@ export const packagesLinksGenerator = (prefix: string = "") => {
             ],
           },
         ],
-        "@telegram-apps/sdk-react": [
+        "@openweb3-apps/sdk-react": [
           {
-            url: "telegram-apps-sdk-react",
+            url: "openweb3-apps-sdk-react",
             page: false,
           },
           {
@@ -151,9 +151,9 @@ export const packagesLinksGenerator = (prefix: string = "") => {
             "@2.x": "2-x",
           },
         ],
-        "@telegram-apps/sdk-solid": [
+        "@openweb3-apps/sdk-solid": [
           {
-            url: "telegram-apps-sdk-solid",
+            url: "openweb3-apps-sdk-solid",
             page: false,
           },
           {
@@ -161,13 +161,13 @@ export const packagesLinksGenerator = (prefix: string = "") => {
             "@2.x": "2-x",
           },
         ],
-        '@telegram-apps/sdk-vue': '/telegram-apps-sdk-vue',
-        '@telegram-apps/sdk-svelte': '/telegram-apps-sdk-svelte',
-        '@telegram-apps/solid-router-integration': '/telegram-apps-solid-router-integration',
-        '@telegram-apps/react-router-integration': '/telegram-apps-react-router-integration',
+        '@openweb3-apps/sdk-vue': '/openweb3-apps-sdk-vue',
+        '@openweb3-apps/sdk-svelte': '/openweb3-apps-sdk-svelte',
+        '@openweb3-apps/solid-router-integration': '/openweb3-apps-solid-router-integration',
+        '@openweb3-apps/react-router-integration': '/openweb3-apps-react-router-integration',
       }),
       section("Node", {
-        "@telegram-apps/init-data-node": "telegram-apps-init-data-node",
+        "@openweb3-apps/init-data-node": "openweb3-apps-init-data-node",
       }),
       section("GoLang", {
         "init-data-golang": "init-data-golang",

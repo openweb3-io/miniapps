@@ -1,7 +1,7 @@
 # 授权用户 
 
 本文提供了不同编程语言的代码示例，说明开发人员如何使用
-Telegram [初始数据](init-data.md)授权用户。
+Openweb3 [初始数据](init-data.md)授权用户。
 
 ## 客户端
 
@@ -9,7 +9,7 @@ Telegram [初始数据](init-data.md)授权用户。
 ：
 
 ```typescript
-import { retrieveLaunchParams } from '@telegram-apps/sdk';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk';
 
 const { initDataRaw } = retrieveLaunchParams();
 
@@ -25,7 +25,7 @@ fetch('https://example.com/api', {
 方法（你可以使用任何你想要的方法），并附加 `Authorization`（授权）标头，这在这里是最重要的。
 表示一个字符串，包含由空格分割的两个部分。 第一个描述授权方法（在
 的情况下，我们的服务器将支持其他几种方法），第二个包含授权数据。 就
-Telegram Mini Apps 而言，第二部分是原始 init 数据。
+Openweb3 Mini Apps 而言，第二部分是原始 init 数据。
 
 ## 服务器端
 
@@ -37,7 +37,7 @@ Telegram Mini Apps 而言，第二部分是原始 init 数据。
 Node.js 示例使用 [express](https://www.npmjs.com/package/express) 处理 HTTP 请求。
 
 ```typescript
-import { validate, parse, type InitDataParsed } from '@telegram-apps/init-data-node';
+import { validate, parse, type InitDataParsed } from '@openweb3-apps/init-data-node';
 import express, {
   type ErrorRequestHandler,
   type RequestHandler,
@@ -72,7 +72,7 @@ function getInitData(res: Response): InitDataParsed | undefined {
 const authMiddleware: RequestHandler = (req, res, next) => {
   // We expect passing init data in the Authorization header in the following format:
   // <auth-type> <auth-data>
-  // <auth-type> must be "tma", and <auth-data> is Telegram Mini Apps init data.
+  // <auth-type> must be "tma", and <auth-data> is Openweb3 Mini Apps init data.
   const [authType, authData = ''] = (req.header('authorization') || '').split(' ');
 
   switch (authType) {
@@ -151,7 +151,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	initdata "github.com/telegram-mini-apps/init-data-golang"
+	initdata "github.com/openweb3-io/init-data-golang"
 )
 
 type contextKey string
@@ -176,7 +176,7 @@ func authMiddleware(token string) gin.HandlerFunc {
 	return func(context *gin.Context) {
 		// We expect passing init data in the Authorization header in the following format:
 		// <auth-type> <auth-data>
-		// <auth-type> must be "tma", and <auth-data> is Telegram Mini Apps init data.
+		// <auth-type> must be "tma", and <auth-data> is Openweb3 Mini Apps init data.
 		authParts := strings.Split(context.GetHeader("authorization"), " ")
 		if len(authParts) != 2 {
 			context.AbortWithStatusJSON(401, map[string]any{

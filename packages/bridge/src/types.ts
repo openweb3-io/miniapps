@@ -1,4 +1,4 @@
-import type { AsyncOptions } from '@telegram-apps/toolkit';
+import type { AsyncOptions } from '@openweb3-apps/toolkit';
 
 import type { PostEventFn } from '@/methods/postEvent.js';
 

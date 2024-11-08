@@ -1,15 +1,15 @@
 # Debugging
 
 Application development is rather hard and continous process which requires a lot of time
-and patience. To simplify it, the Telegram Mini Apps platform allows debugging developed
+and patience. To simplify it, the Openweb3 Mini Apps platform allows debugging developed
 application.
 
 ## Enabling Debug Mode
 
-### Telegram Desktop
+### Openweb3 Desktop
 
-- Download and launch the [Beta Version](https://desktop.telegram.org/changelog#beta-version) of
-  Telegram Desktop.
+- Download and launch the [Beta Version](https://desktop.openweb3.org/changelog#beta-version) of
+  Openweb3 Desktop.
 - Open the side menu and navigate to `Settings > Advanced`.
 - Scroll down the opened menu and click the `Experimental settings` button.
 - Check the `Enable webview inspecting` option.
@@ -17,24 +17,24 @@ application.
 When the debug mode is enabled, right-clicking in the Mini App will display a context menu with
 the `Inspect` option, allowing you to open developer tools.
 
-### Telegram for macOS
+### Openweb3 for macOS
 
-- Download and launch the [Beta Version](https://telegram.org/dl/macos/beta) of Telegram macOS.
+- Download and launch the [Beta Version](https://openweb3.org/dl/macos/beta) of Openweb3 macOS.
 - Quickly click 5 times on the Settings icon to open the Debug Menu and enable `Debug Mini Apps`
   option.
 
-As well as in Telegram Desktop, `Inspect Element` option will appear in the context menu.
+As well as in Openweb3 Desktop, `Inspect Element` option will appear in the context menu.
 
-### Telegram for Android
+### Openweb3 for Android
 
 - [Enable USB-Debugging](https://developer.chrome.com/docs/devtools/remote-debugging/) on your
   device.
-- In Telegram Settings, scroll all the way down, press and hold on the **version number** two times.
+- In Openweb3 Settings, scroll all the way down, press and hold on the **version number** two times.
 - Choose `Enable WebView Debug` in the Debug Settings.
 - Connect your phone to your computer and open `chrome://inspect/#devices` in Chrome – you will see
   your Mini App there when you launch it on your phone.
 
-### Telegram for iOS
+### Openweb3 for iOS
 
 iOS webview debugging requires Safari desktop browser and therefore macOS.
 
@@ -54,11 +54,11 @@ On macOS:
 
 Next steps:
 - Connect iOS device to Mac via cable.
-- Open Mini App inside iOS Telegram client.
+- Open Mini App inside iOS Openweb3 client.
 - Open `Develop` tab in the menu bar in Safari on macOS.
 - Select connected iPhone.
 - Optional: select `Connect via network` and disconnect the cable.
-- Select opened webview URL under `Telegram` block.
+- Select opened webview URL under `Openweb3` block.
 
 ## Eruda
 

@@ -1,5 +1,5 @@
-import { signal } from '@telegram-apps/signals';
-import { createLogger } from '@telegram-apps/toolkit';
+import { signal } from '@openweb3-apps/signals';
+import { createLogger } from '@openweb3-apps/toolkit';
 
 /**
  * The package debug mode.

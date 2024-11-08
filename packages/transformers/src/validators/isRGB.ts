@@ -1,4 +1,4 @@
-import type { RGB } from '@telegram-apps/types';
+import type { RGB } from '@openweb3-apps/types';
 
 /**
  * Returns true in case, passed value has #RRGGBB format.

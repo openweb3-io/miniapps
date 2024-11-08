@@ -9,8 +9,8 @@ import {
   setCssVar,
   TypedError,
   type EventListener,
-} from '@telegram-apps/bridge';
-import { isPageReload } from '@telegram-apps/navigation';
+} from '@openweb3-apps/bridge';
+import { isPageReload } from '@openweb3-apps/navigation';
 
 import { postEvent } from '@/scopes/globals.js';
 import { ERR_ALREADY_CALLED } from '@/errors.js';

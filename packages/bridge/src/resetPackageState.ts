@@ -1,4 +1,4 @@
-import type { Signal } from '@telegram-apps/signals';
+import type { Signal } from '@openweb3-apps/signals';
 
 import { $eventSignalsCache } from '@/events/listening/signalFor.js';
 import { $lastEvent, $lastEventCleanup } from '@/events/listening/lastEvent.js';

@@ -1,13 +1,13 @@
 'use client';
 
 import { type PropsWithChildren, useEffect, useMemo } from 'react';
-import { useLaunchParams, miniApp, useSignal } from '@telegram-apps/sdk-react';
+import { useLaunchParams, miniApp, useSignal } from '@openweb3-apps/sdk-react';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
-import { AppRoot } from '@telegram-apps/telegram-ui';
+import { AppRoot } from '@openweb3-apps/openweb3-ui';
 
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorPage } from '@/components/ErrorPage';
-import { useTelegramMock } from '@/hooks/useTelegramMock';
+import { useOpenweb3Mock } from '@/hooks/useOpenweb3Mock';
 import { useDidMount } from '@/hooks/useDidMount';
 import { init } from '@/init';
 
@@ -15,10 +15,10 @@ import './styles.css';
 import { useClientOnce } from '@/hooks/useClientOnce';
 
 function RootInner({ children }: PropsWithChildren) {
-  // Mock Telegram environment in development mode if needed.
+  // Mock Openweb3 environment in development mode if needed.
   if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    useTelegramMock();
+    useOpenweb3Mock();
   }
 
   const lp = useLaunchParams();
@@ -44,7 +44,7 @@ function RootInner({ children }: PropsWithChildren) {
 }
 
 export function Root(props: PropsWithChildren) {
-  // Unfortunately, Telegram Mini Apps does not allow us to use all features of the Server Side
+  // Unfortunately, Openweb3 Mini Apps does not allow us to use all features of the Server Side
   // Rendering. That's why we are showing loader on the server side.
   const didMount = useDidMount();
 

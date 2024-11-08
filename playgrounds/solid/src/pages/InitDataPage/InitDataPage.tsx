@@ -1,4 +1,4 @@
-import { initData as $initData, type User, useSignal } from '@telegram-apps/sdk-solid';
+import { initData as $initData, type User, useSignal } from '@openweb3-apps/sdk-solid';
 import { createMemo, Show, type Component } from 'solid-js';
 
 import { DisplayData, type DisplayDataRow } from '@/components/DisplayData/DisplayData.js';
@@ -75,7 +75,7 @@ export const InitDataPage: Component = () => {
         <>
           This page displays application
           {' '}
-          <Link href="https://docs.telegram-mini-apps.com/platform/init-data">
+          <Link href="https://docs.openweb3-mini-apps.com/platform/init-data">
             init data
           </Link>
           .

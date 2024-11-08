@@ -1,17 +1,17 @@
-import { object, fn } from '@telegram-apps/transformers';
+import { object, fn } from '@openweb3-apps/transformers';
 
 interface WithWebviewProxy {
-  TelegramWebviewProxy: {
+  Openweb3WebviewProxy: {
     postEvent: (...args: unknown[]) => unknown;
   };
 }
 
 const webViewProxy = object<WithWebviewProxy>({
-  TelegramWebviewProxy: object({ postEvent: fn() })(),
+  Openweb3WebviewProxy: object({ postEvent: fn() })(),
 });
 
 /**
- * Returns true in case, passed value contains path `TelegramWebviewProxy.postEvent` property and
+ * Returns true in case, passed value contains path `Openweb3WebviewProxy.postEvent` property and
  * `postEvent` is a function.
  * @param value - value to check.
  */

@@ -4,11 +4,11 @@ outline: [ 2, 4 ]
 
 # 获取应用程序链接
 
-简而言之，所有迷你应用程序都是典型的网络应用程序，每个应用程序都需要自己的 URL，以检索和显示应用程序的内容。 Telegram 不为
+简而言之，所有迷你应用程序都是典型的网络应用程序，每个应用程序都需要自己的 URL，以检索和显示应用程序的内容。 Openweb3 不为
 开发者的应用程序提供任何存储空间，因此开发者有责任为其
 应用程序创建存储空间并获取 URL。
 
-Telegram 只接受具有有效 SSL 证书并使用 HTTPS 协议的链接。 与
+Openweb3 只接受具有有效 SSL 证书并使用 HTTPS 协议的链接。 与
 生产环境不同，[测试环境](test-environment.md) 允许直接使用 IP。
 
 ::: info
@@ -29,7 +29,7 @@ Telegram 只接受具有有效 SSL 证书并使用 HTTPS 协议的链接。 与
    应用程序，通常由普通用户访问。
 
 本指南涵盖这两种情况。 您可以在
-[template for React.js](https://github.com/telegram-mini-apps/reactjs-template) 中找到真正的链接生成和使用方法。
+[template for React.js](https://github.com/openweb3-io/reactjs-template) 中找到真正的链接生成和使用方法。
 
 本文档接下来的章节将使用 [Vite](https://vitejs.dev)作为
 应用程序的基本捆绑程序。
@@ -112,7 +112,7 @@ VITE ready in 275 ms
 ➜  press h + enter to show help
 ```
 
-`本地` 链接 (`https://localhost:5173`)指的是本地开发服务器。 在浏览器、Telegram for macOS、Telegram Desktop 或 Telegram Web A/K 中打开此链接
+`本地` 链接 (`https://localhost:5173`)指的是本地开发服务器。 在浏览器、Openweb3 for macOS、Openweb3 Desktop 或 Openweb3 Web A/K 中打开此链接
 ，会出现一条与不信任证书相关的警告
 消息。
 

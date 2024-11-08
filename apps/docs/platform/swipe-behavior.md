@@ -10,5 +10,5 @@ so the application won't hide in the dock when swiping the application itself.
 
 In any case, users will still be able to minimize and close the Mini App by swiping the Mini App's header.
 
-To disable vertical page swipes, Telegram Mini Apps provides a method
+To disable vertical page swipes, Openweb3 Mini Apps provides a method
 called [web_app_setup_swipe_behavior](methods.md#web-app-setup-swipe-behavior).

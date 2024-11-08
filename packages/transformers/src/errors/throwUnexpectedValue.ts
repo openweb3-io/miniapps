@@ -1,4 +1,4 @@
-import { TypedError } from '@telegram-apps/toolkit';
+import { TypedError } from '@openweb3-apps/toolkit';
 
 import { ERR_UNEXPECTED_TYPE } from './errors.js';
 

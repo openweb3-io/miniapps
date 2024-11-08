@@ -1,4 +1,4 @@
-import type { RGB } from '@telegram-apps/types';
+import type { RGB } from '@openweb3-apps/types';
 
 import { isRGB } from './validators/isRGB.js';
 import { isRGBShort } from './validators/isRGBShort.js';

@@ -1,4 +1,4 @@
-import { type MethodName, supports, TypedError } from '@telegram-apps/bridge';
+import { type MethodName, supports, TypedError } from '@openweb3-apps/bridge';
 
 import { $version } from '@/scopes/globals.js';
 import { ERR_NOT_SUPPORTED } from '@/errors.js';

@@ -5,7 +5,7 @@ import {
   type ParentProps, onCleanup, createMemo,
 } from 'solid-js';
 import { useNavigate } from '@solidjs/router';
-import { backButton } from '@telegram-apps/sdk-solid';
+import { backButton } from '@openweb3-apps/sdk-solid';
 
 import './Page.css';
 

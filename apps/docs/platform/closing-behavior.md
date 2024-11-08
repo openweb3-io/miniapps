@@ -10,5 +10,5 @@ Accidentally closing a Mini App with data loss can be a significant disappointme
 prevent this, developers have the option to configure the closing behavior and prompt the user
 before closing the application.
 
-To enable closing confirmation, Telegram Mini Apps provides a method
+To enable closing confirmation, Openweb3 Mini Apps provides a method
 called [web_app_setup_closing_behavior](methods.md#web-app-setup-closing-behavior).

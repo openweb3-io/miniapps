@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { mockSessionStorageGetItem, mockPageReload, mockSessionStorageSetItem } from 'test-utils';
-import { emitMiniAppsEvent, TypedError } from '@telegram-apps/bridge';
+import { emitMiniAppsEvent, TypedError } from '@openweb3-apps/bridge';
 
 import { mockPostEvent } from '@test-utils/mockPostEvent.js';
 import { resetPackageState } from '@test-utils/reset/reset.js';

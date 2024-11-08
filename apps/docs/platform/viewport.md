@@ -29,7 +29,7 @@ user not seeing any additional elements in the interface.
 
 ## Expanding
 
-In case, application is opened in mobile version of Telegram (both Android and iOS), it will be
+In case, application is opened in mobile version of Openweb3 (both Android and iOS), it will be
 displayed in native component, called `BottomSheet`. It represents draggable from bottom to top
 block, which could be expanded to the entire screen size. To do this, user could drag it to the
 upper bound of the screen, but developer is able to do it programmatically too.

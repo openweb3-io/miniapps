@@ -1,4 +1,4 @@
-import { CancelablePromise } from '@telegram-apps/toolkit';
+import { CancelablePromise } from '@openweb3-apps/toolkit';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createWindow, mockSessionStorageGetItem, mockWindow } from 'test-utils';
 
@@ -16,9 +16,9 @@ afterEach(() => {
 });
 
 describe('async', () => {
-  it('should return true if current window contains TelegramWebviewProxy property', async () => {
+  it('should return true if current window contains Openweb3WebviewProxy property', async () => {
     createWindow({
-      TelegramWebviewProxy: {
+      Openweb3WebviewProxy: {
         postEvent: 123,
       },
     } as any);

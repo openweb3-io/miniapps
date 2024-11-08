@@ -1,4 +1,4 @@
-import { TypedError } from '@telegram-apps/toolkit';
+import { TypedError } from '@openweb3-apps/toolkit';
 
 import { ERR_PARSE } from './errors/errors.js';
 import type { TransformFn, Schema } from './types.js';

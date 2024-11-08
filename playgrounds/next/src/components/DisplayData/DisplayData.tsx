@@ -1,5 +1,5 @@
-import { isRGB } from '@telegram-apps/sdk-react';
-import { Cell, Checkbox, Section } from '@telegram-apps/telegram-ui';
+import { isRGB } from '@openweb3-apps/sdk-react';
+import { Cell, Checkbox, Section } from '@openweb3-apps/openweb3-ui';
 import type { FC, ReactNode } from 'react';
 
 import { RGB } from '@/components/RGB/RGB';

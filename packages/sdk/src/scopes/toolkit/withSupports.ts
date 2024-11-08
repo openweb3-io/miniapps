@@ -2,7 +2,7 @@ import {
   MethodNameWithVersionedParams,
   MethodVersionedParams,
   supports, TypedError,
-} from '@telegram-apps/bridge';
+} from '@openweb3-apps/bridge';
 import { $version } from '@/scopes/globals.js';
 import { ERR_NOT_SUPPORTED } from '@/errors.js';
 

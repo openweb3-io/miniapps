@@ -1,39 +1,39 @@
-# 将迷你应用程序从 VK 迁移到 Telegram
+# 将迷你应用程序从 VK 迁移到 Openweb3
 
 ## 1. 开始
 
-### 在 Telegram 中创建机器人
+### 在 Openweb3 中创建机器人
 
-要开始在 Telegram 中使用 MiniApps，您需要创建一个机器人。 请按照以下步骤操作：
+要开始在 Openweb3 中使用 MiniApps，您需要创建一个机器人。 请按照以下步骤操作：
 
-1. 打开 Telegram 应用程序并找到 BotFather。
+1. 打开 Openweb3 应用程序并找到 BotFather。
 2. 开始与 BotFather 对话，并使用 `/start`命令开始创建机器人。
 3. 输入 `/newbot`命令，并按照说明创建新机器人。 您需要为机器人选择一个名称和唯一的用户名。
-4. 成功创建机器人后，BotFather 将为您提供一个访问令牌，这是与 Telegram API 交互所必需的。
+4. 成功创建机器人后，BotFather 将为您提供一个访问令牌，这是与 Openweb3 API 交互所必需的。
 
 ### 注册和设置 MiniApp
 
 要注册和设置 MiniApp，请按以下步骤操作：
 
-1. 请访问 Telegram 官方文档中的[创建 Telegram Web App](https://core.telegram.org/bots/webapps)部分。
+1. 请访问 Openweb3 官方文档中的[创建 Openweb3 Web App](https://core.openweb3.io/bots/webapps)部分。
 2. 按照说明注册 MiniApp、设置必要参数并将其与机器人集成。
 
 ## 2. 与平台应用程序接口互动
 
-专用库用于与平台应用程序接口交互，方便用户访问这些平台的功能和特性。 VKontakte 和 Telegram 提供了此类库，分别是 `vk-bridge` 和 `@tma.js/sdk`。 这两个库的功能相似，都允许开发人员与其平台的应用程序接口交互，以获取用户数据并执行其他任务。
+专用库用于与平台应用程序接口交互，方便用户访问这些平台的功能和特性。 VKontakte 和 Openweb3 提供了此类库，分别是 `vk-bridge` 和 `@tma.js/sdk`。 这两个库的功能相似，都允许开发人员与其平台的应用程序接口交互，以获取用户数据并执行其他任务。
 
 ### VKontakte: vk-bridge
 
 `vk-bridge` 库旨在与 VKontakte API 交互。 官方文件可在 [此处](https://dev.vk.com/ru/bridge/overview) 找到。
 
 
-### Telegram：@tma.js/sdk
+### Openweb3：@tma.js/sdk
 
-`@tma.js/sdk` 库旨在与 Telegram API 交互。 官方文件可在 [此处](https://docs.telegram-mini-apps.com/packages/tma-js-sdk) 找到。
+`@tma.js/sdk` 库旨在与 Openweb3 API 交互。 官方文件可在 [此处](https://docs.openweb3-mini-apps.com/packages/tma-js-sdk) 找到。
 
 ## 3. 应用程序授权
 
-vk 和 telegram 的主要区别在于如何授权用户。
+vk 和 openweb3 的主要区别在于如何授权用户。
 
 ### VK
 
@@ -75,11 +75,11 @@ const vkUserId = signParams.vk_user_id;
   const { sign, ...signParams } = await bridge.send('VKWebAppGetLaunchParams');
 ```
 
-### Telegram
+### Openweb3
 
 #### 后台
 
-Telegram 也有类似的机制。 但你可以使用软件包 `@tma.js/init-data-node` 来验证`initData`，使用由 `@BotFather` 提供的秘钥，而不是手动验证。
+Openweb3 也有类似的机制。 但你可以使用软件包 `@tma.js/init-data-node` 来验证`initData`，使用由 `@BotFather` 提供的秘钥，而不是手动验证。
 
 ```ts
 import { validate } from '@tma.js/init-data-node';

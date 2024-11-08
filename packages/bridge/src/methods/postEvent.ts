@@ -1,5 +1,5 @@
-import { fn, object } from '@telegram-apps/transformers';
-import { TypedError } from '@telegram-apps/toolkit';
+import { fn, object } from '@openweb3-apps/transformers';
+import { TypedError } from '@openweb3-apps/toolkit';
 
 import { logInfo } from '@/debug.js';
 import { isIframe } from '@/env/isIframe.js';
@@ -53,20 +53,20 @@ export function postEvent(
 
   const w = window;
 
-  // Telegram for iOS and macOS.
+  // Openweb3 for iOS and macOS.
   if (hasWebviewProxy(w)) {
-    w.TelegramWebviewProxy.postEvent(eventType, JSON.stringify(eventData));
+    w.Openweb3WebviewProxy.postEvent(eventType, JSON.stringify(eventData));
     return;
   }
 
   const message = JSON.stringify({ eventType, eventData });
 
-  // Telegram Web.
+  // Openweb3 Web.
   if (isIframe()) {
     return w.parent.postMessage(message, $targetOrigin());
   }
 
-  // Telegram for Windows Phone or Android.
+  // Openweb3 for Windows Phone or Android.
   const { external } = w;
   if (object({ notify: fn() })().isValid(external)) {
     external.notify(message);

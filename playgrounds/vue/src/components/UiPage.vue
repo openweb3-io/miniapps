@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, withDefaults } from 'vue';
 import { useRouter } from 'vue-router';
-import { backButton } from '@telegram-apps/sdk-vue';
+import { backButton } from '@openweb3-apps/sdk-vue';
 
 const props = withDefaults(defineProps<{
   /**

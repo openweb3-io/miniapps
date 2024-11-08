@@ -1,4 +1,4 @@
-import type { RGB } from '@telegram-apps/types';
+import type { RGB } from '@openweb3-apps/types';
 
 import { toRGB } from '@/toRGB.js';
 import type { TransformerGen } from '@/types.js';

@@ -1,4 +1,4 @@
-import type { LaunchParams } from '@telegram-apps/types';
+import type { LaunchParams } from '@openweb3-apps/types';
 
 import { retrieveFromUrl } from './retrieveFromUrl.js';
 

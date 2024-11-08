@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest';
-import type { Version } from '@telegram-apps/types';
+import type { Version } from '@openweb3-apps/types';
 
 import { supports } from './supports.js';
 import type {

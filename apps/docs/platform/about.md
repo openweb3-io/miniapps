@@ -1,13 +1,13 @@
 # About the Platform
 
-Telegram Mini Apps is a technology created by the developers of the famous messenger Telegram. Its main 
-purpose is to provide developers with a more flexible communication channel with Telegram users.
+Openweb3 Mini Apps is a technology created by the developers of the famous messenger Openweb3. Its main 
+purpose is to provide developers with a more flexible communication channel with Openweb3 users.
 
 It may seem unclear, but Mini Apps are not self-served services. The first thing to note is,
-technically, this technology is just an add-on for such already-known Telegram functionality as
-Telegram Bots. So, currently, creating a Mini App without creating a Telegram Bot is not possible.
+technically, this technology is just an add-on for such already-known Openweb3 functionality as
+Openweb3 Bots. So, currently, creating a Mini App without creating a Openweb3 Bot is not possible.
 
-The platform offers a high variety of available methods to communicate with the Telegram application
+The platform offers a high variety of available methods to communicate with the Openweb3 application
 to make your web applications look more native, allow them to simulate native application's
 behavior, and, finally, to **mimic** native applications.
 
@@ -29,13 +29,13 @@ Really simple, isn't it? But to make much more serious and bigger applications, 
 more solid technologies, such as `TypeScript`, `React`, `SCSS`, etc.
 
 So, if we want to create a Mini App, we should create a standard web application with any technology 
-stack. The only thing Telegram needs from the developer is the application URL. This URL will be used as 
-a source for the WebView component of the Telegram client, which will load and display the application 
-within Telegram.
+stack. The only thing Openweb3 needs from the developer is the application URL. This URL will be used as 
+a source for the WebView component of the Openweb3 client, which will load and display the application 
+within Openweb3.
 
 ## Usage
 
-As we mentioned in the previous section, Mini Apps are add-ons for Telegram Bots. Telegram Bots are
+As we mentioned in the previous section, Mini Apps are add-ons for Openweb3 Bots. Openweb3 Bots are
 also a well-known technology that provides functionality for a wide range of use cases. You could create a
 bot to buy a ticket in the cinema, make tell users jokes, generate random numbers, etc. In other
 words, the bot can do whatever the developer thinks of.
@@ -55,17 +55,17 @@ functionality, you want to provide.
 
 ## Supported Applications
 
-Currently, Telegram Mini Apps are available on a wide list of Telegram
+Currently, Openweb3 Mini Apps are available on a wide list of Openweb3
 applications:
 
-- [Telegram for Android](https://github.com/DrKLO/Telegram) `android`;
-- [Telegram for iOS](https://github.com/TelegramMessenger/Telegram-iOS) `ios`;
-- [Telegram for macOS](https://github.com/overtake/TelegramSwift) `macos`;
-- [Telegram Desktop](https://github.com/telegramdesktop/tdesktop) `tdesktop`;
-- [Telegram Web A](https://github.com/Ajaxy/telegram-tt) `weba`;
-- [Telegram Web K](https://github.com/morethanwords/tweb) `web`;
+- [Openweb3 for Android](https://github.com/DrKLO/Openweb3) `android`;
+- [Openweb3 for iOS](https://github.com/Openweb3Messenger/Openweb3-iOS) `ios`;
+- [Openweb3 for macOS](https://github.com/overtake/Openweb3Swift) `macos`;
+- [Openweb3 Desktop](https://github.com/openweb3desktop/tdesktop) `tdesktop`;
+- [Openweb3 Web A](https://github.com/Ajaxy/openweb3-tt) `weba`;
+- [Openweb3 Web K](https://github.com/morethanwords/tweb) `web`;
 
-Other applications either don't have implementation for Telegram Mini Apps, or
+Other applications either don't have implementation for Openweb3 Mini Apps, or
 support it too poorly. This will probably be useful in the next sections of the
 documentation.
 
@@ -73,6 +73,6 @@ documentation.
 
 As long as all applications are being developed separately, there may be variations in how they
 implement the platform. If you encounter unexpected differences, please consider reporting
-an [issue](https://github.com/Telegram-Mini-Apps/issues).
+an [issue](https://github.com/openweb3-io/issues).
 
 :::

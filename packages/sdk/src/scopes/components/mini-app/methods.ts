@@ -10,10 +10,10 @@ import {
   type RGB,
   type BottomBarColor,
   type BackgroundColor,
-} from '@telegram-apps/bridge';
-import { isRGB } from '@telegram-apps/transformers';
-import { isPageReload } from '@telegram-apps/navigation';
-import { computed, type Computed } from '@telegram-apps/signals';
+} from '@openweb3-apps/bridge';
+import { isRGB } from '@openweb3-apps/transformers';
+import { isPageReload } from '@openweb3-apps/navigation';
+import { computed, type Computed } from '@openweb3-apps/signals';
 
 import { $version, postEvent } from '@/scopes/globals.js';
 import { ERR_ALREADY_CALLED } from '@/errors.js';
@@ -163,7 +163,7 @@ function onHeaderColorChanged(): void {
 }
 
 /**
- * Informs the Telegram app that the Mini App is ready to be displayed.
+ * Informs the Openweb3 app that the Mini App is ready to be displayed.
  *
  * It is recommended to call this method as early as possible, as soon as all essential
  * interface elements loaded.

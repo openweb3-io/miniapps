@@ -1,5 +1,5 @@
-import type { Computed } from '@telegram-apps/signals';
-import type { PostEventFn } from '@telegram-apps/bridge';
+import type { Computed } from '@openweb3-apps/signals';
+import type { PostEventFn } from '@openweb3-apps/bridge';
 
 import type { URLLike } from '@/url/types.js';
 
@@ -60,7 +60,7 @@ export interface NavigatorCtrOptions<State> {
   bb?: Partial<BackButtonOptions>;
   /**
    * Custom function to call Mini Apps methods.
-   * @default The `postEvent` function from the `@telegram-apps/bridge` package.
+   * @default The `postEvent` function from the `@openweb3-apps/bridge` package.
    */
   postEvent?: PostEventFn;
   /**
@@ -168,8 +168,8 @@ export interface Navigator<State> {
    * how the navigator "sees" it.
    *
    * @example
-   * parsePath('http://example.com/abc?a=1#telegram-mini-apps?is=cool#yeah');
-   * // { pathname: '/telegram-mini-apps', search: '?is=cool', hash: '#yeah' }
+   * parsePath('http://example.com/abc?a=1#openweb3-mini-apps?is=cool#yeah');
+   * // { pathname: '/openweb3-mini-apps', search: '?is=cool', hash: '#yeah' }
    */
   parsePath(this: void, path: string | Partial<URLLike>): URLLike;
   /**

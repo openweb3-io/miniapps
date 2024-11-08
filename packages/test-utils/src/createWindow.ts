@@ -11,7 +11,7 @@ export type WindowSpy = MockInstance<[], Wnd>;
  */
 export function createWindow({ env, ...rest }: Partial<Wnd & { env: 'iframe' }> = {}): WindowSpy {
   return mockWindow({
-    // We need this property to correctly re-emit received event from Telegram.
+    // We need this property to correctly re-emit received event from Openweb3.
     parent: { postMessage: vi.fn() },
     ...createDomEmitter(),
     ...(env === 'iframe' ? { top: 1, self: 2 } : {}),

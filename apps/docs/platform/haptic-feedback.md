@@ -13,7 +13,7 @@ There are currently three types of notifications used in different cases:
 - `selection_change`, when the user changes their selection.
 - `notification`, when some action execution has been completed.
 
-Almost each of these types has its own subtypes. To produce haptic feedback, Telegram Mini Apps
+Almost each of these types has its own subtypes. To produce haptic feedback, Openweb3 Mini Apps
 provides [web_app_trigger_haptic_feedback](methods.md#web-app-trigger-haptic-feedback)
 method.
 

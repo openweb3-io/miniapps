@@ -1,7 +1,7 @@
 export { hasWebviewProxy } from '@/env/hasWebviewProxy.js';
 export { isIframe } from '@/env/isIframe.js';
 export { isTMA } from '@/env/isTMA.js';
-export { mockTelegramEnv } from '@/env/mockTelegramEnv.js';
+export { mockOpenweb3Env } from '@/env/mockOpenweb3Env.js';
 
 export { defineEventHandlers } from '@/events/handling/defineEventHandlers.js';
 export { removeEventHandlers } from '@/events/handling/removeEventHandlers.js';
@@ -87,7 +87,7 @@ export {
   setStorageValue,
   setCssVar,
   snakeToCamel,
-} from '@telegram-apps/toolkit';
+} from '@openweb3-apps/toolkit';
 
 export type {
   Chat,
@@ -101,4 +101,4 @@ export type {
   ThemeParamsKey,
   User,
   Version,
-} from '@telegram-apps/types';
+} from '@openweb3-apps/types';

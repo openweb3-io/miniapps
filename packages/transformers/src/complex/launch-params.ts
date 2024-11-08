@@ -1,4 +1,4 @@
-import type { LaunchParams } from '@telegram-apps/types';
+import type { LaunchParams } from '@openweb3-apps/types';
 
 import { searchParams } from '@/transformers/searchParams.js';
 import { boolean as createBoolean } from '@/transformers/boolean.js';
@@ -26,7 +26,7 @@ export const launchParams: TransformerGen<LaunchParams> = (optional) => {
 };
 
 /**
- * Serializes launch parameters to representation sent from the Telegram application.
+ * Serializes launch parameters to representation sent from the Openweb3 application.
  */
 // #__NO_SIDE_EFFECTS__
 export function serializeLaunchParams(lp: LaunchParams): string {

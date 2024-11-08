@@ -5,7 +5,7 @@ import {
   object,
   string,
   type TransformerGen,
-} from '@telegram-apps/transformers';
+} from '@openweb3-apps/transformers';
 
 import type { EventName, EventPayload } from '@/events/types/events.js';
 

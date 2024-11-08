@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { TypedError } from '@telegram-apps/bridge';
+import { TypedError } from '@openweb3-apps/bridge';
 import { mockSessionStorageGetItem, mockPageReload, mockSessionStorageSetItem } from 'test-utils';
 
 import { mockPostEvent } from '@test-utils/mockPostEvent.js';

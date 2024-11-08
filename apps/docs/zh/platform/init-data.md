@@ -11,10 +11,10 @@
 ## 检索 {#retrieving}
 
 要提取初始数据，开发人员可以使用
-[@telegram-apps/sdk](../packages/telegram-apps-sdk/2-x) 中的 `retrieveLaunchParams` 函数。
+[@openweb3-apps/sdk](../packages/openweb3-apps-sdk/2-x) 中的 `retrieveLaunchParams` 函数。
 
 ```typescript
-import { retrieveLaunchParams } from '@telegram-apps/sdk';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk';
 
 const { initDataRaw, initData } = retrieveLaunchParams();
 ```
@@ -22,11 +22,11 @@ const { initDataRaw, initData } = retrieveLaunchParams();
 ## 授权和认证 {#authorization-and-authentication}
 
 初始化数据的一个特点是可以用作授权或
-身份验证的因素。 事实上，原生 Telegram 应用程序生成的数据会使用 Telegram 机器人的密钥对
+身份验证的因素。 事实上，原生 Openweb3 应用程序生成的数据会使用 Openweb3 机器人的密钥对
 进行签名，然后生成的签名会放在
 参数本身旁边。
 
-因此，知道了 Telegram 机器人的秘钥，开发者就有机会验证
+因此，知道了 Openweb3 机器人的秘钥，开发者就有机会验证
 参数的签名，确保这些参数确实是发给指定用户的。
 
 此外，签名验证操作足够快，不需要大量服务器
@@ -48,7 +48,7 @@ const { initDataRaw, initData } = retrieveLaunchParams();
 下面是开发人员向服务器发送初始数据的方法：
 
 ```typescript
-import { retrieveLaunchParams } from '@telegram-apps/sdk';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk';
 
 const { initDataRaw } = retrieveLaunchParams();
 
@@ -82,7 +82,7 @@ fetch('https://example.com/api', {
    格式创建字符串值数组 `{key}={value}`。 `hash` 应排除在外，但要记下来。
    代表初始数据符号，将用于验证过程的最后一步。
 2. 将计算出的数组按字母顺序排序。
-3. 使用密钥 `WebAppData` 创建 HMAC-SHA256，并将其应用于绑定到迷你应用程序的 Telegram Bot
+3. 使用密钥 `WebAppData` 创建 HMAC-SHA256，并将其应用于绑定到迷你应用程序的 Openweb3 Bot
    令牌。
 4. 使用第 3 步的结果作为密钥创建 HMAC-SHA256。 将
    应用于第 2 步
@@ -104,7 +104,7 @@ fetch('https://example.com/api', {
 成熟且经过
 测试的软件包：
 
-- 用于节点：[@telegram-apps/init-data-node](../packages/telegram-apps-init-data-node)
+- 用于节点：[@openweb3-apps/init-data-node](../packages/openweb3-apps-init-data-node)
 - GoLang: [init-data-golang](../packages/init-data-golang.md)
 
 :::
@@ -114,7 +114,7 @@ fetch('https://example.com/api', {
 让我们想象一下，我们有这样的输入：
 
 ```
-Telegram Bot token:
+Openweb3 Bot token:
 5768337691:AAGDAe6rjxu1cUgxK4BizYi--Utc3J9v5AU
 
 Init data:
@@ -141,7 +141,7 @@ user=%7B%22id%22%3A279058397%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name
 ```
 
 然后，创建第 3 步所需的 HMAC-SHA256。 它应基于
-`WebAppData` 字面字符串值和 Telegram Bot token。
+`WebAppData` 字面字符串值和 Openweb3 Bot token。
 
 ```
 HMAC-SHA256(
@@ -198,7 +198,7 @@ HMAC-SHA256(
     </td>
     <td>
       <i>可选</i>。 通过
-      <a href="https://core.telegram.org/bots/api#answerwebappquery">answerWebAppQuery</a> 方法发送消息的秒数。
+      <a href="https://core.openweb3.io/bots/api#answerwebappquery">answerWebAppQuery</a> 方法发送消息的秒数。
     </td>
   </tr>
 
@@ -269,7 +269,7 @@ HMAC-SHA256(
     <td>
       <i>可选</i>。 迷你应用程序的唯一会话 ID。 在
       通过
-      <a href="https://core.telegram.org/bots/api#answerwebappquery">answerWebAppQuery</a> 方法发送信息的过程中使用。
+      <a href="https://core.openweb3.io/bots/api#answerwebappquery">answerWebAppQuery</a> 方法发送信息的过程中使用。
     </td>
   </tr>
 
@@ -398,7 +398,7 @@ HMAC-SHA256(
 | ------------------------------- | --- | ------------------------------------------------------------------- |
 | added_to_attachment_menu                         | `boolean` | _可选_。 如果该用户在附件菜单中添加了机器人，则为 True。                                    |
 | allows_write_to_pm | `boolean` | _可选_。 如果该用户允许机器人向其发送信息，则为 "true"。                                   |
-| is_premium | `boolean` | _可选_。 用户是否购买了 Telegram Premium。                                     |
+| is_premium | `boolean` | _可选_。 用户是否购买了 Openweb3 Premium。                                     |
 | first_name | `string` | 机器人或用户名。                                                            |
 | id | `number` | 机器人或用户 ID。                                                          |
 | is_bot     | `boolean` | _可选_。 用户是否是机器人                                                      |

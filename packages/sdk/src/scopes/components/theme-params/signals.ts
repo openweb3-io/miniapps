@@ -1,5 +1,5 @@
-import type { ThemeParams } from '@telegram-apps/bridge';
-import { computed, type Computed, signal } from '@telegram-apps/signals';
+import type { ThemeParams } from '@openweb3-apps/bridge';
+import { computed, type Computed, signal } from '@openweb3-apps/signals';
 
 import { isColorDark } from '@/utils/isColorDark.js';
 

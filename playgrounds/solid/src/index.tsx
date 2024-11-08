@@ -1,6 +1,6 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
-import { retrieveLaunchParams } from '@telegram-apps/sdk-solid';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk-solid';
 
 import './index.css';
 
@@ -8,7 +8,7 @@ import { Root } from '@/components/Root.js';
 import { init } from '@/init.js';
 
 // Uncomment this import in case, you would like to develop the application even outside
-// the Telegram application, just in your browser.
+// the Openweb3 application, just in your browser.
 // import './mockEnv.ts';
 
 const root = document.getElementById('root');

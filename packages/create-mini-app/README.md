@@ -1,22 +1,22 @@
-# @telegram-apps/create-mini-app
+# @openweb3-apps/create-mini-app
 
 [code-badge]: https://img.shields.io/badge/source-black?logo=github
 
 [docs-badge]: https://img.shields.io/badge/documentation-blue?logo=gitbook&logoColor=white
 
-[code-link]: https://github.com/Telegram-Mini-Apps/telegram-apps/tree/master/packages/create-mini-app
+[code-link]: https://github.com/openweb3-io/miniapps/tree/master/packages/create-mini-app
 
-[docs-link]: https://docs.telegram-mini-apps.com/packages/telegram-apps-create-mini-app
+[docs-link]: https://docs.openweb3-mini-apps.com/packages/openweb3-apps-create-mini-app
 
-[npm-link]: https://npmjs.com/package/@telegram-apps/create-mini-app
+[npm-link]: https://npmjs.com/package/@openweb3-apps/create-mini-app
 
-[npm-badge]: https://img.shields.io/npm/v/@telegram-apps/create-mini-app?logo=npm
+[npm-badge]: https://img.shields.io/npm/v/@openweb3-apps/create-mini-app?logo=npm
 
 [![NPM][npm-badge]][npm-link]
 [![docs-badge]][docs-link]
 [![code-badge]][code-link]
 
-CLI tool to scaffold your new mini application on the Telegram Mini Apps platform.
+CLI tool to scaffold your new mini application on the Openweb3 Mini Apps platform.
 
 ## Usage
 
@@ -24,13 +24,13 @@ To run the tool, use one of the following scripts depending on your package mana
 
 ```bash
 # npm
-npx @telegram-apps/create-mini-app
+npx @openweb3-apps/create-mini-app
 
 # yarn
-yarn create @telegram-apps/mini-app
+yarn create @openweb3-apps/mini-app
 
 # pnpm
-pnpm dlx @telegram-apps/create-mini-app
+pnpm dlx @openweb3-apps/create-mini-app
 ```
 
 The tool will launch the project initialization process, prompting you with questions related to the

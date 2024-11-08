@@ -1,4 +1,4 @@
-import { classNames, type RGB as RGBType } from '@telegram-apps/sdk-solid';
+import { classNames, type RGB as RGBType } from '@openweb3-apps/sdk-solid';
 import { type Component, type JSX, splitProps } from 'solid-js';
 
 import './RGB.css';

@@ -1,4 +1,4 @@
-import type { RGB } from '@telegram-apps/bridge';
+import type { RGB } from '@openweb3-apps/bridge';
 
 export interface State {
   /**

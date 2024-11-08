@@ -11,8 +11,8 @@ import {
   type ExecuteWithOptions,
   type CustomMethodParams,
   type CustomMethodName,
-} from '@telegram-apps/bridge';
-import { signal } from '@telegram-apps/signals';
+} from '@openweb3-apps/bridge';
+import { signal } from '@openweb3-apps/signals';
 
 export interface ConfigureOptions {
   /**

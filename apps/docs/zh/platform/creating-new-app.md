@@ -1,12 +1,12 @@
 # 创建新应用程序
 
-在本文中，我们将深入探讨在 Telegram Mini
+在本文中，我们将深入探讨在 Openweb3 Mini
 Apps 平台上开发新应用程序的过程，了解创建应用程序到底需要执行哪些操作，以及
 ，并就如何改进创建应用程序的过程提出建议。
 
 创建应用程序的过程通常包括以下基本步骤：
 
-1. 创建 Telegram 机器人并注册迷你应用程序。
+1. 创建 Openweb3 机器人并注册迷你应用程序。
 2. 创建网络应用程序。
 3. 通过 BotFather 获取网络应用程序 URL 并进行设置。
 
@@ -25,19 +25,19 @@ Apps 平台上开发新应用程序的过程，了解创建应用程序到底需
 
 ## 在 BotFather 中创建应用程序
 
-只要在技术上将迷你应用程序与 Telegram 机器人连接起来，我们就应该首先创建
-一个 Telegram 机器人。 为此，您需要找到所有机器人之父，即
+只要在技术上将迷你应用程序与 Openweb3 机器人连接起来，我们就应该首先创建
+一个 Openweb3 机器人。 为此，您需要找到所有机器人之父，即
 机器人 [BotFather](https://t.me/botfather)，并使用 `/newbot`'命令，然后通过建议的
 流程，指定所有必要的数据。
 
 创建机器人后，需要使用 `/newapp` 命令，并再次通过
-程序创建另一个实体--Telegram 迷你应用程序，并将其链接到
-Telegram 机器人。 从现在起，创建的应用程序将通过
+程序创建另一个实体--Openweb3 迷你应用程序，并将其链接到
+Openweb3 机器人。 从现在起，创建的应用程序将通过
 表格 `https://t.me/{mybot}/{myapp}` 的直接链接提供。
 
 ::: info
 
-Telegram Mini Apps 技术也可以在不创建新应用程序的情况下使用，而是作为
+Openweb3 Mini Apps 技术也可以在不创建新应用程序的情况下使用，而是作为
 机器人的网络接口。 要将其用作机器人的扩展，请使用
 BotFather 的 `/setmenubutton`命令。
 
@@ -54,12 +54,12 @@ BotFather 的 `/setmenubutton`命令。
 
 ### 应用
 
-收到 HTTPS 链接后，必须在之前创建的 Telegram 机器人中使用。 Telegram
+收到 HTTPS 链接后，必须在之前创建的 Openweb3 机器人中使用。 Openweb3
 支持多种方式安装此链接：
 
 - **用于机器人菜单按钮**。 然后，每个与机器人对话的用户都可以通过
   ，以开发应用程序的形式打开机器人的 "菜单"。
-- **用于 Telegram 迷你应用程序**。 然后，只有当用户
+- **用于 Openweb3 迷你应用程序**。 然后，只有当用户
   按照格式 `https://t.me/{mybot}/{myapp}` 的链接操作时，应用程序才会打开。 在这种情况下，用户可以避免加入
   与机器人的对话。
 
@@ -80,7 +80,7 @@ BotFather 的 `/setmenubutton`命令。
 2. 选择所需的应用程序。
 3. 单击 `Edit link` 并安装新链接。
 
-现在，当用户点击格式为 `https://t.me/{mybot}/{myapp}` 的链接时，Telegram
+现在，当用户点击格式为 `https://t.me/{mybot}/{myapp}` 的链接时，Openweb3
 将显示源地址为设置中指定 URL 的网页组件。
 
 ## 调试应用程序
@@ -112,5 +112,5 @@ BotFather 的 `/setmenubutton`命令。
 [//]: # "我们在浏览器应用程序中这样做，直到完成一些附加操作。"
 [//]: #
 [//]: # "在本地应用程序中启用调试模式的步骤如下"
-[//]: # "[正式文件](https://core.telegram.org/bots/webapps#debug-mode-for-web-apps)"
+[//]: # "[正式文件](https://core.openweb3.io/bots/webapps#debug-mode-for-web-apps)"
 [//]: # "."

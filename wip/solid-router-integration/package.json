@@ -1,19 +1,19 @@
 {
-  "name": "@telegram-apps/solid-router-integration",
+  "name": "@openweb3-apps/solid-router-integration",
   "version": "1.0.1",
   "description": "@solidjs/router integration for navigation.",
-  "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",
-  "homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
+  "author": "Dev <dev@openweb3.io>",
+  "homepage": "https://github.com/openweb3-io/miniapps#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Telegram-Mini-Apps/telegram-apps.git",
+    "url": "git@github.com:openweb3-io/miniapps.git",
     "directory": "packages/solid-router-integration"
   },
   "bugs": {
-    "url": "https://github.com/Telegram-Mini-Apps/telegram-apps/issues"
+    "url": "https://github.com/openweb3-io/miniapps/issues"
   },
   "keywords": [
-    "telegram-mini-apps",
+    "openweb3-mini-apps",
     "typescript",
     "navigation",
     "solidjs"
@@ -45,7 +45,7 @@
   },
   "peerDependencies": {
     "@solidjs/router": "^0.14.3",
-    "@telegram-apps/navigation": "workspace:^",
+    "@openweb3-apps/navigation": "workspace:^",
     "solid-js": "^1.8.16"
   },
   "devDependencies": {

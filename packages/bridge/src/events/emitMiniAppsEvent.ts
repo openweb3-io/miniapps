@@ -1,5 +1,5 @@
 /**
- * Emits an event sent from the Telegram native application like it was sent in a default web
+ * Emits an event sent from the Openweb3 native application like it was sent in a default web
  * environment between two iframes.
  *
  * It dispatches a new MessageEvent and expects it to be handled via

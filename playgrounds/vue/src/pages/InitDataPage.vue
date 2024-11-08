@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { initData as $initData, useSignal, type User } from '@telegram-apps/sdk-vue';
+import { initData as $initData, useSignal, type User } from '@openweb3-apps/sdk-vue';
 import UiLink from '@/components/UiLink.vue';
 import UiPage from '@/components/UiPage.vue';
 import UiDisplayData, { type DisplayDataRow } from '@/components/UiDisplayData.vue';
@@ -74,7 +74,7 @@ function getUserRows(user: User): DisplayDataRow[] {
   <UiPage title="Init Data">
     <template #disclaimer>
       This page displays application
-      <UiLink to="https://docs.telegram-mini-apps.com/platform/init-data">init data</UiLink>.
+      <UiLink to="https://docs.openweb3-mini-apps.com/platform/init-data">init data</UiLink>.
     </template>
     <i v-if="!initDataRows">Application was launched with missing init data</i>
     <template v-else>

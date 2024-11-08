@@ -1,4 +1,4 @@
-import type { RGB } from '@telegram-apps/types';
+import type { RGB } from '@openweb3-apps/types';
 
 import type {
   PhoneRequestedStatus,
@@ -11,19 +11,19 @@ import type {
 
 /**
  * Map where key is known event name, and value is its listener.
- * @see https://docs.telegram-mini-apps.com/platform/events
+ * @see https://docs.openweb3-mini-apps.com/platform/events
  */
 export interface Events {
   /**
    * User clicked the BackButton.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/events#back-button-pressed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#back-button-pressed
    */
   back_button_pressed: never;
   /**
    * Biometry authentication request completed.
    * @since 7.2
-   * @see https://docs.telegram-mini-apps.com/platform/events#biometry-auth-requested
+   * @see https://docs.openweb3-mini-apps.com/platform/events#biometry-auth-requested
    */
   biometry_auth_requested: {
     /**
@@ -38,7 +38,7 @@ export interface Events {
   /**
    * Biometry settings were received.
    * @since 7.2
-   * @see https://docs.telegram-mini-apps.com/platform/events#biometry-info-received
+   * @see https://docs.openweb3-mini-apps.com/platform/events#biometry-info-received
    */
   biometry_info_received:
     | {
@@ -85,7 +85,7 @@ export interface Events {
   /**
    * Biometry token was updated.
    * @since 7.2
-   * @see https://docs.telegram-mini-apps.com/platform/events#biometry-token-updated
+   * @see https://docs.openweb3-mini-apps.com/platform/events#biometry-token-updated
    */
   biometry_token_updated: {
     /**
@@ -100,9 +100,9 @@ export interface Events {
     status: BiometryTokenUpdateStatus;
   };
   /**
-   * Telegram application attempted to extract text from clipboard.
+   * Openweb3 application attempted to extract text from clipboard.
    * @since v6.4
-   * @see https://docs.telegram-mini-apps.com/platform/events#clipboard-text-received
+   * @see https://docs.openweb3-mini-apps.com/platform/events#clipboard-text-received
    */
   clipboard_text_received: {
     /**
@@ -118,7 +118,7 @@ export interface Events {
   /**
    * Custom method invocation completed.
    * @since v6.9
-   * @see https://docs.telegram-mini-apps.com/platform/events#custom-method-invoked
+   * @see https://docs.openweb3-mini-apps.com/platform/events#custom-method-invoked
    */
   custom_method_invoked: {
     /**
@@ -136,7 +136,7 @@ export interface Events {
   };
   /**
    * An invoice was closed.
-   * @see https://docs.telegram-mini-apps.com/platform/events#invoice-closed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#invoice-closed
    */
   invoice_closed: {
     /**
@@ -150,13 +150,13 @@ export interface Events {
   };
   /**
    * A user clicked the Main Button.
-   * @see https://docs.telegram-mini-apps.com/platform/events#main-button-pressed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#main-button-pressed
    */
   main_button_pressed: never;
   /**
    * Application received phone access request status.
    * @since v6.9
-   * @see https://docs.telegram-mini-apps.com/platform/events#phone-requested
+   * @see https://docs.openweb3-mini-apps.com/platform/events#phone-requested
    */
   phone_requested: {
     /**
@@ -166,7 +166,7 @@ export interface Events {
   };
   /**
    * Popup was closed.
-   * @see https://docs.telegram-mini-apps.com/platform/events#popup-closed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#popup-closed
    */
   popup_closed: {
     /**
@@ -179,7 +179,7 @@ export interface Events {
    * The QR scanner scanned some QR and extracted its content.
    * @param payload - event payload.
    * @since v6.4
-   * @see https://docs.telegram-mini-apps.com/platform/events#qr-text-received
+   * @see https://docs.openweb3-mini-apps.com/platform/events#qr-text-received
    */
   qr_text_received: {
     /**
@@ -189,38 +189,38 @@ export interface Events {
   };
   /**
    * Parent iframe requested current iframe reload.
-   * @see https://docs.telegram-mini-apps.com/platform/events#reload-iframe
+   * @see https://docs.openweb3-mini-apps.com/platform/events#reload-iframe
    */
   reload_iframe: never;
   /**
    * QR scanner was closed.
    * @since v6.4
-   * @see https://docs.telegram-mini-apps.com/platform/events#scan-qr-popup-closed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#scan-qr-popup-closed
    */
   scan_qr_popup_closed: never;
   /**
    * User clicked the secondary button.
    * @since v7.10
-   * @see https://docs.telegram-mini-apps.com/platform/events#secondary-button-pressed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#secondary-button-pressed
    */
   secondary_button_pressed: never;
   /**
-   * The event which is usually sent by the Telegram web application. Its payload represents
+   * The event which is usually sent by the Openweb3 web application. Its payload represents
    * `<style/>` tag html content, a developer could use. The stylesheet described in the payload
    * will help the developer to stylize the app scrollbar (but he is still able to do it himself).
-   * @see https://docs.telegram-mini-apps.com/platform/events#set-custom-style
+   * @see https://docs.openweb3-mini-apps.com/platform/events#set-custom-style
    */
   set_custom_style: string;
   /**
    * Occurs when the Settings Button was pressed.
    * @since v6.1
-   * @see https://docs.telegram-mini-apps.com/platform/events#settings-button-pressed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#settings-button-pressed
    */
   settings_button_pressed: never;
   /**
-   * Occurs whenever theme settings are changed in the user's Telegram app
+   * Occurs whenever theme settings are changed in the user's Openweb3 app
    * (including switching to night mode).
-   * @see https://docs.telegram-mini-apps.com/platform/events#theme-changed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#theme-changed
    */
   theme_changed: {
     /**
@@ -269,7 +269,7 @@ export interface Events {
   /**
    * Occurs whenever the viewport has been changed. For example, when the user started
    * dragging the application or called the expansion method.
-   * @see https://docs.telegram-mini-apps.com/platform/events#viewport-changed
+   * @see https://docs.openweb3-mini-apps.com/platform/events#viewport-changed
    */
   viewport_changed: {
     /**
@@ -292,7 +292,7 @@ export interface Events {
   /**
    * Application received write access request status.
    * @since v6.9
-   * @see https://docs.telegram-mini-apps.com/platform/events#write-access-requested
+   * @see https://docs.openweb3-mini-apps.com/platform/events#write-access-requested
    */
   write_access_requested: {
     /**

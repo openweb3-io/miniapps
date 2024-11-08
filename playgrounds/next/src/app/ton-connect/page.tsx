@@ -1,6 +1,6 @@
 'use client';
 
-import { openLink } from '@telegram-apps/sdk-react';
+import { openLink } from '@openweb3-apps/sdk-react';
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
 import {
   Avatar,
@@ -11,7 +11,7 @@ import {
   Section,
   Text,
   Title,
-} from '@telegram-apps/telegram-ui';
+} from '@openweb3-apps/openweb3-ui';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData';
 import { Page } from '@/components/Page';

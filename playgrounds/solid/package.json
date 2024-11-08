@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "type": "module",
   "main": "index.js",
-  "homepage": "https://telegram-mini-apps.github.io/solidjs-template",
+  "homepage": "https://openweb3-mini-apps.github.io/solidjs-template",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.14.3",
-    "@telegram-apps/sdk-solid": "workspace:^",
+    "@openweb3-apps/sdk-solid": "workspace:^",
     "@tonconnect/ui": "^2.0.5",
     "eruda": "^3.0.1",
     "solid-js": "^1.8.17"

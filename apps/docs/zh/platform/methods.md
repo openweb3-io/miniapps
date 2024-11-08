@@ -4,11 +4,11 @@ outline: [ 2, 3 ]
 
 # 方法 - Methods {#Methods}
 
-Telegram 迷你应用程序方法是事件，可执行某些预定义的操作。 它们总是被迷你应用程序调用。
+Openweb3 迷你应用程序方法是事件，可执行某些预定义的操作。 它们总是被迷你应用程序调用。
 
 ## 网页版 {#web}
 
-由于 Telegram 的网页版是在 `<iframe/>` 标签中显示前端应用程序，因此
+由于 Openweb3 的网页版是在 `<iframe/>` 标签中显示前端应用程序，因此
 使用两个 iframe 之间的默认通信方式--通过 `window.parent.postMessage` 函数发送信息。
 
 第一个参数是一个 JSON 对象，**转换为字符串**。 该对象应
@@ -21,9 +21,9 @@ interface MessageJSON {
 }
 ```
 
-第二个参数是 `targetOrigin` - 允许的父 iframe 起源。 我们建议在不安全的情况下避免使用通配符 `*`，因为您的应用程序可能不是被 Telegram 插入，而是被另一个 iframe 插入，而后者仍能与您的应用程序通信并接收一些数据。
+第二个参数是 `targetOrigin` - 允许的父 iframe 起源。 我们建议在不安全的情况下避免使用通配符 `*`，因为您的应用程序可能不是被 Openweb3 插入，而是被另一个 iframe 插入，而后者仍能与您的应用程序通信并接收一些数据。
 
-作为默认值，您可以使用 `https://web.telegram.org`。
+作为默认值，您可以使用 `https://web.openweb3.io`。
 
 因此，正如你所看到的，每个方法都有自己的名称，由 `eventType` 表示，参数存储在
 的 `eventData` 属性中。 下面是使用示例：
@@ -36,15 +36,15 @@ const data = JSON.stringify({
   },
 });
 
-window.parent.postMessage(data, 'https://web.telegram.org');
+window.parent.postMessage(data, 'https://web.openweb3.org');
 ```
 
-这段代码将使 Telegram [返回按钮](back-button.md) 出现。
+这段代码将使 Openweb3 [返回按钮](back-button.md) 出现。
 
 ## 桌面和移动 {#Desktop and Mobile}
 
 与网络不同，桌面和移动应用程序使用的方法调用方式更为特殊。
-都将创建一个全局函数 `window.TelegramWebviewProxy.postEvent`。
+都将创建一个全局函数 `window.Openweb3WebviewProxy.postEvent`。
 
 作为第一个参数，该函数接受事件名称。 第二个是参数对象，
 转换为字符串。 具体操作如下：
@@ -53,13 +53,13 @@ window.parent.postMessage(data, 'https://web.telegram.org');
 const data = JSON.stringify({ is_visible: true });
 
 window
-  .TelegramWebviewProxy
+  .Openweb3WebviewProxy
   .postEvent('web_app_setup_back_button', data);
 ```
 
 ## Windows Phone
 
-Telegram Windows Phone 应用程序提供 `window.external.notify` 功能。 它接受与网络版相同的
+Openweb3 Windows Phone 应用程序提供 `window.external.notify` 功能。 它接受与网络版相同的
 参数：
 
 ```typescript
@@ -74,19 +74,19 @@ window.external.notify(data);
 ## 调用方法 {#Calling Methods}
 
 为开发人员的应用程序处理所有可能的环境是一项挑战。 为了简化
-这一过程，社区开发了 [@telegram-apps/sdk](../packages/telegram-apps-sdk/2-x)
+这一过程，社区开发了 [@openweb3-apps/sdk](../packages/openweb3-apps-sdk/2-x)
 软件包，大大简化了集成工作。
 
 下面介绍如何使用它：
 
 ```ts
-import { postEvent } from '@telegram-apps/sdk';
+import { postEvent } from '@openweb3-apps/sdk';
 
 postEvent('web_app_set_header_color', { color_key: 'bg_color' });
 ```
 
 有关调用方法的更多信息，请参阅
-软件包的 [文档](../packages/telegram-apps-bridge/events.md#calling-methods) 。
+软件包的 [文档](../packages/openweb3-apps-bridge/events.md#calling-methods) 。
 
 ## 可用方法 {#Available Methods}
 
@@ -97,7 +97,7 @@ postEvent('web_app_set_header_color', { color_key: 'bg_color' });
 
 ### `iframe_ready`
 
-通知父 iframe 当前帧已准备就绪。 此方法仅在 Telegram 的网络版
+通知父 iframe 当前帧已准备就绪。 此方法仅在 Openweb3 的网络版
 中使用。 因此，Mini App 将收到 [set_custom_style](events.md#set-custom-style)
 事件。
 
@@ -168,7 +168,7 @@ App 界面交互（如点击迷你 App 内部或主按钮）时调用
 
 启用版本: **v6.4**
 
-关闭 QR 扫描仪。 Telegram 应用程序会创建
+关闭 QR 扫描仪。 Openweb3 应用程序会创建
 [scan_qr_popup_closed](events.md#scan-qr-popup-closed) 事件。
 
 ### `web_app_data_send`
@@ -177,7 +177,7 @@ App 界面交互（如点击迷你 App 内部或主按钮）时调用
 长度不超过 4096 字节的数据。 然后，迷你应用程序将关闭。
 
 要获取更多信息，请查看
-class [Message](https://core.telegram.org/bots/api#message) 中的 `web_app_data` 字段。
+class [Message](https://core.openweb3.io/bots/api#message) 中的 `web_app_data` 字段。
 
 | 字段 | 类型  | 说明                          |
 | -- | --- | --------------------------- |
@@ -202,7 +202,7 @@ class [Message](https://core.telegram.org/bots/api#message) 中的 `web_app_data
 启用版本: **v6.1**
 
 按指定的标签打开发票。 有关发票的更多信息，请参阅
-此 [文档](https://core.telegram.org/bots/payments)。
+此 [文档](https://core.openweb3.io/bots/payments)。
 
 | 字段  | 类型  | 说明       |
 | --- | --- | -------- |
@@ -214,14 +214,14 @@ class [Message](https://core.telegram.org/bots/api#message) 中的 `web_app_data
 
 | 字段  | 类型  | 说明  | 启用版本 |
 | ---------------------------------------------------------- | --- | ----------------------------------------------------------------------- | ------ |
-| url                                                         | `string` | Telegram 应用程序要打开的 URL。 应是采用 `https` 协议的完整路径。                            |        |
-| try_instant_view | `boolean` | _可选_。 如果可能，链接将以 [Instant View](https://instantview.telegram.org/) 模式打开。 | `v6.4` |
+| url                                                         | `string` | Openweb3 应用程序要打开的 URL。 应是采用 `https` 协议的完整路径。                            |        |
+| try_instant_view | `boolean` | _可选_。 如果可能，链接将以 [Instant View](https://instantview.openweb3.io/) 模式打开。 | `v6.4` |
 
 ### `web_app_open_popup`
 
 启用版本: **v6.2**
 
-打开一个新的 [弹出窗口](popup.md)。 当用户关闭弹出窗口时，Telegram 会创建
+打开一个新的 [弹出窗口](popup.md)。 当用户关闭弹出窗口时，Openweb3 会创建
 [popup_closed](events.md#popup-closed) 事件。
 
 <table>
@@ -335,9 +335,9 @@ class [Message](https://core.telegram.org/bots/api#message) 中的 `web_app_data
 
 启用版本: **v6.4**
 
-打开 QR 扫描仪。 扫描仪关闭时，Telegram 应用程序会创建
+打开 QR 扫描仪。 扫描仪关闭时，Openweb3 应用程序会创建
 [scan_qr_popup_closed](events.md#scan-qr-popup-closed) 事件。 当扫描仪读取 QR 时，
-Telegram 会创建 [qr_text_received](events.md#qr-text-received) 事件。
+Openweb3 会创建 [qr_text_received](events.md#qr-text-received) 事件。
 
 | 字段 | 类型  | 说明                   |
 | -- | --- | -------------------- |
@@ -347,8 +347,8 @@ Telegram 会创建 [qr_text_received](events.md#qr-text-received) 事件。
 
 启用版本: **v6.1**
 
-通过路径名和查询参数打开 Telegram 链接。 链接将在
-Telegram 应用程序中打开，迷你应用程序将关闭。
+通过路径名和查询参数打开 Openweb3 链接。 链接将在
+Openweb3 应用程序中打开，迷你应用程序将关闭。
 
 | 字段                             | 类型  | 说明                                                     |
 | ------------------------------ | --- | ------------------------------------------------------ |
@@ -368,7 +368,7 @@ Telegram 应用程序中打开，迷你应用程序将关闭。
 
 ### `web_app_ready`
 
-通知 Telegram 当前应用程序已准备好显示。 此方法可让 Telegram
+通知 Openweb3 当前应用程序已准备好显示。 此方法可让 Openweb3
 删除应用程序加载器并显示迷你应用程序。
 
 ### `web_app_request_phone`
@@ -381,13 +381,13 @@ Telegram 应用程序中打开，迷你应用程序将关闭。
 
 ### `web_app_request_theme`
 
-请求 Telegram 当前的 [主题](theming.md)。 因此，Telegram 将
+请求 Openweb3 当前的 [主题](theming.md)。 因此，Openweb3 将
 创建 [theme_changed](events.md#theme-changed) 事件。
 
 ### `web_app_request_viewport`
 
-从 Telegram 请求当前 [viewport](viewport.md)信息。 因此，
-Telegram 将创建 [viewport_changed](events.md#viewport-changed) 事件。
+从 Openweb3 请求当前 [viewport](viewport.md)信息。 因此，
+Openweb3 将创建 [viewport_changed](events.md#viewport-changed) 事件。
 
 ### `web_app_request_write_access`
 
@@ -488,8 +488,8 @@ Telegram 将创建 [viewport_changed](events.md#viewport-changed) 事件。
 | 现场    | 类型  | 说明    |
 | ----------------------------------------------------- | --- | ------------------------------------------------------------------------------------------------------------ |
 | media_url   | `string` | 媒体 URL，将用作创建故事的背景。                                                                                           |
-| text        | `string` | _可选_。 要添加到媒体中的标题。 普通用户为 0-200 个字符，[高级用户](https://telegram.org/faq_premium#telegram-premium) 为 0-2048 个字符。    |
-| widget_link                      | `object`  | _可选_。 描述要包含在故事中的 widget 链接的对象。 请注意，只有 [高级用户](https://telegram.org/faq_premium#telegram-premium) 才能发布带有链接的故事。 |
+| text        | `string` | _可选_。 要添加到媒体中的标题。 普通用户为 0-200 个字符，[高级用户](https://openweb3.io/faq_premium#openweb3-premium) 为 0-2048 个字符。    |
+| widget_link                      | `object`  | _可选_。 描述要包含在故事中的 widget 链接的对象。 请注意，只有 [高级用户](https://openweb3.io/faq_premium#openweb3-premium) 才能发布带有链接的故事。 |
 | widget_link.url  | `string` | 故事中要包含的 URL。                                                                                                 |
 | widget_link.name | `string` | _可选_。 小部件链接显示的名称，0-48 个字符。                                                                                   |
 

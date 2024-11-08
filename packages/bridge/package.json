@@ -1,19 +1,19 @@
 {
-  "name": "@telegram-apps/bridge",
+  "name": "@openweb3-apps/bridge",
   "version": "1.3.0",
-  "description": "TypeScript package to provide communication layer between Mini App and Telegram application.",
+  "description": "TypeScript package to provide communication layer between Mini App and Openweb3 application.",
   "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",
-  "homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
+  "homepage": "https://github.com/openweb3-io/miniapps#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Telegram-Mini-Apps/telegram-apps.git",
+    "url": "git@github.com:openweb3-io/miniapps.git",
     "directory": "packages/bridge"
   },
   "bugs": {
-    "url": "https://github.com/Telegram-Mini-Apps/telegram-apps/issues"
+    "url": "https://github.com/openweb3-io/miniapps/issues"
   },
   "keywords": [
-    "telegram-mini-apps",
+    "openweb3-mini-apps",
     "typescript",
     "bridge"
   ],
@@ -46,10 +46,10 @@
     "build:iife": "vite build -c vite.iife.config.ts"
   },
   "dependencies": {
-    "@telegram-apps/signals": "workspace:^",
-    "@telegram-apps/toolkit": "workspace:^",
-    "@telegram-apps/transformers": "workspace:^",
-    "@telegram-apps/types": "workspace:^"
+    "@openweb3-apps/signals": "workspace:^",
+    "@openweb3-apps/toolkit": "workspace:^",
+    "@openweb3-apps/transformers": "workspace:^",
+    "@openweb3-apps/types": "workspace:^"
   },
   "devDependencies": {
     "test-utils": "workspace:*",

@@ -1,23 +1,23 @@
 # 应用启动参数 {#Launch Parameters}
 
-应用启动参数是本地 Telegram 应用程序
-传递给小应用程序的参数列表。 它可以帮助开发者找出 Telegram 应用程序的特征，
+应用启动参数是本地 Openweb3 应用程序
+传递给小应用程序的参数列表。 它可以帮助开发者找出 Openweb3 应用程序的特征，
 当前设备，获取用户的基本信息等。
 
 ## 传输方式
 
 在网络环境中，在本地运行的
-应用程序之间传输数据最简单快捷的方法之一就是在地址栏中指定数据。 服务器可以在 URL 的哈希值中包含数据，使客户端应用程序可以访问这些数据。 同样，Telegram Mini App 也使用这种方法，Telegram 客户端环境通过 URL 的哈希值向 Mini App 发送数据。 这样，迷你应用程序就能在启动时访问基本信息。
+应用程序之间传输数据最简单快捷的方法之一就是在地址栏中指定数据。 服务器可以在 URL 的哈希值中包含数据，使客户端应用程序可以访问这些数据。 同样，Openweb3 Mini App 也使用这种方法，Openweb3 客户端环境通过 URL 的哈希值向 Mini App 发送数据。 这样，迷你应用程序就能在启动时访问基本信息。
 
-Telegram 本地应用程序会在 URL
+Openweb3 本地应用程序会在 URL
 的动态部分（哈希 #）中传输这些参数的列表。 要访问这些参数，需要在 JavaScript 代码中使用 window.location.hash 属性。
 
 ## 提取
 
-重要的是要记住，`hash` 是一个字符串属性，而 Telegram 传输的是整个属性列表
+重要的是要记住，`hash` 是一个字符串属性，而 Openweb3 传输的是整个属性列表
 ，之后就会出现格式化和处理该列表的问题。 事实上，一切都很简单。
 
-Telegram 本地应用程序将启动参数列表作为查询参数传递，并将
+Openweb3 本地应用程序将启动参数列表作为查询参数传递，并将
 结果字符串保存在 `window.location.hash` 中。 因此，为了提取启动参数，只需执行以下操作即可：
 
 ```typescript title="Example on how to extract launch parameters"
@@ -39,7 +39,7 @@ console.log(params.get('tgWebAppVersion')); // "6.2"
 
 ### `tgWebAppVersion`
 
-本地应用程序使用的当前 Telegram 迷你应用程序版本。 例如，在调用 Telegram Mini
+本地应用程序使用的当前 Openweb3 迷你应用程序版本。 例如，在调用 Openweb3 Mini
 Apps [方法](methods.md)之前，该参数是
 的重要使用参数，以确保它们受支持。
 
@@ -50,13 +50,13 @@ Apps [方法](methods.md)之前，该参数是
 
 ### `tgWebAppPlatform`
 
-[Telegram 应用程序标识符](about.md#supported-applications)。 例如，当
+[Openweb3 应用程序标识符](about.md#supported-applications)。 例如，当
 开发人员需要根据设备显示不同视觉效果的组件时，它可以作为
 判断因素来决定应用程序的视觉风格。
 
 ### `tgWebAppThemeParams`
 
-Telegram 本地应用程序 [主题](theming.md) 的参数。 该参数
+Openweb3 本地应用程序 [主题](theming.md) 的参数。 该参数
 甚至在渲染加载器时也可用于设计应用程序的样式。
 
 该参数的值是转换为字符串的 JSON 对象。 要获得更方便的
@@ -76,12 +76,12 @@ const theme = {
 
 ### `tgWebAppShowSettings`
 
-仅 Telegram SDK 使用的参数，用于在启动时显示 "设置 "按钮。 对于外部开发人员来说，没有任何其他意义。
+仅 Openweb3 SDK 使用的参数，用于在启动时显示 "设置 "按钮。 对于外部开发人员来说，没有任何其他意义。
 
 ### `tgWebAppBotInline`
 
 添加该参数是为了防止当前应用程序以内联模式启动。
-允许调用 Telegram 迷你应用程序方法
+允许调用 Openweb3 迷你应用程序方法
 ，如 [web_app_switch_inline_query](methods.md#web-app-switch-inline-query)。
 
 ### `tgWebAppStartParam`

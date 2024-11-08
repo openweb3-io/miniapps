@@ -4,8 +4,8 @@ import {
   getStorageValue,
   setStorageValue,
   type EventListener,
-} from '@telegram-apps/bridge';
-import { isPageReload } from '@telegram-apps/navigation';
+} from '@openweb3-apps/bridge';
+import { isPageReload } from '@openweb3-apps/navigation';
 
 import { postEvent } from '@/scopes/globals.js';
 import { subAndCall } from '@/utils/subAndCall.js';
@@ -64,7 +64,7 @@ function onStateChanged(): void {
   const s = state();
 
   // We should not commit changes until the payload is correct.
-  // Some version of Telegram will crash due to the empty value of the text.
+  // Some version of Openweb3 will crash due to the empty value of the text.
   s.text && postEvent(WEB_APP_SETUP_MAIN_BUTTON, {
     color: s.backgroundColor,
     has_shine_effect: s.hasShineEffect,

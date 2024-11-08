@@ -9,7 +9,7 @@ import {
   it,
   vi,
 } from 'vitest';
-import { TypedError } from '@telegram-apps/toolkit';
+import { TypedError } from '@openweb3-apps/toolkit';
 
 import { resetPackageState } from '@/resetPackageState.js';
 import { postEvent as globalPostEvent } from '@/methods/postEvent.js';

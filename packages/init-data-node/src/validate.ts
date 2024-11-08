@@ -1,5 +1,5 @@
-import { TypedError } from '@telegram-apps/toolkit';
-import type { InitData } from '@telegram-apps/types';
+import { TypedError } from '@openweb3-apps/toolkit';
+import type { InitData } from '@openweb3-apps/types';
 
 import { initDataToSearchParams } from './initDataToSearchParams.js';
 import type { SharedOptions, SignDataAsyncFn, SignDataSyncFn, Text } from './types.js';

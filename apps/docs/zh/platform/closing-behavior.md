@@ -10,4 +10,4 @@
 ，开发人员可以选择配置关闭行为，并在关闭应用程序前提示用户
 。
 
-要启用关闭确认，Telegram 迷你应用程序提供了一个名为 [web_app_setup_closing_behavior](methods.md#web-app-setup-closing-behavior) 的方法。
+要启用关闭确认，Openweb3 迷你应用程序提供了一个名为 [web_app_setup_closing_behavior](methods.md#web-app-setup-closing-behavior) 的方法。

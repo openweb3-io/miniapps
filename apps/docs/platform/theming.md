@@ -6,14 +6,14 @@ Mini Apps are web applications designed to have a native appearance. This includ
 of components that mimic native elements but also the adoption of the parent application's color
 scheme.
 
-Mini Apps are provided with colors that currently match those used in the Telegram application.
+Mini Apps are provided with colors that currently match those used in the Openweb3 application.
 These colors should be utilized by Mini Apps to ensure a consistent and native look.
 
 ## Retrieving
 
 ### Launch Parameter
 
-Telegram Mini Apps provides theming data through a launch parameter known
+Openweb3 Mini Apps provides theming data through a launch parameter known
 as [tgWebAppThemeParams](launch-parameters.md#tgwebappthemeparams). This
 parameter represents a serialized JSON object containing a list of optional properties, with each
 property describing one of the palette colors.
@@ -39,20 +39,20 @@ Here is a complete example of the parameter value:
 }
 ```
 
-### Telegram Mini Apps Method
+### Openweb3 Mini Apps Method
 
-Nevertheless, retrieving theming data via launch parameters is not the only way. Telegram Mini Apps
+Nevertheless, retrieving theming data via launch parameters is not the only way. Openweb3 Mini Apps
 also permits obtaining the theme through a method
 called [web_app_request_theme](methods.md#web-app-request-theme).
 
-As a result of calling this method, Telegram will emit an event
+As a result of calling this method, Openweb3 will emit an event
 named [theme_changed](events.md#theme-changed). The payload of this event
 contains a property called `theme_params`, which has the format described in the previous section.
 
 ## Background and Header Colors
 
 As long as a Mini App is always displayed within a native component, which consists of parts such
-as the _header_ and _body_, Telegram Mini Apps also allows changing their colors.
+as the _header_ and _body_, Openweb3 Mini Apps also allows changing their colors.
 
 To change the header color, developers should utilize
 the [web_app_set_header_color](methods.md#web-app-set-header-color) method,

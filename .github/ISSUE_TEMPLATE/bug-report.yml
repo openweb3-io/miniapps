@@ -8,16 +8,16 @@ assignees:
 body:
   - type: dropdown
     attributes:
-      label: Telegram Application
-      description: The Telegram application you met the bug in.
+      label: Openweb3 Application
+      description: The Openweb3 application you met the bug in.
       multiple: true
       options:
-        - Telegram for Android
-        - Telegram for iOS
-        - Telegram for macOS
-        - Telegram Desktop
-        - Telegram Web A
-        - Telegram Web K
+        - Openweb3 for Android
+        - Openweb3 for iOS
+        - Openweb3 for macOS
+        - Openweb3 Desktop
+        - Openweb3 Web A
+        - Openweb3 Web K
         - Other
       default: 0
     validations:

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { TypedError } from '@telegram-apps/toolkit';
-import type { InitData } from '@telegram-apps/types';
+import { TypedError } from '@openweb3-apps/toolkit';
+import type { InitData } from '@openweb3-apps/types';
 
 import { validate, sign, signData, isValid } from './web';
 

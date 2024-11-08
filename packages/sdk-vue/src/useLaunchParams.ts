@@ -1,4 +1,4 @@
-import { retrieveLaunchParams } from '@telegram-apps/sdk';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk';
 
 /**
  * @returns The application launch parameters.

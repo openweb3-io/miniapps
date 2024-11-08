@@ -3,8 +3,8 @@ import type { Platform } from './common.js';
 import type { ThemeParams } from './theme-params.js';
 
 /**
- * Telegram Mini Apps launch parameters.
- * @see https://docs.telegram-mini-apps.com/platform/launch-parameters
+ * Openweb3 Mini Apps launch parameters.
+ * @see https://docs.openweb3-mini-apps.com/platform/launch-parameters
  */
 export interface LaunchParams {
   /**
@@ -21,7 +21,7 @@ export interface LaunchParams {
    */
   initDataRaw?: string;
   /**
-   * Current Telegram application identifier.
+   * Current Openweb3 application identifier.
    */
   platform: Platform;
   /**

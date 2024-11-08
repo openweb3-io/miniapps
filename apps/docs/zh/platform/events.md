@@ -4,7 +4,7 @@ outline: [ 2, 3 ]
 
 # 事件 - Events {#Events}
 
-事件是 Telegram 本地应用程序在
+事件是 Openweb3 本地应用程序在
 完成某些外部操作时发送的信号。 与方法一样，每个事件都有自己独特的名称和参数。
 
 ## 网页版 {#web}
@@ -28,7 +28,7 @@ interface MessageJSON {
 }
 ```
 
-然后，让我们想象一下如何处理 Telegram 应用程序中的事件：
+然后，让我们想象一下如何处理 Openweb3 应用程序中的事件：
 
 ```typescript
 window.addEventListener('message', ({ data }) => {
@@ -46,22 +46,22 @@ window.addEventListener('message', ({ data }) => {
 
 ## 电脑、手机和 Windows Phone
 
-桌面版、手机版和 Windows Phone 版 Telegram 不使用
-上一节所述的方法。他们的做法有点不同寻常。开发者首先要知道的是，如果 Telegram 需要发布事件，它会插入 JavaScript 代码，调用全局定义的函数。
+桌面版、手机版和 Windows Phone 版 Openweb3 不使用
+上一节所述的方法。他们的做法有点不同寻常。开发者首先要知道的是，如果 Openweb3 需要发布事件，它会插入 JavaScript 代码，调用全局定义的函数。
 
 下面就是一个例子：
 
 ```typescript
-window.Telegram.WebView.receiveEvent('popup_closed', {
+window.Openweb3.WebView.receiveEvent('popup_closed', {
   button_id: 'cancel'
 });
 ```
 
 该功能的路径取决于平台：
 
-- `window.TelegramGameProxy.receiveEvent` - Telegram 桌面版；
-- `window.Telegram.WebView.receiveEvent` - 适用于 iOS 和 Android 的 Telegram；
-- `window.TelegramGameProxy_receiveEvent` - Windows Phone
+- `window.Openweb3GameProxy.receiveEvent` - Openweb3 桌面版；
+- `window.Openweb3.WebView.receiveEvent` - 适用于 iOS 和 Android 的 Openweb3
+- `window.Openweb3GameProxy_receiveEvent` - Windows Phone
 
 所有这些函数都有相同的签名：
 
@@ -75,13 +75,13 @@ type ReceiveEvent = (eventType: string, eventData: unknown) => void;
 ## 监听事件 {#Listening to Events}
 
 为开发人员的应用程序处理所有可能的环境是一项挑战。 为了简化
-这一过程，社区开发了 [@telegram-apps/sdk](../packages/telegram-apps-sdk/2-x)
+这一过程，社区开发了 [@openweb3-apps/sdk](../packages/openweb3-apps-sdk/2-x)
 软件包，大大简化了集成工作。
 
 下面介绍如何使用它：
 
 ```ts
-import { on } from '@telegram-apps/sdk';
+import { on } from '@openweb3-apps/sdk';
 
 // 开始监听 "viewport_changed "事件。
 // 返回值是一个函数，用于移除此事件监听器。
@@ -94,11 +94,11 @@ removeListener();
 ```
 
 有关调用方法的更多信息，请参阅
-软件包的 [documentation](../packages/telegram-apps-bridge/events.md#listening-to-events) 。
+软件包的 [documentation](../packages/openweb3-apps-bridge/events.md#listening-to-events) 。
 
 ## 可用事件 {#Available Events}
 
-本节包含从 Telegram 发送的事件列表：名称、描述和参数。
+本节包含从 Openweb3 发送的事件列表：名称、描述和参数。
 参数。部分标题表示最小版本，该部分内的事件可从该版本发送。
 
 ### `back_button_pressed`
@@ -150,7 +150,7 @@ removeListener();
 
 启用版本: **v6.4**
 
-Telegram 应用程序试图从剪贴板提取文本。
+Openweb3 应用程序试图从剪贴板提取文本。
 
 | 字段                          | 类型        | 说明                                                                                                                                                                                                              |
 | --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -276,7 +276,7 @@ QR 扫描仪已关闭。
 
 ### `set_custom_style`
 
-通常由 Telegram 网络应用程序发送的事件。 其有效载荷代表 `<style/>`
+通常由 Openweb3 网络应用程序发送的事件。 其有效载荷代表 `<style/>`
 标记 HTML 内容，开发人员可以使用。 有效载荷中描述的样式表将帮助
 开发人员设计应用程序滚动条的样式（但开发人员仍可自行设计）。
 
@@ -288,7 +288,7 @@ QR 扫描仪已关闭。
 
 ### `theme_changed`
 
-每当用户的 Telegram 应用程序（包括切换到夜间模式）中的[主题](theming.md) 发生更改时都会出现这种情况。
+每当用户的 Openweb3 应用程序（包括切换到夜间模式）中的[主题](theming.md) 发生更改时都会出现这种情况。
 
 | 字段   | 类型                                            | 说明                                     |
 | ---- | --------------------------------------------- | -------------------------------------- |

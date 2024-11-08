@@ -1,5 +1,5 @@
-import { camelToSnake } from '@telegram-apps/toolkit';
-import type { Chat, InitData, User } from '@telegram-apps/types';
+import { camelToSnake } from '@openweb3-apps/toolkit';
+import type { Chat, InitData, User } from '@openweb3-apps/types';
 
 import type { Schema, TransformerGen, TransformFn } from '@/types.js';
 

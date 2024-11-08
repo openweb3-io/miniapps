@@ -1,5 +1,5 @@
-import { initData } from '@telegram-apps/transformers';
-import type { InitData } from '@telegram-apps/types';
+import { initData } from '@openweb3-apps/transformers';
+import type { InitData } from '@openweb3-apps/types';
 
 /**
  * Parses incoming value as init data.

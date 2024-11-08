@@ -56,12 +56,12 @@ describe('shareURL', () => {
   it('should change window.location.href, if web_app_open_tg_link is not supported', () => {
     createWindow({ location: { href: '' } } as any);
 
-    shareURL('https://telegram.org');
-    expect(window.location.href).toBe('https://t.me/share/url?url=https%3A%2F%2Ftelegram.org&text=');
+    shareURL('https://openweb3.io');
+    expect(window.location.href).toBe('https://t.me/share/url?url=https%3A%2F%2Fopenweb3.io&text=');
 
-    shareURL('https://telegram.org', 'Wow, cool messenger');
+    shareURL('https://openweb3.io', 'Wow, cool messenger');
     expect(window.location.href).toBe(
-      'https://t.me/share/url?url=https%3A%2F%2Ftelegram.org&text=Wow%2C%20cool%20messenger',
+      'https://t.me/share/url?url=https%3A%2F%2Fopenweb3.io&text=Wow%2C%20cool%20messenger',
     );
   });
 
@@ -69,17 +69,17 @@ describe('shareURL', () => {
     const spy = mockPostEvent();
     $version.set('10');
 
-    shareURL('https://telegram.org');
+    shareURL('https://openweb3.io');
     expect(spy).toHaveBeenCalledOnce();
     expect(spy).toHaveBeenCalledWith('web_app_open_tg_link', {
-      path_full: '/share/url?url=https%3A%2F%2Ftelegram.org&text=',
+      path_full: '/share/url?url=https%3A%2F%2Fopenweb3.io&text=',
     });
 
     spy.mockClear();
-    shareURL('https://telegram.org', 'Wow, cool messenger');
+    shareURL('https://openweb3.io', 'Wow, cool messenger');
     expect(spy).toHaveBeenCalledOnce();
     expect(spy).toHaveBeenCalledWith('web_app_open_tg_link', {
-      path_full: '/share/url?url=https%3A%2F%2Ftelegram.org&text=Wow%2C%20cool%20messenger',
+      path_full: '/share/url?url=https%3A%2F%2Fopenweb3.io&text=Wow%2C%20cool%20messenger',
     });
   });
 });

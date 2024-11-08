@@ -1,4 +1,4 @@
-import type { BiometryType, ExecuteWithOptions } from '@telegram-apps/bridge';
+import type { BiometryType, ExecuteWithOptions } from '@openweb3-apps/bridge';
 
 export type State =
   | {

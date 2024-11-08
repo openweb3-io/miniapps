@@ -1,4 +1,4 @@
-# @telegram-apps/mate
+# @openweb3-apps/mate
 
 ## 0.0.23
 

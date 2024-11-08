@@ -1,4 +1,4 @@
-import { type PopupParams, TypedError } from '@telegram-apps/bridge';
+import { type PopupParams, TypedError } from '@openweb3-apps/bridge';
 
 import { ERR_POPUP_INVALID_PARAMS } from '@/errors.js';
 

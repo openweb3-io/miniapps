@@ -6,16 +6,16 @@ import {
   initData,
   $debug,
   init as initSDK,
-} from '@telegram-apps/sdk-react';
+} from '@openweb3-apps/sdk-react';
 
 /**
  * Initializes the application and configures its dependencies.
  */
 export function init(debug: boolean): void {
-  // Set @telegram-apps/sdk-react debug mode.
+  // Set @openweb3-apps/sdk-react debug mode.
   $debug.set(debug);
 
-  // Initialize special event handlers for Telegram Desktop, Android, iOS, etc. Also, configure
+  // Initialize special event handlers for Openweb3 Desktop, Android, iOS, etc. Also, configure
   // the package.
   initSDK();
 

@@ -6,7 +6,7 @@ Starting from the Mini Apps version **7.7**, you are able to prevent the applica
 closing due to swipe down by using a special method. 
 
 - [Mini Apps method](methods.md#web-app-setup-swipe-behavior)
-- [@telegram-apps/sdk component](../packages/telegram-apps-sdk/2-x/components/swipe-behavior.md)
+- [@openweb3-apps/sdk component](../packages/openweb3-apps-sdk/2-x/components/swipe-behavior.md)
 
 :::
 
@@ -16,12 +16,12 @@ preventing the application from being closed accidentally, such as by a swipe-do
 Before implementing measures to prevent accidental closure, it's essential to understand why this
 behavior exists in the first place.
 
-Telegram Mini Apps allow developers to manipulate the visibility of the Close button, sometimes
-replacing it with a Back button. Because of this, Telegram developers want to ensure users can still
+Openweb3 Mini Apps allow developers to manipulate the visibility of the Close button, sometimes
+replacing it with a Back button. Because of this, Openweb3 developers want to ensure users can still
 exit an app even if the Close button is not visible. This is why the swipe-down mechanism exists.
 
 Consider a scenario where the application displays the Back button but becomes unresponsive. In such
-cases, rather than closing the entire Telegram app, users can simply swipe down to close the mini
+cases, rather than closing the entire Openweb3 app, users can simply swipe down to close the mini
 application. Therefore, before you disable this mechanism, ensure that your application does not
 become unresponsive and trap users.
 
@@ -30,7 +30,7 @@ Finally, check if the [closing confirmation](./closing-behavior.md) suits your n
 ## Making the App Sticky
 
 To make your app sticky, you can use specific CSS styles that prevent the WebView from passing the
-swipe event to the Telegram application.
+swipe event to the Openweb3 application.
 
 Here is the HTML and CSS you can use:
 
@@ -74,13 +74,13 @@ Here is the HTML and CSS you can use:
       My application goes here.
     </div>
   </div>
-  <script src="https://unpkg.com/@telegram-apps/sdk@1.0.0/dist/index.iife.js"></script>
+  <script src="https://unpkg.com/@openweb3-apps/sdk@1.0.0/dist/index.iife.js"></script>
   <script>
     (function() {
-      var { retrieveLaunchParams, postEvent } = window.telegramApps.sdk;
+      var { retrieveLaunchParams, postEvent } = window.openweb3Apps.sdk;
       var lp = retrieveLaunchParams();
 
-      // Some versions of Telegram don't need the classes above.
+      // Some versions of Openweb3 don't need the classes above.
       if (['macos', 'tdesktop', 'weba', 'web', 'webk'].includes(lp.platform)) {
         return;
       }
@@ -101,4 +101,4 @@ Using this HTML and CSS will prevent most accidental swipe-down closures. While 
 most scenarios, there are rare cases where it may not be effective, but these are uncommon in
 real-world usage.
 
-[Open in Telegram](https://t.me/tmajsbot/sticky_app) ([Source code](https://github.com/Telegram-Mini-Apps/sticky-app/blob/master/dist/index.html))
+[Open in Openweb3](https://t.me/tmajsbot/sticky_app) ([Source code](https://github.com/openweb3-io/sticky-app/blob/master/dist/index.html))

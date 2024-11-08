@@ -8,8 +8,8 @@ import {
   type BiometryTokenUpdateStatus,
   type BiometryAuthRequestStatus,
   type EventListener,
-} from '@telegram-apps/bridge';
-import { isPageReload } from '@telegram-apps/navigation';
+} from '@openweb3-apps/bridge';
+import { isPageReload } from '@openweb3-apps/navigation';
 
 import { postEvent, request } from '@/scopes/globals.js';
 import { createMountFn } from '@/scopes/createMountFn.js';

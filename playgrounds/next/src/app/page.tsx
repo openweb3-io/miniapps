@@ -1,6 +1,6 @@
 'use client';
 
-import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
+import { Section, Cell, Image, List } from '@openweb3-apps/openweb3-ui';
 
 import { Link } from '@/components/Link/Link';
 import { Page } from '@/components/Page';
@@ -13,7 +13,7 @@ export default function Home() {
       <List>
         <Section
           header="Features"
-          footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
+          footer="You can use these pages to learn more about features, provided by Openweb3 Mini Apps and other useful projects"
         >
           <Link href="/ton-connect">
             <Cell
@@ -35,7 +35,7 @@ export default function Home() {
             <Cell subtitle="Platform identifier, Mini Apps version, etc.">Launch Parameters</Cell>
           </Link>
           <Link href="/theme-params">
-            <Cell subtitle="Telegram application palette information">Theme Parameters</Cell>
+            <Cell subtitle="Openweb3 application palette information">Theme Parameters</Cell>
           </Link>
         </Section>
       </List>

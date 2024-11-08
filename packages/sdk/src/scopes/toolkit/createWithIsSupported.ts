@@ -1,4 +1,4 @@
-import type { MethodName } from '@telegram-apps/bridge';
+import type { MethodName } from '@openweb3-apps/bridge';
 import { withIsSupported, type WithIsSupported } from '@/scopes/toolkit/withIsSupported.js';
 
 /*@__NO_SIDE_EFFECTS__*/

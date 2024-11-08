@@ -1,4 +1,4 @@
-import { themeParams, useSignal } from '@telegram-apps/sdk-solid';
+import { themeParams, useSignal } from '@openweb3-apps/sdk-solid';
 import type { Component } from 'solid-js';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData.js';
@@ -15,7 +15,7 @@ export const ThemeParamsPage: Component = () => {
         <>
           This page displays current
           {' '}
-          <Link href="https://docs.telegram-mini-apps.com/platform/theming">
+          <Link href="https://docs.openweb3-mini-apps.com/platform/theming">
             theme parameters
           </Link>
           . It is reactive, so, changing theme externally will lead to this page updates.

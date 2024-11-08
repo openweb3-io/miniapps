@@ -36,7 +36,7 @@ export function getConfig({
         emptyOutDir: false,
         sourcemap: true,
         lib: {
-          name: 'telegramApps.sdk',
+          name: 'openweb3Apps.sdk',
           entry: input,
           formats,
           fileName: filename,

@@ -1,4 +1,4 @@
-import { type Signal, signal } from '@telegram-apps/signals';
+import { type Signal, signal } from '@openweb3-apps/signals';
 
 import { lastEventSignal } from '@/events/listening/lastEvent.js';
 import type { EventName } from '@/events/types/events.js';

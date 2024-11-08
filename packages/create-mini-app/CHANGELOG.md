@@ -1,4 +1,4 @@
-# @telegram-apps/create-mini-app
+# @openweb3-apps/create-mini-app
 
 ## 1.1.0
 

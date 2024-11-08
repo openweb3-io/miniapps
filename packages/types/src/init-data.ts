@@ -10,7 +10,7 @@ export type ChatType =
   | string;
 
 /**
- * Describes Telegram Mini Apps [User](https://docs.telegram-mini-apps.com/platform/init-data#user) type.
+ * Describes Openweb3 Mini Apps [User](https://docs.openweb3-mini-apps.com/platform/init-data#user) type.
  */
 export interface User {
   /**
@@ -35,7 +35,7 @@ export interface User {
    */
   isBot?: boolean;
   /**
-   * True, if this user is a Telegram Premium user.
+   * True, if this user is a Openweb3 Premium user.
    */
   isPremium?: boolean;
   /**
@@ -61,7 +61,7 @@ export interface User {
 }
 
 /**
- * Describes Telegram Mini Apps [Chat](https://docs.telegram-mini-apps.com/platform/init-data#chat) type.
+ * Describes Openweb3 Mini Apps [Chat](https://docs.openweb3-mini-apps.com/platform/init-data#chat) type.
  */
 export interface Chat {
   /**
@@ -88,7 +88,7 @@ export interface Chat {
 }
 
 /**
- * Describes Telegram Mini Apps [InitData](https://docs.telegram-mini-apps.com/platform/init-data#parameters-list)
+ * Describes Openweb3 Mini Apps [InitData](https://docs.openweb3-mini-apps.com/platform/init-data#parameters-list)
  * type.
  */
 export interface InitData {
@@ -97,7 +97,7 @@ export interface InitData {
    */
   authDate: Date;
   /**
-   * The number of seconds after which a message can be sent via the method [answerWebAppQuery](https://core.telegram.org/bots/api#answerwebappquery).
+   * The number of seconds after which a message can be sent via the method [answerWebAppQuery](https://core.openweb3.io/bots/api#answerwebappquery).
    */
   canSendAfter?: number;
   /**
@@ -117,12 +117,12 @@ export interface InitData {
   chatInstance?: string;
   /**
    * A hash of all passed parameters, which the bot server can use to
-   * check their [validity](https://core.telegram.org/bots/webapps#validating-data-received-via-the-web-app).
+   * check their [validity](https://core.openweb3.io/bots/webapps#validating-data-received-via-the-web-app).
    */
   hash: string;
   /**
    * A unique identifier for the Mini App session, required for sending
-   * messages via the [answerWebAppQuery](https://core.telegram.org/bots/api#answerwebappquery) method.
+   * messages via the [answerWebAppQuery](https://core.openweb3.io/bots/api#answerwebappquery) method.
    */
   queryId?: string;
   /**

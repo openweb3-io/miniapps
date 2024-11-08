@@ -1,5 +1,5 @@
-import type { If, IsNever } from '@telegram-apps/toolkit';
-import type { SubscribeListenerFn } from '@telegram-apps/signals';
+import type { If, IsNever } from '@openweb3-apps/toolkit';
+import type { SubscribeListenerFn } from '@openweb3-apps/signals';
 
 import type { EventName, EventPayload } from '@/events/types/index.js';
 import type { LastEvent } from '@/events/listening/lastEvent.js';

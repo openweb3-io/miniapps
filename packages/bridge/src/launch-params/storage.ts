@@ -1,6 +1,6 @@
-import { getStorageValue, setStorageValue } from '@telegram-apps/toolkit';
-import { serializeLaunchParams } from '@telegram-apps/transformers';
-import type { LaunchParams } from '@telegram-apps/types';
+import { getStorageValue, setStorageValue } from '@openweb3-apps/toolkit';
+import { serializeLaunchParams } from '@openweb3-apps/transformers';
+import type { LaunchParams } from '@openweb3-apps/types';
 
 import { parseLaunchParams } from './parseLaunchParams.js';
 

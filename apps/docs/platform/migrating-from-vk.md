@@ -1,39 +1,39 @@
-# Migrating MiniApps from VK to Telegram
+# Migrating MiniApps from VK to Openweb3
 
 ## 1. Getting Started
 
-### Creating a Bot in Telegram
+### Creating a Bot in Openweb3
 
-To start working with MiniApps in Telegram, you need to create a bot. Follow these steps:
+To start working with MiniApps in Openweb3, you need to create a bot. Follow these steps:
 
-1. Open the Telegram app and find BotFather.
+1. Open the Openweb3 app and find BotFather.
 2. Start a dialogue with BotFather and use the `/start` command to begin creating a bot.
 3. Enter the `/newbot` command and follow the instructions to create a new bot. You will need to choose a name and a unique username for the bot.
-4. After successfully creating the bot, BotFather will provide you with an access token, which will be required for interacting with the Telegram API.
+4. After successfully creating the bot, BotFather will provide you with an access token, which will be required for interacting with the Openweb3 API.
 
 ### Registering and Setting Up a MiniApp
 
 To register and set up a MiniApp, follow these steps:
 
-1. Go to the [Creating a Telegram Web App](https://core.telegram.org/bots/webapps) section in the official Telegram documentation.
+1. Go to the [Creating a Openweb3 Web App](https://core.openweb3.org/bots/webapps) section in the official Openweb3 documentation.
 2. Follow the instructions to register your MiniApp, set up the necessary parameters, and integrate it with the bot.
 
 ## 2. Interaction with Platform APIs
 
-Specialized libraries are used to interact with platform APIs, providing convenient access to the functions and features of these platforms. VKontakte and Telegram provide such libraries, namely `vk-bridge` and `@tma.js/sdk`, respectively. Both libraries perform similar functions, allowing developers to interact with their platform's APIs to obtain user data and perform other tasks.
+Specialized libraries are used to interact with platform APIs, providing convenient access to the functions and features of these platforms. VKontakte and Openweb3 provide such libraries, namely `vk-bridge` and `@tma.js/sdk`, respectively. Both libraries perform similar functions, allowing developers to interact with their platform's APIs to obtain user data and perform other tasks.
 
 ### VKontakte: vk-bridge
 
 The `vk-bridge` library is designed to interact with the VKontakte API. The official documentation can be found [here](https://dev.vk.com/ru/bridge/overview).
 
 
-### Telegram: @tma.js/sdk
+### Openweb3: @tma.js/sdk
 
-The `@tma.js/sdk` library is designed to interact with the Telegram API. The official documentation can be found [here](https://docs.telegram-mini-apps.com/packages/tma-js-sdk).
+The `@tma.js/sdk` library is designed to interact with the Openweb3 API. The official documentation can be found [here](https://docs.openweb3-mini-apps.com/packages/tma-js-sdk).
 
 ## 3. App authorization
 
-Main difference between vk and telegram is how you authorize your user.
+Main difference between vk and openweb3 is how you authorize your user.
 
 ### VK
 
@@ -76,11 +76,11 @@ Use `vk-bridge` to get sign and sign params data.
   const { sign, ...signParams } = await bridge.send('VKWebAppGetLaunchParams');
 ```
 
-### Telegram
+### Openweb3
 
 #### Backend
 
-Telegram has similar mechanism. But instead of manual validation you can use package `@tma.js/init-data-node` to validate `initData`,
+Openweb3 has similar mechanism. But instead of manual validation you can use package `@tma.js/init-data-node` to validate `initData`,
 using secret key, provided `@BotFather`.
 
 ```ts

@@ -1,6 +1,6 @@
 import './index.css';
 
-import { retrieveLaunchParams } from '@telegram-apps/sdk-vue';
+import { retrieveLaunchParams } from '@openweb3-apps/sdk-vue';
 import { createApp } from 'vue';
 import { TonConnectUIPlugin } from './tonconnect';
 import App from './App.vue';
@@ -8,7 +8,7 @@ import router from './router';
 import { init } from './init';
 
 // Uncomment this import in case, you would like to develop the application even outside
-// the Telegram application, just in your browser.
+// the Openweb3 application, just in your browser.
 // import './mockEnv.ts';
 
 init(retrieveLaunchParams().startParam === 'debug');

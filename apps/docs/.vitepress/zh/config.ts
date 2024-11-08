@@ -23,8 +23,8 @@ function withSlashes(value: string | undefined): string {
 
 export const zh = defineConfig({
   lang: "zh-Hans",
-  title: 'Telegram Mini Apps',
-  description: 'Documentation covering all aspects of Telegram platform - Telegram Mini Apps.',
+  title: 'Openweb3 Mini Apps',
+  description: 'Documentation covering all aspects of Openweb3 platform - Openweb3 Mini Apps.',
 
   // The base URL the site will be deployed at.
   // https://vitepress.dev/reference/site-config#base
@@ -41,7 +41,7 @@ export const zh = defineConfig({
   // Enable sitemap generation.
   // https://vitepress.dev/guide/sitemap-generation#sitemap-generation
   sitemap: {
-    hostname: 'https://docs.telegram-mini-apps.com',
+    hostname: 'https://docs.openweb3-mini-apps.com',
   },
 
   // Configure <head/>.
@@ -66,7 +66,7 @@ export const zh = defineConfig({
 
     editLink: {
       text: '在 GitHub 上编辑此页面',
-      pattern: 'https://github.com/telegram-mini-apps/telegram-apps/edit/master/apps/docs/:path',
+      pattern: 'https://github.com/openweb3-mini-apps/openweb3-apps/edit/master/apps/docs/:path',
     },
 
     nav: [
@@ -83,7 +83,7 @@ export const zh = defineConfig({
 
     socialLinks: [{
       icon: 'github',
-      link: 'https://github.com/telegram-mini-apps',
+      link: 'https://github.com/openweb3-mini-apps',
     }],
 
     search: {

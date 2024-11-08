@@ -5,9 +5,9 @@ import {
   type Computed,
   type Signal,
   type SignalOptions,
-} from '@telegram-apps/signals';
-import { off, on, postEvent } from '@telegram-apps/bridge';
-import { createCbCollector } from '@telegram-apps/toolkit';
+} from '@openweb3-apps/signals';
+import { off, on, postEvent } from '@openweb3-apps/bridge';
+import { createCbCollector } from '@openweb3-apps/toolkit';
 
 import { formatItem } from './formatItem.js';
 import { ensurePrefix } from '../ensurePrefix.js';

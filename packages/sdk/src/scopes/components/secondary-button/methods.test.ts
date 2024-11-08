@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { mockSessionStorageSetItem } from 'test-utils';
-import { emitMiniAppsEvent, type ThemeParams, TypedError } from '@telegram-apps/bridge';
+import { emitMiniAppsEvent, type ThemeParams, TypedError } from '@openweb3-apps/bridge';
 
 import { mockPostEvent } from '@test-utils/mockPostEvent.js';
 import { resetPackageState } from '@test-utils/reset/reset.js';
@@ -21,8 +21,8 @@ import {
 } from './signals.js';
 import { onClick, offClick, setParams, mount, unmount, isSupported } from './methods.js';
 
-vi.mock('@telegram-apps/bridge', async () => {
-  const m = await vi.importActual('@telegram-apps/bridge');
+vi.mock('@openweb3-apps/bridge', async () => {
+  const m = await vi.importActual('@openweb3-apps/bridge');
   return {
     ...m,
     retrieveLaunchParams: vi.fn(() => ({

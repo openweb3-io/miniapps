@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { themeParams, useSignal } from '@telegram-apps/sdk-vue';
+import { themeParams, useSignal } from '@openweb3-apps/sdk-vue';
 import UiDisplayData, { type DisplayDataRow } from '@/components/UiDisplayData.vue';
 import UiLink from '@/components/UiLink.vue';
 import UiPage from '@/components/UiPage.vue';
@@ -20,7 +20,7 @@ const rows = computed<DisplayDataRow[]>(() => Object
 <template>
   <UiPage title="Theme Params">
     <template #disclaimer>
-      This page displays current <UiLink to="https://docs.telegram-mini-apps.com/platform/theming">theme params
+      This page displays current <UiLink to="https://docs.openweb3-mini-apps.com/platform/theming">theme params
       </UiLink>.
     </template>
     <UiDisplayData :rows />

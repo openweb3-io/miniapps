@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { backButton } from '@telegram-apps/sdk-react';
+import { backButton } from '@openweb3-apps/sdk-react';
 import { PropsWithChildren, useEffect } from 'react';
 
 export function Page({ children, back = true }: PropsWithChildren<{

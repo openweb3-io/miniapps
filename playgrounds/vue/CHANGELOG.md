@@ -4,4 +4,4 @@
 
 ### Patch Changes
 
-- @telegram-apps/sdk-vue@1.0.1
+- @openweb3-apps/sdk-vue@1.0.1

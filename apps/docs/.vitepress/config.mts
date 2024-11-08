@@ -23,8 +23,8 @@ function withSlashes(value: string | undefined): string {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Telegram Mini Apps',
-  description: 'Documentation covering all aspects of Telegram platform - Telegram Mini Apps.',
+  title: 'Openweb3 Mini Apps',
+  description: 'Documentation covering all aspects of Openweb3 platform - Openweb3 Mini Apps.',
 
   // The base URL the site will be deployed at.
   // https://vitepress.dev/reference/site-config#base
@@ -56,7 +56,7 @@ export default defineConfig({
   // Enable sitemap generation.
   // https://vitepress.dev/guide/sitemap-generation#sitemap-generation
   sitemap: {
-    hostname: 'https://docs.telegram-mini-apps.com',
+    hostname: 'https://docs.openweb3-mini-apps.com',
   },
 
   // Configure <head/>.
@@ -82,7 +82,7 @@ export default defineConfig({
 
     editLink: {
       text: 'Edit this page on GitHub',
-      pattern: 'https://github.com/telegram-mini-apps/telegram-apps/edit/master/apps/docs/:path',
+      pattern: 'https://github.com/openweb3-io/miniapps/edit/master/apps/docs/:path',
     },
 
     nav: [
@@ -99,7 +99,7 @@ export default defineConfig({
 
     socialLinks: [{
       icon: 'github',
-      link: 'https://github.com/telegram-mini-apps',
+      link: 'https://github.com/openweb3-mini-apps',
     }],
 
     search: {
@@ -111,7 +111,7 @@ export default defineConfig({
     //   options: {
     //     apiKey: '2d6f370231694c71de2955f974e54986',
     //     appId: 'QRZA56E4H6',
-    //     indexName: 'telegram-mini-apps',
+    //     indexName: 'openweb3-mini-apps',
     //     insights: true,
     //   },
     // },
@@ -146,14 +146,14 @@ export default defineConfig({
     const addOg = (prop: string, content: string) => addMeta(`og:${prop}`, content);
 
     addOg('title', isHome ? siteTitle : `${title} | ${siteTitle}`);
-    addOg('site_name', 'Telegram Mini Apps Platform Documentation');
+    addOg('site_name', 'Openweb3 Mini Apps Platform Documentation');
     addOg('image', `${siteBase}thumbnail-1200x630.6b8f54aa217a6baed4703ad5af866677.png`);
     addOg('image:width', '1200');
     addOg('image:height', '630');
     addOg('image:type', 'image/png');
     addOg('locale', lang.replace(/-/, '_'));
 
-    // To make it correctly display in Telegram.
+    // To make it correctly display in Openweb3.
     addMeta('twitter:card', 'summary_large_image');
 
     if (description) {

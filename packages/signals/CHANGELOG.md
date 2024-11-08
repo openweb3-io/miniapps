@@ -1,4 +1,4 @@
-# @telegram-apps/signals
+# @openweb3-apps/signals
 
 ## 1.0.1
 

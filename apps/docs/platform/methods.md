@@ -4,12 +4,12 @@ outline: [ 2, 3 ]
 
 # Methods
 
-Telegram Mini Apps methods are events, which execute some predefined action. They are always called
+Openweb3 Mini Apps methods are events, which execute some predefined action. They are always called
 by a Mini App.
 
 ## Web
 
-Since the web version of Telegram displays the front-end application in an `<iframe/>` tag, it
+Since the web version of Openweb3 displays the front-end application in an `<iframe/>` tag, it
 uses the default way of communication between 2 iframes - sending messages
 through `window.parent.postMessage` function.
 
@@ -25,10 +25,10 @@ interface MessageJSON {
 
 The second parameter is `targetOrigin` - allowed parent iframe origin. We recommend avoiding the
 usage of wildcard `*` as long as it is not secure - your application could be inserted not by
-Telegram, but by another iframe that will still be able to communicate with your app and receive
+Openweb3, but by another iframe that will still be able to communicate with your app and receive
 some data.
 
-As a default value, you could use `https://web.telegram.org`.
+As a default value, you could use `https://web.openweb3.org`.
 
 So, as you see, each method has its own name expressed by `eventType` and parameters stored
 in `eventData` property. Here is the usage example:
@@ -41,15 +41,15 @@ const data = JSON.stringify({
   },
 });
 
-window.parent.postMessage(data, 'https://web.telegram.org');
+window.parent.postMessage(data, 'https://web.openweb3.org');
 ```
 
-This code will make the Telegram [BackButton](back-button.md) appear.
+This code will make the Openweb3 [BackButton](back-button.md) appear.
 
 ## Desktop and Mobile
 
 Unlike the web, desktop and mobile applications use a bit more unusual way of calling methods. Both
-of these platforms will create a global function `window.TelegramWebviewProxy.postEvent`.
+of these platforms will create a global function `window.Openweb3WebviewProxy.postEvent`.
 
 As the first argument, this function accepts the event name. The second one - the parameters object,
 converted to a string. Here is how it works:
@@ -58,13 +58,13 @@ converted to a string. Here is how it works:
 const data = JSON.stringify({ is_visible: true });
 
 window
-  .TelegramWebviewProxy
+  .Openweb3WebviewProxy
   .postEvent('web_app_setup_back_button', data);
 ```
 
 ## Windows Phone
 
-Telegram Windows Phone app provides such function as `window.external.notify`. It accepts the same
+Openweb3 Windows Phone app provides such function as `window.external.notify`. It accepts the same
 parameter as the web version does:
 
 ```typescript
@@ -79,19 +79,19 @@ window.external.notify(data);
 ## Calling Methods
 
 Handling all possible environments for a developer's application can be challenging. To simplify
-this process, the community developed the [@telegram-apps/sdk](../packages/telegram-apps-sdk/2-x)
+this process, the community developed the [@openweb3-apps/sdk](../packages/openweb3-apps-sdk/2-x)
 package, which greatly eases integration.
 
 Here's how to use it:
 
 ```ts
-import { postEvent } from '@telegram-apps/sdk';
+import { postEvent } from '@openweb3-apps/sdk';
 
 postEvent('web_app_set_header_color', { color_key: 'bg_color' });
 ```
 
 You can learn more about calling methods in the
-package's [documentation](../packages/telegram-apps-bridge/events.md#calling-methods).
+package's [documentation](../packages/openweb3-apps-bridge/events.md#calling-methods).
 
 ## Available Methods
 
@@ -103,7 +103,7 @@ internally.
 ### `iframe_ready`
 
 Notifies parent iframe about the current frame is ready. This method is only used in the Web version
-of Telegram. As a result, Mini App will receive [set_custom_style](events.md#set-custom-style)
+of Openweb3. As a result, Mini App will receive [set_custom_style](events.md#set-custom-style)
 event.
 
 | Field            | Type      | Description                                                      |
@@ -173,7 +173,7 @@ Closes Mini App.
 
 Available since: **v6.4**
 
-Closes a QR scanner. The Telegram application creates
+Closes a QR scanner. The Openweb3 application creates
 the [scan_qr_popup_closed](events.md#scan-qr-popup-closed) event.
 
 ### `web_app_data_send`
@@ -182,7 +182,7 @@ Sends data to the bot. When this method is called, a service message is sent to 
 the data of the length up to 4096 bytes. Then, Mini App will be closed.
 
 To get more information, take a look at `web_app_data` field in the
-class [Message](https://core.telegram.org/bots/api#message).
+class [Message](https://core.openweb3.org/bots/api#message).
 
 | Field | Type     | Description                                                          |
 |-------|----------|----------------------------------------------------------------------|
@@ -207,7 +207,7 @@ Available since: **v6.9**
 Available since: **v6.1**
 
 Opens an invoice by its specified slug. More information about invoices in
-this [documentation](https://core.telegram.org/bots/payments).
+this [documentation](https://core.openweb3.org/bots/payments).
 
 | Field | Type     | Description                |
 |-------|----------|----------------------------|
@@ -219,14 +219,14 @@ Opens link in the default browser. Mini App will not be closed.
 
 | Field            | Type      | Description                                                                                            | Available since |
 |------------------|-----------|--------------------------------------------------------------------------------------------------------|-----------------|
-| url              | `string`  | URL to be opened by Telegram application. Should be a full path with `https` protocol.                 |                 |
-| try_instant_view | `boolean` | _Optional_. Link will be opened in [Instant View](https://instantview.telegram.org/) mode if possible. | `v6.4`          |
+| url              | `string`  | URL to be opened by Openweb3 application. Should be a full path with `https` protocol.                 |                 |
+| try_instant_view | `boolean` | _Optional_. Link will be opened in [Instant View](https://instantview.openweb3.org/) mode if possible. | `v6.4`          |
 
 ### `web_app_open_popup`
 
 Available since: **v6.2**
 
-Opens a new [popup](popup.md). When user closes the popup, Telegram creates
+Opens a new [popup](popup.md). When user closes the popup, Openweb3 creates
 the [popup_closed](events.md#popup-closed) event.
 
 <table>
@@ -340,9 +340,9 @@ the [popup_closed](events.md#popup-closed) event.
 
 Available since: **v6.4**
 
-Opens a QR scanner. When the scanner was closed, the Telegram application creates
+Opens a QR scanner. When the scanner was closed, the Openweb3 application creates
 the [scan_qr_popup_closed](events.md#scan-qr-popup-closed) event. When the scanner reads QR,
-Telegram creates the [qr_text_received](events.md#qr-text-received) event.
+Openweb3 creates the [qr_text_received](events.md#qr-text-received) event.
 
 | Field | Type     | Description                                         |
 |-------|----------|-----------------------------------------------------|
@@ -352,8 +352,8 @@ Telegram creates the [qr_text_received](events.md#qr-text-received) event.
 
 Available since: **v6.1**
 
-Opens the Telegram link by its pathname and query parameters. The link will be opened in the
-Telegram app, Mini App will be closed.
+Opens the Openweb3 link by its pathname and query parameters. The link will be opened in the
+Openweb3 app, Mini App will be closed.
 
 | Field     | Type     | Description                                                                                                                  |
 |-----------|----------|------------------------------------------------------------------------------------------------------------------------------|
@@ -373,7 +373,7 @@ the [clipboard_text_received](events.md#clipboard-text-received) event.
 
 ### `web_app_ready`
 
-Notifies Telegram about current application is ready to be shown. This method will make Telegram to
+Notifies Openweb3 about current application is ready to be shown. This method will make Openweb3 to
 remove application loader and display Mini App.
 
 ### `web_app_request_phone`
@@ -386,13 +386,13 @@ Requests access to current user's phone.
 
 ### `web_app_request_theme`
 
-Requests current [theme](theming.md) from Telegram. As a result, Telegram will
+Requests current [theme](theming.md) from Openweb3. As a result, Openweb3 will
 create [theme_changed](events.md#theme-changed) event.
 
 ### `web_app_request_viewport`
 
-Requests current [viewport](viewport.md) information from Telegram. As a result,
-Telegram will create [viewport_changed](events.md#viewport-changed) event.
+Requests current [viewport](viewport.md) information from Openweb3. As a result,
+Openweb3 will create [viewport_changed](events.md#viewport-changed) event.
 
 ### `web_app_request_write_access`
 
@@ -493,8 +493,8 @@ A method that opens the native story editor.
 | Field            | Type     | Description                                                                                                                                                                                          |
 |------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | media_url        | `string` | A media URL which will be used as a background for a created story.                                                                                                                                  |
-| text             | `string` | _Optional_. The caption to be added to the media. 0-200 characters for regular users and 0-2048 characters for [premium subscribers](https://telegram.org/faq_premium#telegram-premium).             |
-| widget_link      | `object` | _Optional_. An object that describes a widget link to be included in the story. Note that only [premium subscribers](https://telegram.org/faq_premium#telegram-premium) can post stories with links. |
+| text             | `string` | _Optional_. The caption to be added to the media. 0-200 characters for regular users and 0-2048 characters for [premium subscribers](https://openweb3.org/faq_premium#openweb3-premium).             |
+| widget_link      | `object` | _Optional_. An object that describes a widget link to be included in the story. Note that only [premium subscribers](https://openweb3.org/faq_premium#openweb3-premium) can post stories with links. |
 | widget_link.url  | `string` | The URL to be included in the story.                                                                                                                                                                 |
 | widget_link.name | `string` | _Optional_. The name to be displayed for the widget link, 0-48 characters.                                                                                                                           |
 

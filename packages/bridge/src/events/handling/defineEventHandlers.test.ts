@@ -4,13 +4,13 @@ import { mockWindow } from 'test-utils';
 import { defineEventHandlers } from './defineEventHandlers.js';
 import { emitMiniAppsEvent } from '@/events/emitMiniAppsEvent.js';
 
-it('should should specify emitMiniAppsEvent function by paths [window.TelegramGameProxy_receiveEvent, window.TelegramGameProxy.receiveEvent, window.Telegram.WebView.receiveEvent]', () => {
+it('should should specify emitMiniAppsEvent function by paths [window.Openweb3GameProxy_receiveEvent, window.Openweb3GameProxy.receiveEvent, window.Openweb3.WebView.receiveEvent]', () => {
   const wnd = {};
   mockWindow(wnd as any);
   defineEventHandlers();
   expect(wnd).toStrictEqual({
-    TelegramGameProxy_receiveEvent: emitMiniAppsEvent,
-    TelegramGameProxy: { receiveEvent: emitMiniAppsEvent },
-    Telegram: { WebView: { receiveEvent: emitMiniAppsEvent } },
+    Openweb3GameProxy_receiveEvent: emitMiniAppsEvent,
+    Openweb3GameProxy: { receiveEvent: emitMiniAppsEvent },
+    Openweb3: { WebView: { receiveEvent: emitMiniAppsEvent } },
   });
 });

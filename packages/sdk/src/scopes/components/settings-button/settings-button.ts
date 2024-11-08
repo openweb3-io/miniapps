@@ -4,9 +4,9 @@ import {
   getStorageValue,
   setStorageValue,
   type EventListener,
-} from '@telegram-apps/bridge';
-import { signal } from '@telegram-apps/signals';
-import { isPageReload } from '@telegram-apps/navigation';
+} from '@openweb3-apps/bridge';
+import { signal } from '@openweb3-apps/signals';
+import { isPageReload } from '@openweb3-apps/navigation';
 
 import { postEvent } from '@/scopes/globals.js';
 import { subAndCall } from '@/utils/subAndCall.js';

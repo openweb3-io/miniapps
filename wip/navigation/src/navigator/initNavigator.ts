@@ -7,7 +7,7 @@ import type { NavigatorCtrOptions, HistoryItem, Navigator } from './types.js';
 export interface InitNavigatorOptions<State> extends NavigatorCtrOptions<State> {
   /**
    * Session storage key, containing the navigator state.
-   * @default "@telegram-apps/navigator/state"
+   * @default "@openweb3-apps/navigator/state"
    */
   sessionStorageKey?: string;
 }
@@ -55,7 +55,7 @@ export function initNavigator<State>(options?: InitNavigatorOptions<State>): [
   cleanup: () => void,
 ] {
   options ||= {};
-  const sessionStorageKey = options.sessionStorageKey || '@telegram-apps/navigator';
+  const sessionStorageKey = options.sessionStorageKey || '@openweb3-apps/navigator';
   const navigator = instantiate<State>(sessionStorageKey, options);
 
   const saveState = () => sessionStorage.setItem(sessionStorageKey, JSON.stringify({

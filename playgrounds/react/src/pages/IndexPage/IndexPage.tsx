@@ -1,4 +1,4 @@
-import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
+import { Section, Cell, Image, List } from '@openweb3-apps/openweb3-ui';
 import type { FC } from 'react';
 
 import { Link } from '@/components/Link/Link.tsx';
@@ -12,7 +12,7 @@ export const IndexPage: FC = () => {
       <List>
         <Section
           header="Features"
-          footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
+          footer="You can use these pages to learn more about features, provided by Openweb3 Mini Apps and other useful projects"
         >
           <Link to="/ton-connect">
             <Cell
@@ -34,7 +34,7 @@ export const IndexPage: FC = () => {
             <Cell subtitle="Platform identifier, Mini Apps version, etc.">Launch Parameters</Cell>
           </Link>
           <Link to="/theme-params">
-            <Cell subtitle="Telegram application palette information">Theme Parameters</Cell>
+            <Cell subtitle="Openweb3 application palette information">Theme Parameters</Cell>
           </Link>
         </Section>
       </List>

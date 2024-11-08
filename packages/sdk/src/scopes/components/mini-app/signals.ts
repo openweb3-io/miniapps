@@ -1,6 +1,6 @@
-import { Computed, computed, signal } from '@telegram-apps/signals';
-import { isRGB } from '@telegram-apps/transformers';
-import type { BackgroundColor, BottomBarColor, RGB } from '@telegram-apps/bridge';
+import { Computed, computed, signal } from '@openweb3-apps/signals';
+import { isRGB } from '@openweb3-apps/transformers';
+import type { BackgroundColor, BottomBarColor, RGB } from '@openweb3-apps/bridge';
 
 import { isColorDark } from '@/utils/isColorDark.js';
 import {
@@ -52,7 +52,7 @@ export const bottomBarColorRGB = computed<RGB | undefined>(() => {
   return isRGB(color)
     ? color
     : color === 'bottom_bar_bg_color'
-      // Following the logic from the Telegram SDK.
+      // Following the logic from the Openweb3 SDK.
       // I removed "|| '#ffffff'" because this seems too strange to me. This is just not right.
       ? themeBottomBarBgColor() || themeSecondaryBgColor()
       : color === 'secondary_bg_color'

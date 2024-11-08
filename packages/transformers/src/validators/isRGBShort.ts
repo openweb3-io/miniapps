@@ -1,4 +1,4 @@
-import type { RGBShort } from '@telegram-apps/types';
+import type { RGBShort } from '@openweb3-apps/types';
 
 /**
  * Returns true in case, passed value has #RGB format.
